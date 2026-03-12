@@ -109,7 +109,7 @@
 
         /* HERO */
         .hero {
-            background: linear-gradient(rgba(33, 50, 29, 0.85), rgba(33, 50, 29, 0.85)), url('./images/file_118.jpg'); /* Replaced with uploaded hero image */
+            background: linear-gradient(rgba(33, 50, 29, 0.85), rgba(33, 50, 29, 0.85)), url('hero-bg.jpg'); /* Placeholder for image */
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -154,6 +154,60 @@
         .service-card h3 {
             margin-bottom: 15px;
             color: var(--primary);
+        }
+
+        .trust-strip {
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 16px 0;
+            font-weight: 700;
+        }
+
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .cta-panel {
+            margin-top: 40px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 18px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.08);
+            padding: 20px;
+            border-radius: 14px;
+        }
+
+        .policy-list {
+            max-width: 820px;
+            margin: 30px auto 0;
+            text-align: left;
+        }
+
+        .policy-list li { margin-bottom: 10px; }
+
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
         }
 
         /* MISSION */
@@ -250,33 +304,51 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <h1>Blaze new trails, wag new tails.</h1>
-            <p>Every step your dog takes with us paves the way for a veteran's new beginning. Dog walking services that fund service puppies.</p>
+            <h1>Trusted Dog Walking & Pet Care in NYC</h1>
+            <p>Reliable walks, attentive care, and a bigger mission behind every visit. NYC Tailblazers supports busy pet owners while building toward future service-dog support for veterans.</p>
             <div style="margin-top: 20px;">
-                <a href="#services" class="btn btn-primary">Book a Walk</a>
-                <a href="#support" class="btn btn-outline">Support the Cause</a>
+                <a href="#contact" class="btn btn-primary">Book a Meet &amp; Greet</a>
+                <a href="#services" class="btn btn-outline">See Services</a>
             </div>
+        </div>
+    </section>
+
+    <section class="trust-strip">
+        <div class="container trust-items">
+            <span>Meet &amp; Greet Before First Service</span>
+            <span>Photo Updates Available</span>
+            <span>Mission-Driven Local Business</span>
+            <span>Serving Select NYC Neighborhoods</span>
         </div>
     </section>
 
     <!-- SERVICES (THE ENGINE) -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Professional Pet Care</h2>
-            <p class="section-subtitle">The stepping stone to our mission. Professional, reliable, and loving care for your pets that directly funds our veteran programs.</p>
+            <h2 class="section-title">Professional Pet Care With Purpose</h2>
+            <p class="section-subtitle">Safe, dependable care for your pets with clear communication and a mission-centered brand behind every booking.</p>
             
             <div class="service-grid">
                 <div class="service-card">
                     <h3>Dog Walking</h3>
-                    <p>Daily adventures for your pup. We don't just walk; we engage, train, and love. GPS tracked and insured.</p>
+                    <p>Solo or small-group walks built around your dog's energy, routine, and comfort.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Puppy Raising</h3>
-                    <p>Building the foundation. We specialize in early development to ensure happy, balanced dogs.</p>
+                    <h3>Pet Sitting / Drop-Ins</h3>
+                    <p>Reliable in-home visits for feeding, potty breaks, companionship, and care while you're away.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Pet Sitting</h3>
-                    <p>Peace of mind while you're away. In-home care that keeps your pets safe and comfortable.</p>
+                    <h3>Puppy Support</h3>
+                    <p>Early routine support, reinforcement of good habits, and patient care during the puppy stage.</p>
+                </div>
+            </div>
+
+            <div class="cta-panel">
+                <h3 style="margin-bottom: 10px; font-size: 1.8rem;">Ready for reliable pet care?</h3>
+                <p>Tell us your neighborhood, your dog's needs, and the schedule you're looking for. We'll help you find the right fit.</p>
+                <div style="margin-top: 18px;">
+                    <a href="#contact" class="btn btn-primary">Request Service</a>
+                    <a href="mailto:info@nyctailblazers.com" class="btn btn-outline">Ask a Question</a>
                 </div>
             </div>
         </div>
@@ -286,11 +358,10 @@
     <section id="mission" class="mission">
         <div class="container">
             <h2>The Heart of Tailblazers</h2>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
-                <strong>NYC Tailblazers</strong> stands for change, hope, and new beginnings. 
-                We use the revenue from our walking services to raise and train service puppies for veterans in need.
+            <p style="max-width: 820px; margin: 0 auto; font-size: 1.1rem;">
+                <strong>NYC Tailblazers</strong> is more than a dog walking business. Dog walking is the foundation that helps fund a bigger long-term goal: supporting the raising and development of dogs that can one day serve veterans in need.
                 <br><br>
-                Food, supplies, vet bills—raising a hero takes a village. When you hire us, you aren't just getting a dog walker; you're joining a movement.
+                When you hire NYC Tailblazers, you support dependable local pet care and a mission built on change, hope, and new beginnings.
             </p>
         </div>
     </section>
@@ -300,18 +371,17 @@
         <div class="container">
             <div class="collab-content">
                 <div>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Creators & Partners</h2>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Partners, Parks & Community</h2>
                     <p style="margin-bottom: 20px; font-size: 1.1rem;">
-                        We love highlighting the best for our furry friends. From handmade treats to durable gear, we collaborate with brands that share our values.
+                        We welcome collaborations with pet brands, local businesses, creators, and dog-friendly community partners who align with our values.
                     </p>
-                    <p><strong>Featured Partner:</strong> Local artisan dog treats (Coming Soon to our videos!)</p>
+                    <p><strong>Dog Park Collaboration Proposal:</strong> Available for parks, community groups, and neighborhood partners interested in pilot meetups, sponsored events, or responsible dog-owner programming.</p>
                     <br>
-                    <a href="https://instagram.com/nyctailblazers" class="btn" style="background: var(--dark); color: white;">Work With Us</a>
+                    <a href="mailto:info@nyctailblazers.com?subject=Partnership%20Inquiry" class="btn" style="background: var(--dark); color: white;">Request the Proposal</a>
                 </div>
                 <div>
-                    <!-- Placeholder for an image of you/products -->
-                    <div style="background: rgba(255,255,255,0.3); height: 300px; border-radius: 20px; display: flex; align-items: center; justify-content: center;">
-                        <h3>[Partner Content / Video Placeholder]</h3>
+                    <div style="background: rgba(255,255,255,0.3); height: 300px; border-radius: 20px; display: flex; align-items: center; justify-content: center; text-align:center; padding:20px;">
+                        <h3>Pilot meetup, sponsored dog event, safety education, or community cleanup day</h3>
                     </div>
                 </div>
             </div>
@@ -322,7 +392,7 @@
     <section id="support" class="support">
         <div class="container">
             <h2 class="section-title">Help Us Raise Heroes</h2>
-            <p class="section-subtitle">You don't need a dog to help. Your donations go directly to food, supplies, and veterinary care for our service puppies in training.</p>
+            <p class="section-subtitle">Donations, supplies, and collaborations help fund the long-term mission behind NYC Tailblazers.</p>
             
             <div class="donation-options">
                 <a href="https://cash.app/$bestlife625" target="_blank" class="donate-btn cashapp">
@@ -337,20 +407,57 @@
             </div>
 
             <div style="margin-top: 40px;">
-                <p>Have supplies to donate? <a href="mailto:nyctailblazers@gmail.com" style="color: var(--primary); font-weight: bold;">Email us</a> to send food, toys, or gear.</p>
+                <p>Have supplies to donate? <a href="mailto:info@nyctailblazers.com" style="color: var(--primary); font-weight: bold;">Email us</a> to coordinate food, toys, gear, or community support.</p>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact">
+    <section class="services" style="background:#eef3ea;">
         <div class="container">
-            <h2>Ready to blaze a trail?</h2>
-            <p style="margin: 20px 0;">Join our pack today.</p>
-            <p>
-                <a href="https://instagram.com/nyctailblazers" style="margin: 0 10px;">Instagram</a> | 
-                <a href="mailto:nyctailblazers@gmail.com" style="margin: 0 10px;">nyctailblazers@gmail.com</a>
-            </p>
+            <h2 class="section-title">Policies &amp; Service Area</h2>
+            <p class="section-subtitle">NYC Tailblazers proudly serves select New York City neighborhoods. Contact us with your location to confirm availability and current coverage.</p>
+            <ul class="policy-list">
+                <li>New clients start with a meet &amp; greet.</li>
+                <li>Dog walking starts at <strong>$XX</strong>; drop-in visits start at <strong>$XX</strong>.</li>
+                <li>Pet sitting is priced by quote based on duration, location, and care needs.</li>
+                <li>Cancellations with less than 24 hours' notice may be subject to a fee.</li>
+                <li>Holiday and last-minute bookings may include adjusted rates.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Book, Partner, or Ask a Question</h2>
+            <p style="margin: 20px 0;">Reach out for pet care, partnership opportunities, dog park collaborations, or community inquiries.</p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@nyctailblazers.com">info@nyctailblazers.com</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>Instagram</h3>
+                    <p><a href="https://instagram.com/nyctailblazers">@nyctailblazers</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>Service Inquiry</h3>
+                    <p>Name, neighborhood/ZIP, pet type, service needed, preferred schedule, and best contact method.</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Partnerships</h3>
+                    <p>Contact us for dog park proposals, brand collaborations, vendor partnerships, and community events.</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="proposal.html">Dog Park Proposal</a>
+            </div>
+
             <p style="margin-top: 30px; font-size: 0.9rem; color: #888;">&copy; 2026 NYC Tailblazers. All rights reserved.</p>
         </div>
     </section>
