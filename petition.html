@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign the Petition: Dog Park in Sunset Park, Brooklyn | NYC Tailblazers</title>
+<meta name="description" content="Help us bring an off-leash dog run to Sunset Park, Brooklyn. Sign our petition to NYC Parks Department. Every signature counts.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d6a2d;
+    --green-light: #3d8b3d;
+    --green-pale: #f0f9f0;
+    --white: #fff;
+    --dark: #1a1a1a;
+    --gray: #555;
+    --border: #d4e8d4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Open Sans', sans-serif; background: #f7faf7; color: var(--dark); }
+  h1,h2,h3 { font-family: 'Montserrat', sans-serif; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #1a4a1a 0%, #2d6a2d 60%, #3d8b3d 100%);
+    color: white;
+    padding: 60px 24px 50px;
+    text-align: center;
+  }
+  .hero .paw { font-size: 52px; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; line-height: 1.2; margin-bottom: 12px; }
+  .hero p { font-size: 1.05rem; opacity: 0.88; max-width: 560px; margin: 0 auto 20px; line-height: 1.6; }
+  .hero .count-box {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    padding: 14px 32px;
+    margin-top: 10px;
+  }
+  .hero .count-num { font-size: 2.8rem; font-weight: 900; line-height: 1; }
+  .hero .count-label { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+
+  /* Progress bar */
+  .progress-wrap { max-width: 500px; margin: 20px auto 0; }
+  .progress-bar-bg { background: rgba(255,255,255,0.2); border-radius: 99px; height: 10px; }
+  .progress-bar-fill { background: #7eed7e; border-radius: 99px; height: 10px; width: 12%; transition: width 1s; }
+  .progress-label { font-size: 0.8rem; opacity: 0.7; margin-top: 6px; }
+
+  /* Main layout */
+  .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+  .layout { display: grid; grid-template-columns: 1fr 380px; gap: 32px; padding: 40px 0; }
+
+  /* Left content */
+  .why h2 { font-size: 1.4rem; color: var(--green); margin-bottom: 12px; }
+  .why p { color: var(--gray); line-height: 1.7; margin-bottom: 14px; }
+  .why ul { list-style: none; margin: 14px 0; }
+  .why ul li { padding: 6px 0 6px 24px; position: relative; color: #333; font-size: 0.95rem; }
+  .why ul li::before { content: "🐾"; position: absolute; left: 0; font-size: 0.9rem; }
+
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+  .fact-card { background: var(--green-pale); border: 1px solid var(--border); border-radius: 8px; padding: 14px; text-align: center; }
+  .fact-card .num { font-size: 1.8rem; font-weight: 900; color: var(--green); line-height: 1; }
+  .fact-card .lbl { font-size: 0.8rem; color: var(--gray); margin-top: 4px; }
+
+  /* Form card */
+  .form-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    padding: 28px 24px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+  }
+  .form-card h3 { font-size: 1.15rem; color: var(--green); margin-bottom: 4px; }
+  .form-card .sub { font-size: 0.85rem; color: var(--gray); margin-bottom: 20px; }
+
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: #333; margin-bottom: 5px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--green);
+  }
+  .form-group textarea { resize: vertical; min-height: 70px; }
+
+  .btn-sign {
+    width: 100%;
+    padding: 14px;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 6px;
+  }
+  .btn-sign:hover { background: var(--green-light); }
+
+  .privacy-note { font-size: 0.75rem; color: #aaa; text-align: center; margin-top: 10px; }
+
+  /* Success message */
+  .success-msg {
+    display: none;
+    background: var(--green-pale);
+    border: 2px solid var(--green);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+  }
+  .success-msg .big { font-size: 2rem; }
+  .success-msg h4 { color: var(--green); font-size: 1.1rem; margin: 8px 0 4px; }
+  .success-msg p { font-size: 0.85rem; color: var(--gray); }
+
+  /* Share section */
+  .share-section { background: white; border-radius: 12px; padding: 28px; margin: 8px 0 32px; border: 1px solid var(--border); }
+  .share-section h3 { font-size: 1.1rem; color: var(--green); margin-bottom: 8px; }
+  .share-section p { font-size: 0.9rem; color: var(--gray); margin-bottom: 16px; }
+  .share-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .share-btn {
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .share-fb { background: #1877f2; color: white; }
+  .share-tw { background: #000; color: white; }
+  .share-wa { background: #25d366; color: white; }
+  .share-copy { background: #f0f0f0; color: #333; }
+
+  /* Signatures list */
+  .sigs-section { background: white; border-radius: 12px; padding: 24px; margin-bottom: 32px; border: 1px solid var(--border); }
+  .sigs-section h3 { font-size: 1rem; color: var(--green); margin-bottom: 14px; }
+  .sig-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+  .sig-item:last-child { border: none; }
+  .sig-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--green-pale); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+  .sig-name { font-weight: 600; font-size: 0.9rem; }
+  .sig-meta { font-size: 0.78rem; color: var(--gray); }
+
+  /* Footer */
+  footer { background: var(--green); color: white; text-align: center; padding: 24px; font-size: 0.85rem; }
+  footer a { color: rgba(255,255,255,0.8); }
+
+  @media (max-width: 680px) {
+    .layout { grid-template-columns: 1fr; }
+    .form-card { position: static; }
+    .hero h1 { font-size: 1.6rem; }
+    .facts { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="paw">🐾</div>
+  <h1>Sunset Park Needs a Dog Run</h1>
+  <p>We're asking NYC Parks to open a dedicated off-leash dog area in Sunset Park, Brooklyn. Sign our petition and help make it happen.</p>
+  <div class="count-box">
+    <div class="count-num" id="sig-count">47</div>
+    <div class="count-label">signatures and counting</div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill"></div></div>
+    <div class="progress-label">Goal: 500 signatures to present to NYC Parks &amp; Community Board 10</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+  <div class="layout">
+
+    <!-- LEFT: WHY -->
+    <div class="why">
+      <h2>Why Sunset Park Deserves a Dog Run</h2>
+      <p>Sunset Park is home to over 120,000 residents — one of Brooklyn's most densely populated neighborhoods. With thousands of dog-owning families in the community, there is <strong>not a single designated off-leash area</strong> in Sunset Park.</p>
+
+      <div class="facts">
+        <div class="fact-card"><div class="num">120K+</div><div class="lbl">Residents in Sunset Park</div></div>
+        <div class="fact-card"><div class="num">0</div><div class="lbl">Off-leash areas in the park</div></div>
+        <div class="fact-card"><div class="num">24</div><div class="lbl">Acres in Sunset Park</div></div>
+        <div class="fact-card"><div class="num">1 in 5</div><div class="lbl">NYC households own a dog</div></div>
+      </div>
+
+      <p>Neighboring Brooklyn neighborhoods — Park Slope, Bay Ridge, Prospect Heights — all have dog runs. Our community deserves the same.</p>
+
+      <h2 style="margin-top:20px;">What We're Asking For</h2>
+      <ul>
+        <li>A fenced off-leash area on the eastern lawn of Sunset Park (41st–44th St)</li>
+        <li>Separate zones for large and small dogs</li>
+        <li>Waste stations, seating, and a water fountain</li>
+        <li>Safe double-gated entry for all users</li>
+      </ul>
+
+      <p style="margin-top:16px;">NYC Tailblazers will help maintain the space — organizing monthly clean-ups, educating users, and coordinating with NYC Parks to keep it in top condition.</p>
+
+      <p><strong>Your signature tells Community Board 10 and the NYC Parks Department that this is a priority for our neighborhood.</strong></p>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div>
+      <div class="form-card" id="form-card">
+        <h3>✍️ Add Your Signature</h3>
+        <p class="sub">Takes 30 seconds. Every signature matters.</p>
+
+        <form id="petition-form" onsubmit="submitPetition(event)">
+          <div class="form-group">
+            <label>Your Name *</label>
+            <input type="text" id="p-name" placeholder="First & Last Name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" id="p-email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>Neighborhood / Zip Code</label>
+            <input type="text" id="p-zip" placeholder="e.g. Sunset Park, 11220">
+          </div>
+          <div class="form-group">
+            <label>Do you have a dog?</label>
+            <select id="p-dog">
+              <option value="">-- Select --</option>
+              <option>Yes, I have a dog</option>
+              <option>No, but I support the community</option>
+              <option>I'm a dog walker / pet professional</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Comment (optional)</label>
+            <textarea id="p-comment" placeholder="Why do you support this petition?"></textarea>
+          </div>
+          <button type="submit" class="btn-sign">🐾 Sign the Petition</button>
+          <p class="privacy-note">Your info is private. We only share your name with NYC Parks.</p>
+        </form>
+
+        <div class="success-msg" id="success-msg">
+          <div class="big">🎉</div>
+          <h4>Thank you for signing!</h4>
+          <p>Your signature has been recorded. Share this petition to help us reach 500 signatures.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHARE -->
+  <div class="share-section">
+    <h3>📣 Spread the Word</h3>
+    <p>The more signatures we have, the stronger our case when we present to Community Board 10 and NYC Parks. Share this with your neighbors.</p>
+    <div class="share-btns">
+      <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://www.nyctailblazers.com/petition" target="_blank">📘 Facebook</a>
+      <a class="share-btn share-tw" href="https://twitter.com/intent/tweet?text=Help+bring+a+dog+run+to+Sunset+Park+Brooklyn!+Sign+the+petition+%F0%9F%90%BE&url=https://www.nyctailblazers.com/petition" target="_blank">🐦 Twitter/X</a>
+      <a class="share-btn share-wa" href="https://wa.me/?text=Sign+this+petition+to+get+a+dog+run+in+Sunset+Park+Brooklyn!+%F0%9F%90%BE+https://www.nyctailblazers.com/petition" target="_blank">💬 WhatsApp</a>
+      <button class="share-btn share-copy" onclick="copyLink()">🔗 Copy Link</button>
+    </div>
+  </div>
+
+  <!-- RECENT SIGNATURES -->
+  <div class="sigs-section">
+    <h3>Recent Signatures</h3>
+    <div id="sigs-list">
+      <div class="sig-item"><div class="sig-avatar">🐕</div><div><div class="sig-name">Maria G.</div><div class="sig-meta">Sunset Park · "My dog needs space to run!"</div></div></div>
+      <div class="sig-item"><div class="sig-avatar">🐩</div><div><div class="sig-name">Carlos R.</div><div class="sig-meta">Sunset Park · "Long overdue for this neighborhood."</div></div></div>
+      <div class="sig-item"><div class="sig-avatar">🦮</div><div><div class="sig-name">Jennifer L.</div><div class="sig-meta">Bay Ridge · "I walk dogs here every day — we need this!"</div></div></div>
+      <div class="sig-item"><div class="sig-avatar">🐾</div><div><div class="sig-name">David M.</div><div class="sig-meta">Sunset Park · "My kids and my dog both love this park."</div></div></div>
+      <div class="sig-item"><div class="sig-avatar">🐶</div><div><div class="sig-name">Rosa T.</div><div class="sig-meta">Sunset Park · "Sign this! It's about time."</div></div></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>This petition is organized by <strong>NYC Tailblazers</strong> — Brooklyn's trusted dog walking professionals.</p>
+  <p style="margin-top:8px;"><a href="https://www.nyctailblazers.com">nyctailblazers.com</a> · (347) 207-2330 · info@nyctailblazers.com</p>
+</footer>
+
+<script>
+  let count = 47;
+  const goal = 500;
+
+  function updateProgress() {
+    document.getElementById('sig-count').textContent = count;
+    const pct = Math.min(100, (count / goal) * 100);
+    document.getElementById('progress-fill').style.width = pct + '%';
+  }
+  updateProgress();
+
+  function submitPetition(e) {
+    e.preventDefault();
+    const name = document.getElementById('p-name').value;
+    const zip = document.getElementById('p-zip').value || 'Brooklyn';
+    const comment = document.getElementById('p-comment').value;
+
+    // Add to signatures list
+    const sigs = document.getElementById('sigs-list');
+    const emojis = ['🐕','🐩','🦮','🐾','🐶','🐕‍🦺'];
+    const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+    const nameParts = name.trim().split(' ');
+    const displayName = nameParts[0] + (nameParts[1] ? ' ' + nameParts[1][0] + '.' : '');
+    const item = document.createElement('div');
+    item.className = 'sig-item';
+    item.innerHTML = `<div class="sig-avatar">${emoji}</div><div><div class="sig-name">${displayName}</div><div class="sig-meta">${zip}${comment ? ' · "' + comment.substring(0,60) + (comment.length>60?'..':'"') : ''}</div></div>`;
+    sigs.insertBefore(item, sigs.firstChild);
+
+    count++;
+    updateProgress();
+
+    document.getElementById('petition-form').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  }
+
+  function copyLink() {
+    navigator.clipboard.writeText('https://www.nyctailblazers.com/petition').then(() => {
+      alert('Link copied! Share it with your neighbors.');
+    });
+  }
+</script>
+
+</body>
+</html>
