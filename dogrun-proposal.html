@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal: Dog Park at Sunset Park — NYC Tailblazers</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #fff;
+    color: #1a1a1a;
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0 auto;
+    padding: 0.55in 0.65in;
+    font-size: 10.5pt;
+    line-height: 1.6;
+  }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 3px solid #2d6a2d;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-icon { font-size: 36pt; line-height: 1; }
+  .brand-name { font-size: 18pt; font-weight: 800; color: #2d6a2d; line-height: 1; }
+  .brand-tagline { font-size: 9pt; color: #666; margin-top: 2px; }
+  .header-right { text-align: right; font-size: 8.5pt; color: #666; line-height: 1.6; }
+  .header-right strong { color: #1a1a1a; }
+
+  /* Title block */
+  .title-block {
+    background: linear-gradient(135deg, #2d6a2d 0%, #3d8b3d 100%);
+    color: white;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+  }
+  .title-block h1 { font-size: 18pt; font-weight: 800; line-height: 1.2; }
+  .title-block .subtitle { font-size: 10pt; opacity: 0.85; margin-top: 6px; }
+  .title-block .meta { font-size: 8.5pt; opacity: 0.7; margin-top: 8px; }
+
+  /* Sections */
+  .section { margin-bottom: 18px; }
+  .section-title {
+    font-size: 8pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #2d6a2d;
+    border-bottom: 1.5px solid #d4e8d4;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  p { margin-bottom: 8px; font-size: 10pt; color: #333; }
+
+  /* Grid */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+
+  /* Cards */
+  .card {
+    background: #f8fdf8;
+    border: 1px solid #d4e8d4;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .card h3 { font-size: 10pt; font-weight: 700; color: #2d6a2d; margin-bottom: 4px; }
+  .card p { font-size: 9pt; color: #555; margin: 0; }
+  .card .stat { font-size: 20pt; font-weight: 900; color: #2d6a2d; line-height: 1; }
+  .card .stat-label { font-size: 8pt; color: #777; margin-top: 2px; }
+
+  /* List */
+  ul.doc { margin-left: 18px; margin-bottom: 8px; }
+  ul.doc li { font-size: 10pt; color: #333; margin-bottom: 3px; }
+  ul.clean { list-style: none; }
+  ul.clean li { font-size: 9.5pt; color: #444; padding: 3px 0 3px 16px; position: relative; }
+  ul.clean li::before { content: "✓"; position: absolute; left: 0; color: #2d6a2d; font-weight: 700; }
+
+  /* Quote / callout */
+  .callout {
+    border-left: 4px solid #2d6a2d;
+    background: #f0f9f0;
+    padding: 10px 16px;
+    border-radius: 0 6px 6px 0;
+    font-size: 10pt;
+    font-style: italic;
+    color: #2a4a2a;
+    margin: 14px 0;
+  }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin-bottom: 10px; }
+  th { background: #2d6a2d; color: white; padding: 7px 10px; text-align: left; font-size: 8.5pt; }
+  td { padding: 6px 10px; border-bottom: 1px solid #e8f5e8; color: #333; }
+  tr:nth-child(even) td { background: #f8fdf8; }
+
+  /* Timeline */
+  .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .phase { background: #f8fdf8; border: 1px solid #d4e8d4; border-radius: 8px; padding: 10px 12px; }
+  .phase .phase-num { font-size: 7.5pt; color: #2d6a2d; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+  .phase h4 { font-size: 9.5pt; font-weight: 700; margin: 3px 0; }
+  .phase p { font-size: 8.5pt; color: #666; margin: 0; }
+
+  /* Signature */
+  .signature-block {
+    border-top: 2px solid #2d6a2d;
+    margin-top: 20px;
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .sig-line { border-top: 1px solid #999; width: 200px; margin-top: 30px; }
+  .sig-label { font-size: 8pt; color: #666; margin-top: 4px; }
+
+  /* Footer */
+  .footer { text-align: center; margin-top: 16px; font-size: 8pt; color: #aaa; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="brand">
+    <div class="brand-icon">🐾</div>
+    <div>
+      <div class="brand-name">NYC Tailblazers</div>
+      <div class="brand-tagline">Professional Dog Walking &amp; Pet Care — Brooklyn, NY</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <strong>Submitted to:</strong> NYC Parks Department<br>
+    <strong>Date:</strong> March 2026<br>
+    <strong>Contact:</strong> Markus | (342) 260-8305<br>
+    <strong>Email:</strong> info@nyctailblazers.com<br>
+    <strong>Web:</strong> nyctailblazers.com
+  </div>
+</div>
+
+<!-- TITLE -->
+<div class="title-block">
+  <h1>Proposal: Off-Leash Dog Area at Sunset Park</h1>
+  <div class="subtitle">A Community Request to NYC Parks for a Designated Off-Leash Dog Run in Sunset Park, Brooklyn</div>
+  <div class="meta">Submitted by NYC Tailblazers on behalf of the Sunset Park Community · March 2026</div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="section">
+  <div class="section-title">Executive Summary</div>
+  <p>NYC Tailblazers, a professional dog walking and pet care business serving the Sunset Park neighborhood of Brooklyn, respectfully submits this proposal to the New York City Department of Parks &amp; Recreation requesting the designation of a permanent off-leash dog run within Sunset Park.</p>
+  <p>Sunset Park is a beloved 24-acre green space in one of Brooklyn's most densely populated and rapidly growing neighborhoods. Despite a high concentration of dog owners in the surrounding community, there is currently no designated off-leash area within the park — leaving residents with no safe, legal space for their dogs to exercise freely.</p>
+  <div class="callout">"Dogs need space to run. Families deserve a safe place for that to happen. Sunset Park is the heart of this community — it should serve every resident in it, including our four-legged neighbors."</div>
+</div>
+
+<!-- THE NEED -->
+<div class="section">
+  <div class="section-title">The Need</div>
+  <div class="grid-3" style="margin-bottom:12px;">
+    <div class="card" style="text-align:center;">
+      <div class="stat">~120K</div>
+      <div class="stat-label">Residents in Sunset Park neighborhood</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="stat">1 in 5</div>
+      <div class="stat-label">NYC households own a dog (est.)</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="stat">0</div>
+      <div class="stat-label">Designated off-leash areas in Sunset Park</div>
+    </div>
+  </div>
+  <p>The Sunset Park neighborhood is home to thousands of dog-owning families. Without a designated off-leash area, residents are forced to either keep dogs on-leash at all times (limiting the animals' physical and mental health) or allow off-leash activity in non-designated areas — creating enforcement issues, safety concerns, and tension with other park users.</p>
+  <p>Neighboring Brooklyn neighborhoods with similar population densities — including Park Slope, Bay Ridge, and Red Hook — have established dog runs that are heavily used and well-maintained. Sunset Park deserves the same.</p>
+</div>
+
+<!-- PROPOSED LOCATION -->
+<div class="section">
+  <div class="section-title">Proposed Location &amp; Design</div>
+  <div class="grid-2">
+    <div>
+      <p><strong>Park:</strong> Sunset Park, Brooklyn, NY<br>
+      <strong>Address:</strong> 41st–44th Streets, between 5th and 7th Avenues<br>
+      <strong>Proposed Area:</strong> Underutilized eastern lawn section (approx. 5,000–8,000 sq ft)<br>
+      <strong>Access:</strong> Separate entrance gate from main park path</p>
+      <ul class="clean" style="margin-top:8px;">
+        <li>Fully fenced perimeter (4–5 ft minimum height)</li>
+        <li>Double-gated entry/exit for safety</li>
+        <li>Separate areas for large and small dogs</li>
+        <li>Waste bag dispensers &amp; trash receptacles</li>
+        <li>Seating benches for owners</li>
+        <li>Water fountain (human &amp; canine)</li>
+        <li>Ground cover: decomposed granite or mulch</li>
+        <li>Shade structure or trees for summer use</li>
+      </ul>
+    </div>
+    <div class="card" style="background:#f0f9f0;">
+      <h3>Why This Location Works</h3>
+      <p style="margin-bottom:8px;">The eastern lawn area of Sunset Park currently sees low recreational use and is not designated for any organized activity. It offers:</p>
+      <ul class="clean">
+        <li>Sufficient square footage for a dual-zone run</li>
+        <li>Natural grade separation from family picnic areas</li>
+        <li>Proximity to park entrance on 5th Avenue</li>
+        <li>Minimal disruption to existing park programming</li>
+        <li>Visibility for self-policing by the community</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- COMMUNITY BENEFIT -->
+<div class="section">
+  <div class="section-title">Community Benefits</div>
+  <table>
+    <tr><th>Benefit</th><th>Who It Helps</th><th>Impact</th></tr>
+    <tr><td>Safe off-leash exercise for dogs</td><td>Dog owners, dogs</td><td>Reduces behavioral issues; improves animal health</td></tr>
+    <tr><td>Reduced illegal off-leash use</td><td>All park users, NYPD, Parks</td><td>Fewer conflicts; cleaner enforcement</td></tr>
+    <tr><td>Community gathering space</td><td>Neighbors</td><td>Builds social connections among residents</td></tr>
+    <tr><td>Supports local pet businesses</td><td>Local economy</td><td>NYC Tailblazers + other small businesses</td></tr>
+    <tr><td>Physical &amp; mental health of residents</td><td>Dog owners</td><td>Regular park visits improve wellbeing</td></tr>
+    <tr><td>Equity for dense neighborhoods</td><td>Sunset Park community</td><td>Matches amenities available in other boroughs</td></tr>
+  </table>
+</div>
+
+<!-- MAINTENANCE & OPERATIONS -->
+<div class="section">
+  <div class="section-title">Maintenance &amp; Community Stewardship</div>
+  <div class="grid-2">
+    <div>
+      <p>NYC Tailblazers commits to acting as a community steward for the proposed dog run, including:</p>
+      <ul class="clean">
+        <li>Coordinating volunteer clean-up events (monthly)</li>
+        <li>Reporting maintenance issues to NYC Parks</li>
+        <li>Distributing and posting dog run rules</li>
+        <li>Educating new users on proper etiquette</li>
+        <li>Building a neighborhood user group for ongoing upkeep</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Funding Options</h3>
+      <p>We propose the following funding pathways for consideration:</p>
+      <ul class="clean" style="margin-top:6px;">
+        <li>NYC Parks capital budget allocation</li>
+        <li>Participatory Budgeting (Council District 38)</li>
+        <li>NYC Dog Run Grant Program (if applicable)</li>
+        <li>Community fundraising + local business sponsorships</li>
+        <li>Partnerships with pet industry brands</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- IMPLEMENTATION TIMELINE -->
+<div class="section">
+  <div class="section-title">Proposed Implementation Timeline</div>
+  <div class="timeline">
+    <div class="phase">
+      <div class="phase-num">Month 1–2</div>
+      <h4>Community Support</h4>
+      <p>Petition signatures, CB10 presentation, City Council outreach</p>
+    </div>
+    <div class="phase">
+      <div class="phase-num">Month 3–4</div>
+      <h4>Parks Review</h4>
+      <p>Site assessment by NYC Parks, formal application submission</p>
+    </div>
+    <div class="phase">
+      <div class="phase-num">Month 5–8</div>
+      <h4>Design &amp; Approval</h4>
+      <p>Site design, environmental review, community board vote</p>
+    </div>
+    <div class="phase">
+      <div class="phase-num">Month 9–12</div>
+      <h4>Construction</h4>
+      <p>Fencing, amenities installed, grand opening event</p>
+    </div>
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="section">
+  <div class="section-title">Requested Actions</div>
+  <ul class="doc">
+    <li>Schedule a site visit with NYC Parks staff to evaluate the proposed location</li>
+    <li>Provide guidance on the formal dog run application process</li>
+    <li>Connect us with the relevant Community Board (CB10) liaison</li>
+    <li>Review this proposal and respond with feedback or next steps</li>
+  </ul>
+  <p>We are prepared to gather community petition signatures, present at a Community Board 10 meeting, and work with local City Council Member Alexa Avilés (District 38) to advance this request.</p>
+</div>
+
+<!-- SIGNATURE -->
+<div class="signature-block">
+  <div>
+    <div class="sig-line"></div>
+    <div class="sig-label">Markus — Owner, NYC Tailblazers<br>(342) 260-8305 · info@nyctailblazers.com</div>
+  </div>
+  <div style="text-align:right;">
+    <div class="sig-line" style="margin-left:auto;"></div>
+    <div class="sig-label">Date: ___________________<br>Signature of Recipient</div>
+  </div>
+</div>
+
+<div class="footer">
+  NYC Tailblazers · nyctailblazers.com · (342) 260-8305 · info@nyctailblazers.com · Brooklyn, NY
+</div>
+
+</body>
+</html>
