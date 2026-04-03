@@ -3,20 +3,21 @@
 import { create } from "zustand";
 import type { Agent, AgentStatus, GatewayMessage } from "@/lib/types";
 
-// Deterministic position assignment for new agents
+// Must match DESK_POSITIONS in OfficeScene.tsx (index = deskIndex in agents-config)
 const DESK_POSITIONS: Array<{ x: number; y: number; z: number }> = [
-  { x: -3, y: 0, z: -2 },
-  { x:  0, y: 0, z: -2 },
-  { x:  3, y: 0, z: -2 },
-  { x: -3, y: 0, z:  2 },
-  { x:  0, y: 0, z:  2 },
-  { x:  3, y: 0, z:  2 },
-  { x: -5, y: 0, z:  0 },
-  { x:  5, y: 0, z:  0 },
+  { x: -4,   y: 0, z: -2 },   // 0
+  { x: -1.5, y: 0, z: -2 },   // 1
+  { x:  1.5, y: 0, z: -2 },   // 2
+  { x:  4,   y: 0, z: -2 },   // 3
+  { x: -4,   y: 0, z:  1.5 }, // 4
+  { x: -1.5, y: 0, z:  1.5 }, // 5
+  { x:  1.5, y: 0, z:  1.5 }, // 6
+  { x:  4,   y: 0, z:  1.5 }, // 7
 ];
 
-function assignPosition(index: number) {
-  return DESK_POSITIONS[index % DESK_POSITIONS.length];
+function assignPosition(deskIndex: number | undefined, fallbackIndex: number) {
+  const idx = deskIndex ?? fallbackIndex;
+  return DESK_POSITIONS[idx % DESK_POSITIONS.length];
 }
 
 // ── Store types ───────────────────────────────────────────────────────────
@@ -49,15 +50,15 @@ export const useAgentStore = create<AgentStore>((set, get) => ({
       switch (msg.type) {
         case "agent_registered": {
           if (!msg.agentId) break;
-          const index = Object.keys(agents).length;
+          const fallback = Object.keys(agents).length;
           agents[msg.agentId] = {
             id: msg.agentId,
             name: msg.agentName ?? msg.agentId,
             model: msg.model ?? "unknown",
             status: "idle",
             lastActiveAt: msg.timestamp,
-            position: assignPosition(index),
-            color: (msg as GatewayMessage & { color?: string }).color ?? "#e040fb",
+            position: assignPosition(msg.deskIndex, fallback),
+            color: msg.color ?? "#e040fb",
           };
           break;
         }
@@ -74,7 +75,7 @@ export const useAgentStore = create<AgentStore>((set, get) => ({
             };
           } else {
             // Auto-register unknown agent
-            const index = Object.keys(agents).length;
+            const fallback = Object.keys(agents).length;
             agents[msg.agentId] = {
               id: msg.agentId,
               name: msg.agentName ?? msg.agentId,
@@ -82,8 +83,8 @@ export const useAgentStore = create<AgentStore>((set, get) => ({
               status: (msg.status as AgentStatus) ?? "idle",
               task: msg.task,
               lastActiveAt: msg.timestamp,
-              position: assignPosition(index),
-              color: "#e040fb",
+              position: assignPosition(msg.deskIndex, fallback),
+              color: msg.color ?? "#e040fb",
             };
           }
           break;

@@ -41,7 +41,15 @@ export interface GatewayMessage {
   model?: string;
   status?: AgentStatus;
   message?: string;
+  /** User prompt sent TO an agent (chat input) */
+  prompt?: string;
   task?: string;
+  /** Desk slot index from agents-config */
+  deskIndex?: number;
+  /** Agent accent color */
+  color?: string;
+  /** Agent role label */
+  role?: string;
   timestamp: string;
 }
 

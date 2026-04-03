@@ -24,7 +24,7 @@ export function HUD({ onAgentSelect, selectedAgentId }: HUDProps) {
     const msg = prompt.trim();
     if (!msg) return;
     // Send to PM who coordinates
-    getGatewayClient().send({ type: "chat", message: msg } as never);
+    getGatewayClient().send({ type: "chat", prompt: msg });
     setPrompt("");
   };
 

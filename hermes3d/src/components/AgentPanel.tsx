@@ -28,7 +28,7 @@ export function AgentPanel({ agent, onClose }: AgentPanelProps) {
   const sendMessage = () => {
     const prompt = input.trim();
     if (!prompt) return;
-    getGatewayClient().send({ type: "chat", agentId: agent.id, message: prompt } as never);
+    getGatewayClient().send({ type: "chat", agentId: agent.id, prompt });
     setInput("");
     textareaRef.current?.focus();
   };
