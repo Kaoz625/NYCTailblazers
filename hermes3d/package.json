@@ -1,0 +1,49 @@
+{
+  "name": "hermes3d",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:https": "next dev --experimental-https",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "hermes-adapter": "tsx scripts/hermes-adapter.ts",
+    "demo-gateway": "tsx scripts/demo-gateway.ts",
+    "test": "vitest run",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "canvas-confetti": "^1.9.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.563.0",
+    "next": "^15.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "three": "^0.183.2",
+    "ws": "^8.18.3",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/canvas-confetti": "^1.9.4",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.183.0",
+    "@types/ws": "^8.18.3",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.1.7",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^4.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.18"
+  }
+}
