@@ -31,6 +31,9 @@ export type GatewayMessageType =
   | "agent_task"
   | "agent_done"
   | "agent_error"
+  | "agent_spawning"
+  | "chat"
+  | "spawn"
   | "ping"
   | "pong";
 
