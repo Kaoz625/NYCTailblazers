@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Wifi, WifiOff, Users, Activity, Send, ChevronDown, ChevronUp } from "lucide-react";
+import { useShallow } from "zustand/react/shallow";
 import { useAgentStore, selectAgentList, STATUS_COLORS } from "@/store/agents";
 import { getGatewayClient } from "@/lib/gateway-client";
 import type { Agent } from "@/lib/types";
@@ -13,8 +14,8 @@ interface HUDProps {
 
 export function HUD({ onAgentSelect, selectedAgentId }: HUDProps) {
   const connected = useAgentStore((s) => s.connected);
-  const agents = useAgentStore(selectAgentList);
-  const log = useAgentStore((s) => s.activityLog.slice(0, 8));
+  const agents = useAgentStore(useShallow(selectAgentList));
+  const log = useAgentStore(useShallow((s) => s.activityLog.slice(0, 8)));
   const [prompt, setPrompt] = useState("");
   const [rosterOpen, setRosterOpen] = useState(true);
 

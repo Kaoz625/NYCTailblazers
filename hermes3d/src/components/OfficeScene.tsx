@@ -4,6 +4,7 @@ import { Suspense, useEffect, useCallback } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment, Stars } from "@react-three/drei";
 import * as THREE from "three";
+import { useShallow } from "zustand/react/shallow";
 import { OfficeFloor, Desk } from "./OfficeFloor";
 import { AgentAvatar } from "./AgentAvatar";
 import { useAgentStore, selectAgentList } from "@/store/agents";
@@ -27,8 +28,10 @@ interface OfficeSceneProps {
 }
 
 export function OfficeScene({ onAgentClick }: OfficeSceneProps) {
-  const agents = useAgentStore(selectAgentList);
-  const { setConnected, handleGatewayMessage } = useAgentStore();
+  const agents = useAgentStore(useShallow(selectAgentList));
+  const { setConnected, handleGatewayMessage } = useAgentStore(
+    useShallow((s) => ({ setConnected: s.setConnected, handleGatewayMessage: s.handleGatewayMessage }))
+  );
 
   // Connect to gateway
   useEffect(() => {

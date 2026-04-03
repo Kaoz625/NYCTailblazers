@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { X, Send, Zap, ChevronDown, ChevronUp } from "lucide-react";
+import { useShallow } from "zustand/react/shallow";
 import type { Agent } from "@/lib/types";
 import { STATUS_COLORS, useAgentStore } from "@/store/agents";
 import { getGatewayClient } from "@/lib/gateway-client";
@@ -14,8 +15,8 @@ interface AgentPanelProps {
 export function AgentPanel({ agent, onClose }: AgentPanelProps) {
   const [input, setInput] = useState("");
   const [expanded, setExpanded] = useState(false);
-  const log = useAgentStore((s) =>
-    s.activityLog.filter((e) => e.agentId === agent.id).slice(0, 30)
+  const log = useAgentStore(
+    useShallow((s) => s.activityLog.filter((e) => e.agentId === agent.id).slice(0, 30))
   );
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const logRef = useRef<HTMLDivElement>(null);
