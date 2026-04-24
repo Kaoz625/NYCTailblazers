@@ -1,0 +1,15 @@
+{
+  "_comment": "Add this block to ~/.config/claude/claude_desktop_config.json under 'mcpServers'",
+  "mcpServers": {
+    "llm-brains": {
+      "command": "python",
+      "args": ["/CHANGE/TO/YOUR/PATH/LLM-Brains/mcp_server.py"],
+      "env": {
+        "BRAIN_DIR": "/CHANGE/TO/YOUR/PATH/LLM-Brains/brain",
+        "ANTHROPIC_API_KEY": "sk-ant-YOUR-KEY-HERE",
+        "EMBEDDING_BACKEND": "openai",
+        "OPENAI_API_KEY": "sk-YOUR-OPENAI-KEY-HERE"
+      }
+    }
+  }
+}
