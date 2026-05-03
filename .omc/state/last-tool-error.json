@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd \\\"/Users/markususche/Documents/NYCTailblazers/nyctailblazers-modern\\\" && git pull origin main --rebase && git push origin main && echo \\\"✓ modern pushed\\\"\",\"description\":\"Pull remote ch...",
+  "error": "Exit code 1\nFrom https://github.com/Kaoz625/nyctailblazers-modern\n * branch            main       -> FETCH_HEAD\n   264567a..0b83fb3  main       -> origin/main\nRebasing (1/1)\rAuto-merging .replit-tasks/improvements.md\nCONFLICT (add/add): Merge conflict in .replit-tasks/improvements.md\nerror: could not apply 5a9d7ef... add replit agent task spec and RESULTS template\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --contin...",
+  "timestamp": "2026-05-03T06:37:40.570Z",
+  "retry_count": 1
+}
