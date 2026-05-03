@@ -3,6 +3,7 @@
 ## Instructions for Replit Agent
 You are building/improving this project. Read this file carefully before touching any code.
 Commit all changes with prefix "replit: " and push to main when done.
+When all tasks are complete, fill out .replit-tasks/RESULTS.md and commit+push.
 
 ## Stack Rules (non-negotiable)
 - Static → Cloudflare Pages (never Vercel)
