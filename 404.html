@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NYC Tailblazers</title>
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+
+      // Try appending .html for extensionless paths
+      if (path !== '/' && !path.match(/\.[a-z0-9]+$/i) && !path.endsWith('/')) {
+        window.location.replace(path + '.html' + search + hash);
+        return;
+      }
+
+      // Redirect to homepage
+      window.location.replace('/');
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/">
+  </noscript>
+</head>
+<body><p>Redirecting...</p></body>
+</html>
