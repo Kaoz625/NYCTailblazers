@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYC Tailblazers | Cinematic Dog Walking & Pet Care in NYC</title>
-    <meta name="description" content="Premium dog walking, drop-in visits, and puppy support across NYC. Background-checked, GPS-tracked, photo updates every walk. Mission-driven — every booking supports service dogs for veterans. Book a free meet & greet.">
+    <meta name="description" content="Premium, background-checked dog walking in NYC — GPS-tracked, photo updates every walk. Every booking funds service dogs for veterans. Book a free meet &amp; greet.">
     <link rel="icon" href="tailblazers-logo.png">
     <link rel="canonical" href="https://nyctailblazers.com/">
 
@@ -12,7 +12,7 @@
     <meta property="og:title" content="NYC Tailblazers — Dog Walking & Pet Care in NYC" />
     <meta property="og:description" content="Premium, mission-driven dog walking in NYC. Background-checked, GPS-tracked, photo updates every walk. Book a free meet & greet." />
     <meta property="og:image" content="https://nyctailblazers.com/tailblazers-logo.png" />
-    <meta property="og:url" content="https://nyctailblazers.com" />
+    <meta property="og:url" content="https://nyctailblazers.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="NYC Tailblazers" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -117,8 +117,6 @@
         .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 18px 44px -10px rgba(255,201,40,0.65); }
         .btn-ghost { background: transparent; color: var(--cream); border: 1.5px solid rgba(246,240,226,0.28); }
         .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); }
-        .btn-green { background: var(--green); color: #f6f0e2; }
-        .btn-green:hover { background: #4d6d43; transform: translateY(-3px); }
 
         /* ── SECTION SCAFFOLD ── */
         section { position: relative; }
@@ -162,11 +160,11 @@
         .nav-cta { background: var(--gold); color: #14120d !important; padding: 10px 22px; border-radius: 100px; font-weight: 700 !important; transition: transform .2s; }
         .nav-cta:hover { transform: translateY(-2px); }
         .nav-social { display: flex; gap: 14px; }
-        .nav-social a { color: var(--muted-2); display: flex; transition: color .2s; }
+        .nav-social a { color: var(--muted-2); display: flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; transition: color .2s; }
         .nav-social a:hover { color: var(--gold); }
         .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
         .hamburger span { width: 26px; height: 2px; background: var(--cream); border-radius: 2px; transition: .3s; }
-        @media (max-width: 940px) {
+        @media (max-width: 1050px) {
             .hamburger { display: flex; }
             .nav-links { position: absolute; top: 74px; left: 0; right: 0; background: rgba(20,18,13,0.98); backdrop-filter: blur(14px); flex-direction: column; align-items: stretch; gap: 4px; padding: 16px 24px 24px; border-bottom: 1px solid var(--line); transform: translateY(-8px); opacity: 0; visibility: hidden; pointer-events: none; transition: .3s; }
             .nav-links.open { transform: none; opacity: 1; visibility: visible; pointer-events: auto; }
@@ -321,9 +319,9 @@
         .trust-badges { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
         .tbadge { text-align: center; padding: 24px 16px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,0.015); }
         .tbadge .ic { font-size: 1.8rem; margin-bottom: 10px; }
-        .tbadge h4 { font-family: var(--ui); font-size: 0.9rem; color: var(--gold); margin-bottom: 4px; }
+        .tbadge h3 { font-family: var(--ui); font-size: 0.9rem; color: var(--gold); margin-bottom: 4px; }
         .tbadge p { font-size: 0.76rem; color: var(--muted); }
-        @media (max-width: 900px) { .trust-badges { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 900px) { .trust-badges { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); } }
 
         /* ── MISSION ── */
         .mission { text-align: center; position: relative; overflow: hidden; }
@@ -403,7 +401,7 @@
         footer { background: #100e09; border-top: 1px solid var(--line); padding: 60px 0 28px; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr; gap: 36px; margin-bottom: 36px; }
         .footer-brand p { color: var(--muted); font-size: 0.9rem; margin-top: 14px; max-width: 300px; }
-        footer h4 { font-family: var(--ui); color: var(--cream); font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+        footer h3 { font-family: var(--ui); color: var(--cream); font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
         footer a { color: var(--muted); text-decoration: none; display: block; margin-bottom: 8px; font-size: 0.9rem; transition: color .2s; }
         footer a:hover { color: var(--gold); }
         .footer-bottom { border-top: 1px solid var(--line); padding-top: 22px; text-align: center; color: var(--muted-2); font-size: 0.82rem; }
@@ -418,11 +416,18 @@
             .sticky-book { display: block; position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 300; }
             .sticky-book a { display: flex; justify-content: center; width: 100%; box-shadow: 0 12px 34px -8px rgba(0,0,0,0.7); }
         }
+
+        /* ── SMALL-PHONE: reclaim width for the Calendly widget ── */
+        @media (max-width: 480px) {
+            .container { padding: 0 14px; }
+            .book-box { padding: 22px 16px; }
+        }
     </style>
 </head>
 <body>
+    <noscript><style>.reveal{opacity:1!important;transform:none!important;transition:none!important;}</style></noscript>
 
-    <a href="#services" class="skip-link">Skip to content</a>
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <!-- ANNOUNCE -->
     <div class="announce">
@@ -437,7 +442,7 @@
                     <img src="tailblazers-logo.png" alt="NYC Tailblazers logo">
                     <span class="brand-name">NYC Tailblazers<small>Walks That Change Lives</small></span>
                 </a>
-                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="var n=document.getElementById('navlinks');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+                <button class="hamburger" aria-label="Toggle menu" aria-controls="navlinks" aria-expanded="false" onclick="var n=document.getElementById('navlinks');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">
                     <span></span><span></span><span></span>
                 </button>
                 <div class="nav-links" id="navlinks">
@@ -457,6 +462,7 @@
         </div>
     </header>
 
+    <main id="main">
     <!-- HERO -->
     <section class="hero" id="top">
         <div class="container">
@@ -695,11 +701,11 @@
                 <h2>Care, consistency, transparency.</h2>
             </div>
             <div class="trust-badges">
-                <div class="tbadge reveal"><div class="ic">🔍</div><h4>Background Checked</h4><p>Every walker fully verified before their first walk</p></div>
-                <div class="tbadge reveal d1"><div class="ic">📍</div><h4>GPS Tracked</h4><p>Every walk is logged so you know where your dog went</p></div>
-                <div class="tbadge reveal d2"><div class="ic">📸</div><h4>Real Updates</h4><p>Photo + message after every single visit — no exceptions</p></div>
-                <div class="tbadge reveal d3"><div class="ic">🤝</div><h4>Free Meet &amp; Greet</h4><p>We always meet before the first booking</p></div>
-                <div class="tbadge reveal d4"><div class="ic">❤️</div><h4>Mission-Backed</h4><p>Revenue supports service dogs for veterans</p></div>
+                <div class="tbadge reveal"><div class="ic">🔍</div><h3>Background Checked</h3><p>Every walker fully verified before their first walk</p></div>
+                <div class="tbadge reveal d1"><div class="ic">📍</div><h3>GPS Tracked</h3><p>Every walk is logged so you know where your dog went</p></div>
+                <div class="tbadge reveal d2"><div class="ic">📸</div><h3>Real Updates</h3><p>Photo + message after every single visit — no exceptions</p></div>
+                <div class="tbadge reveal d3"><div class="ic">🤝</div><h3>Free Meet &amp; Greet</h3><p>We always meet before the first booking</p></div>
+                <div class="tbadge reveal d4"><div class="ic">❤️</div><h3>Mission-Backed</h3><p>Revenue supports service dogs for veterans</p></div>
             </div>
         </div>
     </section>
@@ -728,7 +734,7 @@
                     <a href="web-design.html" class="btn btn-gold">See Our Web Work →</a>
                 </div>
                 <div class="wd-logos reveal d2">
-                    <span class="wd-chip">Gentleman Brand Mgmt</span>
+                    <!-- TODO re-enable when deployed: <span class="wd-chip">Gentleman Brand Mgmt</span> -->
                     <span class="wd-chip">Clarity Coaching</span>
                     <span class="wd-chip">Luxe &amp; Co Hair</span>
                     <span class="wd-chip">Peak Pro HVAC</span>
@@ -868,6 +874,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- FOOTER -->
     <footer>
         <div class="container">
@@ -877,28 +885,28 @@
                     <p>Premium, mission-driven dog walking and pet care in NYC. Blaze new trails, wag new tails. 🐾</p>
                 </div>
                 <div>
-                    <h4>Services</h4>
+                    <h3>Services</h3>
                     <a href="#services">Dog Walking</a>
                     <a href="#services">Drop-In Visits</a>
                     <a href="#services">Puppy Support</a>
                     <a href="#pricing">Pricing</a>
                 </div>
                 <div>
-                    <h4>Company</h4>
+                    <h3>Company</h3>
                     <a href="#mission">Our Mission</a>
                     <a href="#faq">FAQ</a>
                     <a href="#support">Donate</a>
                     <a href="mailto:info@nyctailblazers.com">Contact</a>
                 </div>
                 <div>
-                    <h4>Community</h4>
+                    <h3>Community</h3>
                     <a href="petition.html">🐾 Dog Park Petition</a>
                     <a href="dogrun-proposal.html">Dog Run Proposal</a>
                     <a href="web-design.html">Web Design</a>
                 </div>
                 <div>
-                    <h4>Our Web Work</h4>
-                    <a href="https://gentlemanbrandmanagement.nyctailblazers.com" target="_blank" rel="noopener">Gentleman Brand Mgmt</a>
+                    <h3>Our Web Work</h3>
+                    <!-- TODO re-enable when gentlemanbrandmanagement.nyctailblazers.com is deployed: <a href="https://gentlemanbrandmanagement.nyctailblazers.com" target="_blank" rel="noopener">Gentleman Brand Mgmt</a> -->
                     <a href="https://claritycoachingpro.nyctailblazers.com" target="_blank" rel="noopener">Clarity Coaching Pro</a>
                     <a href="https://luxeandcohair.nyctailblazers.com" target="_blank" rel="noopener">Luxe &amp; Co Hair</a>
                     <a href="https://peakprohvac.nyctailblazers.com" target="_blank" rel="noopener">Peak Pro HVAC</a>

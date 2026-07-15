@@ -23,14 +23,21 @@ Built 2026-07-15 by claude-nyc-main. Direction chosen by Markus: **bold & cinema
 - **NEW: LocalBusiness + ProfessionalService SEO schema** (JSON-LD) for local search.
 - Correct phone everywhere: **(347) 260-8305**.
 
-## ⚠️ Swap these BEFORE relying on the live site
-1. **Photos** — the hero + gallery use tasteful *stock* placeholders. Replace with your own dog photos (label says "placeholder"). Showing stock as "our pack" long-term is misleading — swap them.
-2. **Formspree endpoint** — form still posts to `formspree.io/f/xwkgvpbz` (carried from old site, unconfirmed). Create a form at formspree.io/new and paste the real ID.
-3. **Calendly slug** — uses `calendly.com/nyctailblazers` (unconfirmed). Confirm the real scheduling link.
+## ✅ Resolved during the 2026-07-15 finishing pass (claude-nyc-owner)
+- **Formspree endpoint** — `formspree.io/f/xwkgvpbz` is **byte-identical to the live index.html** → it IS the real production form. No swap needed.
+- **Calendly slug** — `calendly.com/nyctailblazers` is **identical to live** → real. No swap needed.
+- **Accessibility** — added `<main>` landmark + fixed skip-link target (both pages), heading order (h4→h3, zero skipped levels), `<noscript>` reveal fallback (content visible with JS off), 32px social tap targets, `aria-controls` on the menu button.
+- **Responsive** — aligned both pages to a single 1050px nav breakpoint (kills the 941–1050px nav wrap), added a ≤480px rule so the Calendly widget keeps usable width on small phones, fixed the trust-badge orphan-grid.
+- **SEO** — trimmed both meta descriptions to ~155–160 chars, fixed og:url trailing slash, added a PostalAddress to the web-design JSON-LD.
+- **Consistency** — web-design.html now has the same header social icons + a 3-column footer matching the homepage.
+- **Dead link** — `gentlemanbrandmanagement.nyctailblazers.com` is **NXDOMAIN**. Its 3 references (footer link, teaser chip, work card) are **commented out** (not deleted) with a `TODO re-enable when deployed` note. The other 5 client sites all return HTTP 200.
+- Verified in Chrome (desktop 1280 + mobile): no console errors, no horizontal overflow, all sections render.
 
-## Minor polish left (optional)
-- Social share image is the square logo (fine, but a 1200×630 banner would preview better).
-- A couple of `<h4>` section labels (footer/trust badges) could be re-tagged for stricter heading order.
+## ⚠️ Still needs a Markus decision BEFORE full launch
+1. **Photos** — hero + "The Pack" gallery use tasteful *stock* placeholders. The gallery still carries a visible "(Placeholder photos…)" note that should not ship to real visitors. Send real dog photos, or decide to keep stock (note removed) / hide the gallery.
+2. **Testimonials + "5★ Average Rating"** — 3 named reviews (Jessica R./Marcus T./Aisha P.) + the rating. NOTE: these are **already on the current live site**, so promoting adds no new risk — but if they aren't from real customers, address on both.
+3. **"6+ Sites Launched"** (web-design.html, NEW claim) — some linked demos have placeholder 555 numbers; consider "6+ Sites Built" or a real client count.
+4. **OG social image** — still the square logo. A 1200×630 banner previews better (offered — can generate on request).
 
 ## How to promote to live (when approved)
 ```

@@ -1,5 +1,6 @@
-Working on: nyctailblazers.com redo — cinematic redesign (dark+gold) + new "We Build Websites" tab
-Last action: Built redesign.html + web-design.html as CANDIDATES (live index.html untouched), QA'd in Chrome desktop+mobile, ran 6-lens review workflow, applied all fixes. Pushed phone-number fix (347) 260-8305 to LIVE (88761b1).
-Next step: Wait for Markus to approve the redesign look. To promote: follow "How to promote to live" in REDESIGN-NOTES.md (archive index.html, mv redesign.html index.html, add web-design.html, commit, push main). BEFORE full launch, swap: real photos, Formspree ID (xwkgvpbz placeholder), Calendly slug.
-Key files: redesign.html, web-design.html, REDESIGN-NOTES.md, index.html (LIVE, only phone changed), _archive/original-site-the-beginning/
-Blockers: none. Pending confirmations from Markus: (1) approve cinematic look? (2) real Formspree form ID, (3) confirm Calendly slug, (4) real dog photos.
+Working on: nyctailblazers.com cinematic redesign — finishing pass after main hit a rate limit (branch redesign-cinematic)
+Last action: Ran 6-lens adversarial QA workflow (37 confirmed findings), applied 24 autonomous fixes to redesign.html + web-design.html, verified in Chrome (desktop+mobile), committed + pushed to redesign-cinematic. LIVE index.html still untouched.
+Next step: Waiting on Markus's 4 decisions (asked via AskUserQuestion): (1) real dog photos vs keep/hide gallery, (2) testimonials+5★ (already on live) keep/replace/remove, (3) "6+ Sites Launched" wording, (4) promote to live now or hold. Once answered: apply content choices, optionally generate 1200×630 OG banner, then (if approved) promote — archive index.html, `mv redesign.html index.html`, add web-design.html, commit, push origin main (see "How to promote" in REDESIGN-NOTES.md).
+Key files: redesign.html, web-design.html, REDESIGN-NOTES.md, index.html (LIVE, unchanged except phone fix)
+Verified facts: Formspree id xwkgvpbz + Calendly calendly.com/nyctailblazers are REAL (identical to live). gentlemanbrandmanagement subdomain = NXDOMAIN → its 3 links commented out; other 5 client sites HTTP 200.
+Blockers: none — awaiting the 4 content/launch decisions from Markus.
