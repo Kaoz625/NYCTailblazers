@@ -1,0 +1,24 @@
+# NYC Tailblazers — GitHub Pages (Jekyll passthrough).
+# Pages are plain HTML with no YAML front matter, so Jekyll copies them verbatim.
+# This file's only job is to keep dev docs + unrelated sub-projects OUT of the
+# public site. Dotfiles/dot-dirs (.claude, .omc, .git, .replit-tasks) are always
+# ignored by Jekyll automatically; underscore items are listed here explicitly.
+exclude:
+  - README.md
+  - REDESIGN-NOTES.md
+  - _archive
+  - _headers
+  - node_modules
+  - "**/node_modules"
+  - portfolio
+  - portfolio-site
+  - nyctailblazers-modern
+  - kaoz625.github.io
+  - hermes3d
+  - stocks
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - .claude
+  - .omc
+  - .replit-tasks
