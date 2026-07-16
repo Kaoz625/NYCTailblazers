@@ -1,17 +1,17 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Design by NYC Tailblazers | Sites for NYC Businesses</title>
-  <meta name="description" content="Websites for NYC small businesses, built by NYC Tailblazers. Fast, mobile-first sites for local entrepreneurs.">
+  <title>3D Printing | NYC Tailblazers</title>
+  <meta name="description" content="Custom 3D printing in NYC. Browse what we make, buy a piece you like, or send us your idea and reference images and we'll print it for you.">
   <link rel="icon" href="tailblazers-logo.png">
-  <link rel="canonical" href="https://nyctailblazers.com/web-design.html">
-  <meta property="og:title" content="Web Design by NYC Tailblazers | Sites for NYC Businesses">
-  <meta property="og:description" content="Websites for NYC small businesses, built by NYC Tailblazers. Fast, mobile-first sites for local entrepreneurs.">
-  <meta property="og:url" content="https://nyctailblazers.com/web-design.html">
-  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://nyctailblazers.com/3d-printing.html">
+  <meta property="og:title" content="3D Printing | NYC Tailblazers">
+  <meta property="og:description" content="Custom 3D printing in NYC. Browse what we make, buy a piece you like, or send us your idea and reference images and we'll print it for you.">
+  <meta property="og:url" content="https://nyctailblazers.com/3d-printing.html">
   <meta property="og:image" content="https://nyctailblazers.com/tailblazers-logo.png">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Web Design by NYC Tailblazers | Sites for NYC Businesses">
-  <meta name="twitter:description" content="Websites for NYC small businesses, built by NYC Tailblazers. Fast, mobile-first sites for local entrepreneurs.">
+  <meta name="twitter:title" content="3D Printing | NYC Tailblazers">
+  <meta name="twitter:description" content="Custom 3D printing in NYC. Browse what we make, buy a piece you like, or send us your idea and reference images and we'll print it for you.">
   <meta name="twitter:image" content="https://nyctailblazers.com/tailblazers-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -146,22 +146,19 @@
   @media (max-width:520px){.footer-grid{grid-template-columns:1fr;}}
   </style>
   <style>
-    /* page-specific: web-design.html */
-    .work-thumb{aspect-ratio:16/10;border-radius:14px 14px 0 0;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;margin:-32px -28px 20px;}
-    .work-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05),rgba(0,0,0,0.55));}
-    .work-thumb span{position:relative;z-index:2;font-family:var(--display);font-size:1.5rem;font-weight:600;color:rgba(255,255,255,0.94);text-align:center;padding:0 18px;letter-spacing:-0.01em;text-shadow:0 4px 18px rgba(0,0,0,0.4);}
-    .work-card{text-decoration:none;display:block;}
-    .work-card .visit{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--gold);font-weight:600;font-size:0.88rem;}
-    .work-thumb.g1{background:linear-gradient(135deg,#3a0f2e,#7a1f4d,#c94f6e);}
-    .work-thumb.g2{background:linear-gradient(135deg,#0b3a2e,#0b5e46,#1f7a5c);}
-    .work-thumb.g3{background:linear-gradient(135deg,#3a2a0b,#7a5a1f,#c9974f);}
-    .work-thumb.g4{background:linear-gradient(135deg,#0b1e3a,#1f4d7a,#4f8ec9);}
-    .work-thumb.g5{background:linear-gradient(135deg,#2a0b3a,#5a1f7a,#974fc9);}
-    .work-thumb.g6{background:linear-gradient(135deg,#3a1a0b,#7a3f1f,#c9784f);}
-    .work-thumb.g7{background:linear-gradient(135deg,#0b2e3a,#1f5e6f,#4fb0c9);}
-    .card-soon{opacity:0.5;position:relative;}
-    .pill-soon{display:inline-flex;align-items:center;gap:6px;background:rgba(246,240,226,0.08);border:1px solid rgba(246,240,226,0.22);color:var(--muted);padding:5px 14px;border-radius:100px;font-size:0.74rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:16px;}
-    .step-num{font-family:var(--display);font-size:0.85rem;font-weight:700;color:var(--gold);letter-spacing:1px;margin-bottom:10px;display:block;}
+    /* 3d-printing.html page-specific */
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+    @media (max-width:760px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+    @media (max-width:480px){.gallery-grid{grid-template-columns:1fr;}}
+    .gallery-tile{aspect-ratio:1/1;border-radius:22px;border:1px solid var(--line);position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:20px;transition:transform .3s,border-color .3s;}
+    .gallery-tile:hover{transform:translateY(-6px);border-color:rgba(255,201,40,0.4);}
+    .gallery-tile::before{content:"";position:absolute;inset:0;background:radial-gradient(65% 65% at 26% 18%,rgba(255,201,40,0.20),transparent 65%);pointer-events:none;}
+    .gallery-tile.grad-a{background:linear-gradient(150deg,var(--green) 0%,var(--green-deep) 78%);}
+    .gallery-tile.grad-b{background:linear-gradient(150deg,var(--bg-3) 0%,#0c0a06 82%);}
+    .gallery-tile .g-emoji{font-size:2.6rem;position:relative;z-index:1;}
+    .gallery-tile .g-label{font-family:var(--display);font-weight:600;font-size:1.14rem;color:var(--cream);position:relative;z-index:1;}
+    .shop-note{max-width:760px;color:var(--muted);font-size:0.95rem;background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin-top:24px;}
+    .shop-note strong{color:var(--cream);}
   </style>
 </head><body>
   <noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
@@ -193,188 +190,132 @@
   </header>
   <main id="main">
 
-  <section class="page-hero center">
-    <div class="container">
-      <div class="inner reveal">
-        <span class="badge"><span aria-hidden="true"></span> Beyond the Leash</span>
-        <h1>We build websites that <span class="italic-gold">bring in customers.</span></h1>
-        <p class="lede" style="margin-inline:auto;">We started out walking dogs. Now we build websites too, fast, mobile-first sites for small businesses across NYC.</p>
-        <div class="cta-btns" style="margin-top:30px;">
-          <a href="#work" class="btn btn-gold">See Our Work ↓</a>
-          <a href="#contact" class="btn btn-ghost">Get a Free Quote</a>
+    <section class="page-hero center">
+      <div class="container inner">
+        <div class="reveal">
+          <span class="badge emerald">Custom 3D Printing</span>
         </div>
-        <div class="metrics center">
-          <div class="metric"><strong>8+</strong><span>Sites Built</span></div>
-          <div class="metric"><strong>&lt;1s</strong><span>Load Times</span></div>
-          <div class="metric"><strong>100%</strong><span>Mobile-First</span></div>
+        <h1 class="reveal d1">Turn Your Ideas Into Real Objects</h1>
+        <p class="reveal d2">We design and 3D-print custom objects right here in NYC. Browse what's possible, then either grab something you like from our shop, or send us your idea and reference images and we'll print it for you.</p>
+        <div class="reveal d3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px;">
+          <a href="mailto:info@nyctailblazers.com?subject=Custom%203D%20Print%20Request&body=Tell%20us%20what%20you%27d%20like%20printed%20(please%20attach%20any%20reference%20images)%3A%0A%0A" class="btn btn-gold">Start a Custom Print →</a>
+          <a href="#gallery" class="btn btn-ghost">See What's Possible ↓</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="pad alt" id="work">
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow center">Our Work</span>
-        <h2>Sites we've built for real NYC businesses.</h2>
-        <p>A growing portfolio of live client sites across NYC. We designed and built every one.</p>
-      </div>
-      <div class="card-grid">
-
-        <a class="card work-card reveal" href="https://nzurient.com" target="_blank" rel="noopener">
-          <div class="work-thumb g1"><span>nzurient</span></div>
-          <span class="eyebrow" style="margin-bottom:6px;">Nightlife &amp; Events</span>
-          <h3>nzurient</h3>
-          <p>A bold events + membership brand with full CMS, ticketing, and a members' app.</p>
-          <span class="visit">Visit site ↗</span>
-        </a>
-
-        <a class="card work-card reveal d1" href="https://kaoz625.github.io/gentlemanbrandmanagement" target="_blank" rel="noopener">
-          <div class="work-thumb g2"><span>Gentleman Brand Management</span></div>
-          <span class="eyebrow" style="margin-bottom:6px;">Brand Consulting</span>
-          <h3>Gentleman Brand Management</h3>
-          <p>Polished, veteran-owned brand-management consultancy site.</p>
-          <span class="visit">Visit site ↗</span>
-        </a>
-
-        <a class="card work-card reveal d2" href="https://titanrenovationsnyc.com" target="_blank" rel="noopener">
-          <div class="work-thumb g3"><span>Titan Renovations</span></div>
-          <span class="eyebrow" style="margin-bottom:6px;">Home Renovation</span>
-          <h3>Titan Renovations</h3>
-          <p>Lead-generating site for a NYC renovation &amp; construction contractor.</p>
-          <span class="visit">Visit site ↗</span>
-        </a>
-
-        <a class="card work-card reveal" href="https://cpaintingservices.nyctailblazers.com" target="_blank" rel="noopener">
-          <div class="work-thumb g4"><span>C Painting Services</span></div>
-          <span class="eyebrow" style="margin-bottom:6px;">Painting</span>
-          <h3>C Painting Services</h3>
-          <p>Bilingual site for a NYC painting contractor.</p>
-          <span class="visit">Visit site ↗</span>
-        </a>
-
-        <a class="card work-card reveal d1" href="https://bartendersinfronteria.nyctailblazers.com" target="_blank" rel="noopener">
-          <div class="work-thumb g5"><span>Bartenders in Frontera</span></div>
-          <span class="eyebrow" style="margin-bottom:6px;">Mobile Bartending</span>
-          <h3>Bartenders in Frontera</h3>
-          <p>A single-page site for a NYC mobile bartending service.</p>
-          <span class="visit">Visit site ↗</span>
-        </a>
-
-        <a class="card work-card reveal d2" href="https://spiritile.com" target="_blank" rel="noopener">
-          <div class="work-thumb g6"><span>Spiritile</span></div>
-          <span class="eyebrow" style="margin-bottom:6px;">Tile &amp; Masonry</span>
-          <h3>Spiritile</h3>
-          <p>Bilingual portfolio site for a tile installation &amp; masonry pro.</p>
-          <span class="visit">Visit site ↗</span>
-        </a>
-
-        <a class="card work-card reveal" href="https://lacubanaprints.nyctailblazers.com" target="_blank" rel="noopener">
-          <div class="work-thumb g7"><span>La Cubana Prints</span></div>
-          <span class="eyebrow" style="margin-bottom:6px;">E-commerce</span>
-          <h3>La Cubana Prints</h3>
-          <p>Custom DTF prints &amp; sneakers store with self-serve admin.</p>
-          <span class="visit">Visit site ↗</span>
-        </a>
-
-        <div class="card card-soon reveal d1">
-          <span class="pill-soon">Coming soon</span>
-          <span class="eyebrow" style="margin-bottom:6px;">Restaurant</span>
-          <h3>AJ's Pizzeria</h3>
-          <p>A 50+ year Brooklyn pizzeria, redesign in progress.</p>
+    <section class="pad alt">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow center">Two Paths</span>
+          <h2>Two ways to get a print</h2>
+          <p>Whether you want something ready now or something made just for you, there's a path that fits.</p>
         </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="pad" id="process">
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow center">How It Works</span>
-        <h2>From idea to launch.</h2>
-        <p>A simple, honest process. No jargon, no surprises.</p>
-      </div>
-      <div class="card-grid" style="grid-template-columns:repeat(4,1fr);">
-        <div class="card reveal">
-          <span class="step-num">01</span>
-          <h3>Discover</h3>
-          <p>We learn your business, your customers, and what you actually need a website to do.</p>
-        </div>
-        <div class="card reveal d1">
-          <span class="step-num">02</span>
-          <h3>Design</h3>
-          <p>A custom look built around your brand, not a cookie-cutter template.</p>
-        </div>
-        <div class="card reveal d2">
-          <span class="step-num">03</span>
-          <h3>Build</h3>
-          <p>Clean, mobile-first code that loads fast and works everywhere.</p>
-        </div>
-        <div class="card reveal d3">
-          <span class="step-num">04</span>
-          <h3>Launch</h3>
-          <p>We ship it, connect your domain, and stick around to make sure it keeps working.</p>
+        <div class="card-grid two">
+          <div class="card reveal d1">
+            <div class="ic" aria-hidden="true">🛍️</div>
+            <h3>Shop Ready-Made</h3>
+            <p>Browse and buy pieces we've already designed and printed. Full checkout is on its way. For now, sign up to be notified the moment it opens.</p>
+            <p style="margin-top:16px;"><a href="#shop" class="italic-gold" style="text-decoration:underline;">Preview the shop →</a></p>
+          </div>
+          <div class="card reveal d2">
+            <div class="ic" aria-hidden="true">✏️</div>
+            <h3>Commission a Custom Piece</h3>
+            <p>Send your idea and any reference images, and we'll design, quote, and print something made specifically for you.</p>
+            <p style="margin-top:16px;"><a href="mailto:info@nyctailblazers.com?subject=Custom%203D%20Print%20Request&body=Tell%20us%20what%20you%27d%20like%20printed%20(please%20attach%20any%20reference%20images)%3A%0A%0A" class="italic-gold" style="text-decoration:underline;">Start your commission →</a></p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="pad alt" id="offer">
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow center">What You Get</span>
-        <h2>Everything a small business needs online.</h2>
-        <p>No bloat, no add-ons you don't need, just what helps a local business get customers.</p>
-      </div>
-      <div class="card-grid">
-        <div class="card reveal">
-          <div class="ic" aria-hidden="true">🎨</div>
-          <h3>Custom Design</h3>
-          <p>A site built around your brand, not a generic template everyone else is using.</p>
+    <section class="pad" id="gallery">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow center">What We Print</span>
+          <h2>What's possible</h2>
+          <p>Categories we print. A photo gallery of our own work is coming soon.</p>
         </div>
-        <div class="card reveal d1">
-          <div class="ic" aria-hidden="true">⚡</div>
-          <h3>Fast &amp; Secure</h3>
-          <p>Lightweight code, quick load times, and HTTPS by default.</p>
-        </div>
-        <div class="card reveal d2">
-          <div class="ic" aria-hidden="true">📱</div>
-          <h3>Mobile-First</h3>
-          <p>Most of your customers are on their phones. Your site is built for that first.</p>
-        </div>
-        <div class="card reveal">
-          <div class="ic" aria-hidden="true">📅</div>
-          <h3>Bookings &amp; Forms</h3>
-          <p>Let customers reach you, book you, or ask questions without picking up the phone.</p>
-        </div>
-        <div class="card reveal d1">
-          <div class="ic" aria-hidden="true">📍</div>
-          <h3>Local SEO</h3>
-          <p>Built so NYC customers searching for what you do can find you.</p>
-        </div>
-        <div class="card reveal d2">
-          <div class="ic" aria-hidden="true">🤝</div>
-          <h3>Real Support</h3>
-          <p>A real person to call when something needs updating, not a ticket queue.</p>
+        <div class="gallery-grid">
+          <div class="gallery-tile grad-a reveal d1">
+            <span class="g-emoji" aria-hidden="true">🧩</span>
+            <span class="g-label">Figurines &amp; Models</span>
+          </div>
+          <div class="gallery-tile grad-b reveal d2">
+            <span class="g-emoji" aria-hidden="true">🖨️</span>
+            <span class="g-label">Home &amp; Decor</span>
+          </div>
+          <div class="gallery-tile grad-a reveal d3">
+            <span class="g-emoji" aria-hidden="true">🧩</span>
+            <span class="g-label">Replacement Parts</span>
+          </div>
+          <div class="gallery-tile grad-b reveal d1">
+            <span class="g-emoji" aria-hidden="true">🖨️</span>
+            <span class="g-label">Prototypes</span>
+          </div>
+          <div class="gallery-tile grad-a reveal d2">
+            <span class="g-emoji" aria-hidden="true">🧩</span>
+            <span class="g-label">Gifts &amp; Keepsakes</span>
+          </div>
+          <div class="gallery-tile grad-b reveal d3">
+            <span class="g-emoji" aria-hidden="true">🖨️</span>
+            <span class="g-label">Cosplay &amp; Props</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="cta-band pad" id="contact">
-    <div class="container">
-      <div class="cta-inner reveal">
-        <span class="eyebrow center">Get Started</span>
-        <h2>Let's build your site.</h2>
-        <p>Tell us about your business and what you need, and we'll put together a plan and a quote. No pressure.</p>
+    <section class="pad alt" id="shop">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Coming Soon</span>
+          <h2>The Shop</h2>
+        </div>
+        <p class="lede reveal d1">We're building an online shop where you'll be able to browse and buy ready-made pieces directly, without the back-and-forth. It isn't open yet, but it's coming.</p>
+        <div class="reveal d2" style="margin-top:28px;">
+          <a href="mailto:info@nyctailblazers.com?subject=3D%20Print%20Shop%20Waitlist" class="btn btn-gold">Notify Me When the Shop Opens</a>
+        </div>
+        <p class="shop-note reveal d3"><strong>Need something now?</strong> Skip the wait. Send us your idea and reference images and we'll get started on a custom piece today.</p>
+      </div>
+    </section>
+
+    <section class="pad">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow center">The Process</span>
+          <h2>How a custom print works</h2>
+          <p>Three simple steps from idea to object in hand.</p>
+        </div>
+        <div class="card-grid">
+          <div class="card reveal d1">
+            <div class="ic" aria-hidden="true">💡</div>
+            <h3>Send Your Idea + Images</h3>
+            <p>Tell us what you want made and attach any reference photos or sketches you have (the more detail, the better).</p>
+          </div>
+          <div class="card reveal d2">
+            <div class="ic" aria-hidden="true">📐</div>
+            <h3>We Design &amp; Quote</h3>
+            <p>We turn your idea into a printable design and give you a clear quote before anything goes to print.</p>
+          </div>
+          <div class="card reveal d3">
+            <div class="ic" aria-hidden="true">🖨️</div>
+            <h3>We Print &amp; Hand It Over</h3>
+            <p>Once you approve the design, we print your piece right here in NYC and get it to you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band pad reveal">
+      <div class="container cta-inner">
+        <span class="eyebrow center">Let's Build It</span>
+        <h2>Have something in mind?</h2>
+        <p>Send us your idea and reference images, or reach out directly. We'll help you figure out the rest.</p>
         <div class="cta-btns">
-          <a href="mailto:info@nyctailblazers.com?subject=Website%20Quote%20Request" class="btn btn-gold">Email for a Quote</a>
+          <a href="mailto:info@nyctailblazers.com?subject=Custom%203D%20Print%20Request&body=Tell%20us%20what%20you%27d%20like%20printed%20(please%20attach%20any%20reference%20images)%3A%0A%0A" class="btn btn-gold">Start a Custom Print →</a>
           <a href="sms:+13472608305" class="btn btn-ghost">Text (347) 260-8305</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   </main>
 
@@ -383,7 +324,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand"><img src="tailblazers-logo.png" alt="NYC Tailblazers" style="width:44px;height:44px;border-radius:10px;"><span class="brand-name">NYC Tailblazers</span></a>
-          <p>NYC Tailblazers is a family of ventures with one mission: veterans get service dogs trained by at-risk youth. Blaze new trails, wag new tails. 🐾</p>
+          <p>NYC Tailblazers is a family of ventures helping veterans through service dogs trained by at-risk youth. Blaze new trails, wag new tails. 🐾</p>
         </div>
         <div>
           <h3>Ventures</h3>
