@@ -1,20 +1,22 @@
-Working on: nyctailblazers.com cinematic redesign — DONE, LIVE, and VERIFIED.
-Last action: Promoted redesign to live, fixed a 2-month-old broken Pages deploy, and fixed a public-exposure issue from .nojekyll. All verified against http://www.nyctailblazers.com/.
-Status: ✅ COMPLETE. main @ 80afbc7. Pages build = success. Live homepage = cinematic redesign; web-design.html live; phone (347) 260-8305 now actually live for the first time.
+Working on: nyctailblazers.com multi-venture expansion — v1 built + verified, STAGED on branch redesign-cinematic (commit 2e9afb3). NOT live yet (awaiting Markus review, per his choice).
+Live right now (main): the earlier cinematic redesign + Venmo @kaoz625 fix (89f4f4f). Everything below is on the branch only.
 
-What shipped (in order):
-1. 959092c — promote: redesign.html → index.html (cinematic homepage) + web-design.html live. Old homepage archived to _archive/superseded-20260715-index.html. Owner decisions applied: stock gallery photos kept (placeholder note removed), reviews+5★ left as-is (already on live), "6+ Sites Built".
-   (Preceded by 3af8de2 = 24 QA fixes, cefc1e1 = content edits.)
-2. 54cad4f — fix broken Pages deploy: removed 2 phantom submodule gitlinks (portfolio/node_modules/.cache/gh-pages/... and 'stocks') that failed EVERY build since ~May 9 ("No url found for submodule path ... in .gitmodules"). Added .gitignore.
-3. 80afbc7 — replaced .nojekyll with Jekyll + _config.yml exclude, because .nojekyll had published internal files (/REDESIGN-NOTES.md, /.claude/handoff.md were HTTP 200). Now those return 404; site pages still 200.
+What v1 adds (staged):
+- Homepage: leads with mission/about-us greeting (veterans + at-risk youth + service dogs) + 7-venture grid; new nav + multi-venture footer. Brand green -> royal emerald-jade (#0b5e46 / --green-lit #45cf9a).
+- New pages: dog-training.html, personal-training.html (coming-soon stubs), vendor-resale.html (NYS Directive 4911 packages, launching soon), jiggs-and-glo.html (Book One, request CTA), 3d-printing.html (shop coming-soon + custom-commission via reference images), dog-run.html (rebuilt petition: sectioned-run case, proposal SUMMARY only, Supabase sign form).
+- web-design.html: showcase = 7 live clients (nzurient neutral label, GBM via github.io) + AJ's coming-soon.
+- petition.html + dogrun-proposal.html -> redirect to dog-run.html (full proposal removed from public site).
+- Ran a de-slop pass on all 8 pages (removed AI-writing tells).
+- Verified in Chrome: no overflow, single h1 each, consistent nav/footer, all internal links resolve.
 
-Verified live: /, /web-design.html, /petition.html, /dogrun-proposal.html all 200; cinematic title live; internal docs + node_modules + _archive all 404.
+NEEDS MARKUS:
+1. Review v1 (open the files locally — they Syncthing-sync to your Macs — or say the word and I promote to live).
+2. Petition DB: create a Supabase project + run _setup/signatures.sql + paste URL/anon key into dog-run.html CONFIG block (see _setup/PETITION-SETUP.md). Until then the form falls back to Formspree (xwkgvpbz).
+3. Real photos: homepage hero + "The Pack" gallery are still Unsplash stock. 3D-printing gallery + Jiggs cover are styled placeholders (no real art yet).
 
-Open follow-ups (NOT blocking; flagged to team / claude-nyc-tech):
-1. HTTPS cert broken: Pages reports bad_authz (ACME), expires 2026-07-26, https_enforced=false → site serves over HTTP. Needs domain/cert re-verification in repo Pages settings.
-2. portfolio/node_modules (~12.5k files) still tracked in git (now .gitignored + excluded from deploy, but still bloats the repo) — worth `git rm -r --cached`.
-3. Optional: generate a 1200×630 OG social image (currently square logo).
-4. When gentlemanbrandmanagement.nyctailblazers.com deploys, uncomment its 3 links (grep "TODO re-enable" in index.html + web-design.html).
-5. Other Kaoz625 Pages client sites may have the same phantom-gitlink deploy bug — worth auditing.
+TO PROMOTE (when Markus approves): merge/fast-forward redesign-cinematic -> main:
+  git push origin redesign-cinematic:main
+(Pages deploys from main/root; build is green since the phantom-submodule fix.)
 
+Other open follow-ups (pre-existing): HTTPS cert bad_authz on Pages (expires 2026-07-26, site on HTTP) -> claude-nyc-tech; portfolio/node_modules still git-tracked (gitignored now); other Kaoz625 Pages sites may share the phantom-gitlink deploy bug.
 Blockers: none.
