@@ -1,0 +1,11 @@
+# Dependencies & build artifacts — never track (they break Pages deploys)
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.cache/
+**/.cache/
+
+# OS cruft
+.DS_Store
+**/.DS_Store
