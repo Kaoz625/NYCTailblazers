@@ -9,3 +9,8 @@ dist/
 # OS cruft
 .DS_Store
 **/.DS_Store
+
+# Program documents — large scans/PDFs + curriculums. Distributed via Syncthing,
+# NOT git (the manual PDFs exceed GitHub's 100MB limit and aren't website content).
+PBB Training/
+Curriculum/

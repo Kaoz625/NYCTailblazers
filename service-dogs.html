@@ -1,17 +1,17 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dog Training | NYC Tailblazers</title>
-  <meta name="description" content="Coming soon: positive-reinforcement dog training rooted in structure and trust, from the same team raising service dogs for veterans.">
+  <title>Service &amp; Facility Dogs | NYC Tailblazers</title>
+  <meta name="description" content="At-risk youth and adults raise and train service dogs for veterans — dogs that go on to serve as facility dogs in schools, hospitals, and alongside first responders and police. Every dog is a battle buddy.">
   <link rel="icon" href="tailblazers-logo.png">
-  <link rel="canonical" href="https://nyctailblazers.com/dog-training.html">
-  <meta property="og:title" content="Dog Training | NYC Tailblazers">
-  <meta property="og:description" content="Coming soon: positive-reinforcement dog training rooted in structure and trust, from the same team raising service dogs for veterans.">
-  <meta property="og:url" content="https://nyctailblazers.com/dog-training.html">
+  <link rel="canonical" href="https://nyctailblazers.com/service-dogs.html">
+  <meta property="og:title" content="Service &amp; Facility Dogs | NYC Tailblazers">
+  <meta property="og:description" content="Service dogs for veterans, raised by the next generation — and facility dogs for schools, hospitals, first responders, and police. Every dog is a battle buddy.">
+  <meta property="og:url" content="https://nyctailblazers.com/service-dogs.html">
   <meta property="og:image" content="https://nyctailblazers.com/tailblazers-logo.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dog Training | NYC Tailblazers">
-  <meta name="twitter:description" content="Coming soon: positive-reinforcement dog training rooted in structure and trust, from the same team raising service dogs for veterans.">
+  <meta name="twitter:title" content="Service &amp; Facility Dogs | NYC Tailblazers">
+  <meta name="twitter:description" content="Service dogs for veterans, raised by the next generation — and facility dogs for schools, hospitals, first responders, and police.">
   <meta name="twitter:image" content="https://nyctailblazers.com/tailblazers-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -45,7 +45,7 @@
     .italic-gold{font-style:italic;color:var(--gold);font-weight:500;}
     .pad{padding:clamp(64px,9vw,130px) 0;}
     section{position:relative;}
-    .section-head{max-width:660px;margin-bottom:52px;}
+    .section-head{max-width:680px;margin-bottom:52px;}
     .section-head.center{margin-inline:auto;text-align:center;}
     .section-head h2{font-size:clamp(2rem,4.6vw,3.4rem);margin:16px 0 14px;}
     .section-head p{color:var(--muted);font-size:1.06rem;}
@@ -77,6 +77,7 @@
     .nav-links{display:flex;align-items:center;gap:26px;}
     .nav-links a{color:var(--muted);text-decoration:none;font-size:0.95rem;font-weight:500;transition:color .2s;}
     .nav-links a:hover{color:var(--cream);}
+    .nav-links a.active{color:var(--gold);}
     .nav-cta{background:var(--gold);color:#14120d !important;padding:10px 22px;border-radius:100px;font-weight:700 !important;transition:transform .2s;}
     .nav-cta:hover{transform:translateY(-2px);}
     .nav-social{display:flex;gap:14px;}
@@ -97,6 +98,7 @@
     .lede{max-width:760px;color:var(--muted);font-size:1.14rem;}
     .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
     .card-grid.two{grid-template-columns:repeat(2,1fr);}
+    .card-grid.four{grid-template-columns:repeat(4,1fr);}
     .card{background:var(--bg-2);border:1px solid var(--line);border-radius:20px;padding:32px 28px;transition:transform .3s,border-color .3s;}
     .card:hover{transform:translateY(-6px);border-color:rgba(255,201,40,0.4);}
     .card .ic{font-size:1.9rem;margin-bottom:14px;}
@@ -105,15 +107,17 @@
     .card ul{list-style:none;margin-top:12px;}
     .card li{font-size:0.9rem;color:var(--muted);padding:5px 0 5px 22px;position:relative;}
     .card li::before{content:"→";position:absolute;left:0;color:var(--gold);}
+    @media (max-width:1000px){.card-grid.four{grid-template-columns:1fr 1fr;}}
     @media (max-width:900px){.card-grid,.card-grid.two{grid-template-columns:1fr;}}
+    @media (max-width:560px){.card-grid.four{grid-template-columns:1fr;}}
 
     /* page hero (sub-pages) */
     .page-hero{position:relative;overflow:hidden;}
     .page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 55% at 78% 12%,rgba(255,201,40,0.14),transparent 60%),radial-gradient(50% 60% at 6% 92%,rgba(11,94,70,0.42),transparent 65%);pointer-events:none;}
-    .page-hero .inner{position:relative;z-index:2;max-width:820px;padding:clamp(56px,8vw,104px) 0 clamp(40px,5vw,64px);}
+    .page-hero .inner{position:relative;z-index:2;max-width:860px;padding:clamp(56px,8vw,104px) 0 clamp(40px,5vw,64px);}
     .page-hero.center .inner{margin:0 auto;text-align:center;}
     .page-hero h1{font-size:clamp(2.5rem,6vw,4.4rem);margin:18px 0 20px;}
-    .page-hero p{color:var(--muted);font-size:1.14rem;max-width:640px;}
+    .page-hero p{color:var(--muted);font-size:1.14rem;max-width:680px;}
     .page-hero.center p{margin-inline:auto;}
     .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,201,40,0.10);border:1px solid rgba(255,201,40,0.32);color:var(--gold);padding:7px 16px;border-radius:100px;font-size:0.78rem;font-weight:600;margin-bottom:22px;}
     .badge.emerald{background:rgba(11,94,70,0.22);border-color:rgba(69,207,154,0.4);color:var(--green-lit);}
@@ -146,11 +150,42 @@
     @media (max-width:520px){.footer-grid{grid-template-columns:1fr;}}
   </style>
   <style>
-    .train-block{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
-    .train-block h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:18px;}
-    .train-block p+p{margin-top:16px;}
-    .train-block p{color:var(--muted);font-size:1.02rem;}
-    @media (max-width:900px){.train-block{grid-template-columns:1fr;gap:28px;}}
+    /* page-specific */
+    .buddy{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;}
+    .buddy h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:18px;}
+    .buddy p{color:var(--muted);font-size:1.05rem;}
+    .buddy p+p{margin-top:16px;}
+    .buddy-quote{background:var(--bg-2);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:16px;padding:30px 32px;}
+    .buddy-quote blockquote{font-family:var(--display);font-size:1.35rem;line-height:1.35;color:var(--cream);font-style:italic;}
+    .buddy-quote cite{display:block;margin-top:16px;font-style:normal;font-size:0.85rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+    @media (max-width:900px){.buddy{grid-template-columns:1fr;gap:30px;}}
+
+    /* benefits list */
+    .benefits{background:var(--bg-2);border:1px solid var(--line);border-radius:22px;padding:clamp(28px,4vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:14px 34px;}
+    .benefits li{list-style:none;display:flex;gap:14px;align-items:flex-start;font-size:1.02rem;color:var(--cream);padding:8px 0;}
+    .benefits li .chk{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:rgba(69,207,154,0.16);border:1px solid rgba(69,207,154,0.4);color:var(--green-lit);display:flex;align-items:center;justify-content:center;font-size:0.85rem;margin-top:1px;}
+    @media (max-width:760px){.benefits{grid-template-columns:1fr;}}
+
+    /* journey / steps */
+    .journey{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:step;}
+    .jstep{background:var(--bg-2);border:1px solid var(--line);border-radius:18px;padding:26px 22px;position:relative;}
+    .jstep .jn{font-family:var(--display);font-size:1.4rem;color:var(--gold);font-weight:600;line-height:1;margin-bottom:12px;}
+    .jstep h3{font-size:1.06rem;margin-bottom:8px;}
+    .jstep p{color:var(--muted);font-size:0.88rem;}
+    @media (max-width:1000px){.journey{grid-template-columns:1fr 1fr;}}
+    @media (max-width:560px){.journey{grid-template-columns:1fr;}}
+
+    /* two tracks */
+    .tracks{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+    .track{background:linear-gradient(180deg,var(--bg-2),var(--bg-3));border:1px solid var(--line);border-radius:22px;padding:clamp(28px,3.5vw,40px);}
+    .track .tag{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green-lit);background:rgba(11,94,70,0.28);border:1px solid rgba(69,207,154,0.35);padding:6px 14px;border-radius:100px;margin-bottom:16px;}
+    .track h3{font-size:1.5rem;margin-bottom:10px;}
+    .track>p{color:var(--muted);font-size:0.98rem;margin-bottom:18px;}
+    .track ul{list-style:none;}
+    .track li{font-size:0.94rem;color:var(--muted);padding:7px 0 7px 24px;position:relative;border-top:1px solid var(--line);}
+    .track li:first-child{border-top:none;}
+    .track li::before{content:"→";position:absolute;left:0;color:var(--gold);}
+    @media (max-width:900px){.tracks{grid-template-columns:1fr;}}
   </style>
 </head><body>
   <noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
@@ -166,6 +201,7 @@
           <span></span><span></span><span></span>
         </button>
         <div class="nav-links" id="navlinks">
+          <a href="service-dogs.html" class="active">Service Dogs</a>
           <a href="index.html#ventures">Our Ventures</a>
           <a href="dog-run.html">Dog Run</a>
           <a href="web-design.html">Web Design</a>
@@ -182,95 +218,182 @@
   </header>
   <main id="main">
 
+    <!-- HERO -->
     <section class="page-hero">
       <div class="container">
         <div class="inner reveal">
-          <span class="badge emerald"><span aria-hidden="true">🐾</span> Coming Soon</span>
-          <h1>Dog Training, the Tailblazers Way</h1>
-          <p class="lede">Positive-reinforcement training rooted in structure and trust. It's the same approach we use raising service dogs for veterans, brought to your dog. We're building a program based on real relationships, not quick fixes.</p>
+          <span class="badge"><span aria-hidden="true">🐕‍🦺</span> Our Mission in Action</span>
+          <h1>Service dogs for veterans.<br>Facility dogs for <span class="italic-gold">everyone who needs a battle buddy.</span></h1>
+          <p class="lede">Our dogs are raised and trained by the next generation — at-risk youth and adults learning discipline, purpose, and patience one puppy at a time. Those dogs go on to serve veterans as service dogs, and to work as facility dogs in schools, hospitals, and beside first responders and police. One program. A whole community changed.</p>
           <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:34px;">
-            <a href="mailto:info@nyctailblazers.com?subject=Dog%20Training%20Interest" class="btn btn-gold">Get on the Early List →</a>
-            <a href="index.html#ventures" class="btn btn-ghost">Back to Ventures</a>
+            <a href="#partner" class="btn btn-gold">Bring a Facility Dog to Your Team →</a>
+            <a href="#raise" class="btn btn-ghost">How the Dogs Are Raised</a>
+          </div>
+          <div class="metrics">
+            <div class="metric"><strong>2</strong><span>Youth &amp; adult training tracks</span></div>
+            <div class="metric"><strong>4+</strong><span>Places our dogs serve</span></div>
+            <div class="metric"><strong>1</strong><span>Mission: change lives, both ends of the leash</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="pad alt">
+    <!-- BATTLE BUDDY -->
+    <section class="pad alt" id="battle-buddy">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">The Vision</span>
-          <h2>What we're building</h2>
-          <p>These are the programs taking shape as we build out our training curriculum. No pricing or scheduling yet, just the plan.</p>
+        <div class="buddy">
+          <div class="reveal">
+            <span class="eyebrow">The Battle Buddy</span>
+            <h2>No one should have to stand post alone.</h2>
+            <p>In the military, every soldier gets a <strong>battle buddy</strong> — someone who has your back, notices when you're not okay, and pulls you through the hard days. It's one of the simplest, most effective things the service does to keep people alive.</p>
+            <p>Veterans come home and lose that. So do a lot of people who never wore the uniform: a kid who dreads walking into school, a patient facing a long recovery, an officer or first responder carrying what they saw on shift. What they all need is the same thing — a steady presence that shows up, every day, no matter what.</p>
+            <p>That's what our dogs are trained to be. A battle buddy on four legs. And the young people who raise them get one too — a purpose, a routine, and a reason to show up. That bond runs both ways.</p>
+          </div>
+          <div class="buddy-quote reveal d1">
+            <blockquote>"We teach the next generation what we learned in the service — discipline, accountability, and how to have someone's back. Then we hand that lesson to a dog, and that dog spends its whole life having someone else's."</blockquote>
+            <cite>— NYC Tailblazers</cite>
+          </div>
         </div>
-        <div class="card-grid">
+      </div>
+    </section>
+
+    <!-- WHERE THEY SERVE -->
+    <section class="pad" id="serve">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow center">Where They Serve</span>
+          <h2>One kind of dog. Four kinds of hope.</h2>
+          <p>Every dog is raised and trained to the same high standard, then matched to where it's needed most.</p>
+        </div>
+        <div class="card-grid four">
+          <div class="card reveal">
+            <div class="ic" aria-hidden="true">🎖️</div>
+            <h3>Veterans</h3>
+            <p>Service dogs trained to support veterans living with PTSD, mobility challenges, and the weight of coming home. A trained companion that can steady a hard moment — and, sometimes, save a life.</p>
+          </div>
           <div class="card reveal d1">
-            <div class="ic" aria-hidden="true">🐶</div>
-            <h3>Puppy Foundations</h3>
-            <p>Getting the basics right from day one, built on patience and consistency.</p>
-            <ul>
-              <li>Crate training</li>
-              <li>Potty training</li>
-              <li>Early socialization</li>
-            </ul>
+            <div class="ic" aria-hidden="true">🏫</div>
+            <h3>Schools</h3>
+            <p>Facility dogs that work alongside counselors and staff, helping students feel calm, safe, and ready to learn. A friendly face in the hallway can change a whole day.</p>
           </div>
           <div class="card reveal d2">
-            <div class="ic" aria-hidden="true">🦮</div>
-            <h3>Everyday Obedience</h3>
-            <p>The manners that make city life with a dog easier.</p>
-            <ul>
-              <li>Leash manners</li>
-              <li>Reliable recall</li>
-              <li>Impulse control</li>
-            </ul>
+            <div class="ic" aria-hidden="true">🏥</div>
+            <h3>Hospitals</h3>
+            <p>Facility dogs that bring comfort to patients and families during treatment, recovery, and the moments that are hardest to sit with alone.</p>
           </div>
           <div class="card reveal d3">
-            <div class="ic" aria-hidden="true">🧠</div>
-            <h3>Reactivity &amp; Confidence</h3>
-            <p>For dogs that struggle with reactivity, building calm and confidence around their triggers.</p>
-            <ul>
-              <li>Calm around other dogs</li>
-              <li>Leash reactivity work</li>
-              <li>Confidence building</li>
-            </ul>
-          </div>
-          <div class="card reveal d4">
-            <div class="ic" aria-hidden="true">📋</div>
-            <h3>Structure &amp; Discipline</h3>
-            <p>Routine-based training, drawn from our service-dog program.</p>
-            <ul>
-              <li>Daily routine structure</li>
-              <li>Clear boundaries</li>
-              <li>Trust-building exercises</li>
-            </ul>
+            <div class="ic" aria-hidden="true">🚓</div>
+            <h3>First Responders &amp; Police</h3>
+            <p>Facility dogs stationed with departments and response teams — supporting officers, EMS, and firefighters through the stress of the job and the calls that stay with them.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="pad">
+    <!-- SCHOOL BENEFITS -->
+    <section class="pad alt" id="schools">
       <div class="container">
-        <div class="train-block">
-          <div class="reveal">
-            <span class="eyebrow">Where This Comes From</span>
-            <h2>Trained by people who train service dogs</h2>
+        <div class="section-head reveal">
+          <span class="eyebrow">Facility Dogs in Schools</span>
+          <h2>A calmer, kinder school day.</h2>
+          <p>Placed with a trained handler on staff, a facility dog becomes part of the school community. Here's what that presence does, every single day.</p>
+        </div>
+        <ul class="benefits reveal d1">
+          <li><span class="chk" aria-hidden="true">✓</span> Encourage positive social interactions</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Help students settle and refocus during the school day</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Provide comfort during difficult moments</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Strengthen connections between students and staff</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Contribute to a more welcoming and supportive school environment</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HOW DOGS ARE RAISED -->
+    <section class="pad" id="raise">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How the Dogs Are Raised</span>
+          <h2>From an eight-week-old puppy to a working partner.</h2>
+          <p>Every dog moves through the same structured journey, built on positive reinforcement, consistency, and trust — never shortcuts. The people raising them grow right alongside them.</p>
+        </div>
+        <div class="journey reveal d1">
+          <div class="jstep">
+            <div class="jn">01</div>
+            <h3>Foundations</h3>
+            <p>Housebreaking, crate training, a settled routine, and early socialization to the sights, sounds, and surfaces of everyday life.</p>
           </div>
-          <div class="reveal d1">
-            <p>Our trainers are developing the same core program that prepares service dogs for veterans. It's built on structure and patience, not shortcuts. When our dog training venture launches, that same approach will be available for your dog.</p>
-            <p>It's part of a bigger mission. NYC Tailblazers connects at-risk youth with the work of raising and training service dogs for veterans. This program grows out of that same commitment.</p>
+          <div class="jstep">
+            <div class="jn">02</div>
+            <h3>Obedience</h3>
+            <p>Sit, down, stay, heel, come, and rock-solid impulse control — the manners a working dog needs before it can work.</p>
+          </div>
+          <div class="jstep">
+            <div class="jn">03</div>
+            <h3>Public Access</h3>
+            <p>Calm, focused behavior in busy, distracting places — buses, stores, elevators, crowds — so the dog is steady anywhere its person goes.</p>
+          </div>
+          <div class="jstep">
+            <div class="jn">04</div>
+            <h3>Specialized Skills</h3>
+            <p>The tasks that fit the placement — from service-dog work for a veteran to the gentle, people-first temperament of a facility dog.</p>
+          </div>
+          <div class="jstep">
+            <div class="jn">05</div>
+            <h3>Placement</h3>
+            <p>Matched with the veteran, school, hospital, or department that needs them — and supported after placement, too.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="pad cta-band reveal">
+    <!-- TWO TRACKS / CURRICULUMS -->
+    <section class="pad alt" id="tracks">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow center">Raised by the Next Generation</span>
+          <h2>Two ways to learn. One standard of care.</h2>
+          <p>We built two curriculums from our service-dog training manual — one for young people, one for adults — so everyone can learn to raise a dog the right way.</p>
+        </div>
+        <div class="tracks reveal d1">
+          <div class="track">
+            <span class="tag">Ages 8–17</span>
+            <h3>Youth Handlers</h3>
+            <p>A hands-on program that teaches responsibility, patience, and empathy through raising a real working dog — in language and steps built for young people.</p>
+            <ul>
+              <li>Dog care, safety, and body language</li>
+              <li>Positive-reinforcement basics they can actually run</li>
+              <li>Responsibility, routine, and follow-through</li>
+              <li>Confidence, teamwork, and public manners</li>
+              <li>Understanding what a service &amp; facility dog does</li>
+            </ul>
+          </div>
+          <div class="track">
+            <span class="tag">Adults</span>
+            <h3>Adult Handlers</h3>
+            <p>The full raiser's curriculum — the complete training progression that prepares a dog for service and facility work, and prepares the handler to lead it.</p>
+            <ul>
+              <li>Full obedience &amp; behavior foundations</li>
+              <li>Public-access training and standards</li>
+              <li>Health, grooming, nutrition, and records</li>
+              <li>Service-dog tasks &amp; facility-dog temperament</li>
+              <li>Handling, troubleshooting, and placement readiness</li>
+            </ul>
+          </div>
+        </div>
+        <p class="reveal d2" style="text-align:center;margin-top:26px;color:var(--muted);font-size:0.95rem;">Curriculum guides are available for partner schools and programs — <a href="#partner" style="color:var(--gold);text-decoration:underline;">get in touch</a> to bring one to your community.</p>
+      </div>
+    </section>
+
+    <!-- PARTNER / CTA -->
+    <section class="pad cta-band reveal" id="partner">
       <div class="container">
         <div class="cta-inner">
-          <span class="eyebrow center">Early Access</span>
-          <h2>Want first access when we launch?</h2>
-          <p>Get on the early list and we'll reach out the moment Dog Training opens up. No spam, just a heads-up when it's real.</p>
+          <span class="eyebrow center">Get Involved</span>
+          <h2>Bring a battle buddy to your community.</h2>
+          <p>Whether you're a school, hospital, or department looking to place a facility dog — a family wanting to get a young person into the program — or someone who just wants to help fund the mission, we'd love to talk.</p>
           <div class="cta-btns">
-            <a href="mailto:info@nyctailblazers.com?subject=Dog%20Training%20Interest" class="btn btn-gold">Join the Early List</a>
+            <a href="mailto:info@nyctailblazers.com?subject=Service%20%26%20Facility%20Dog%20Program" class="btn btn-gold">Partner With Us</a>
+            <a href="index.html#support" class="btn btn-ghost">Support the Mission</a>
             <a href="sms:+13472608305" class="btn btn-ghost">Text (347) 260-8305</a>
           </div>
         </div>
@@ -283,7 +406,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand"><img src="tailblazers-logo.png" alt="NYC Tailblazers" style="width:44px;height:44px;border-radius:10px;"><span class="brand-name">NYC Tailblazers</span></a>
-          <p>A mission-driven family of ventures in NYC, helping veterans through service dogs trained by at-risk youth. Blaze new trails, wag new tails. 🐾</p>
+          <p>A mission-driven family of ventures in NYC, helping veterans through service dogs raised and trained by the next generation. Blaze new trails, wag new tails. 🐾</p>
         </div>
         <div>
           <h3>Ventures</h3>
@@ -294,7 +417,6 @@
           <a href="personal-training.html">Personal Training</a>
           <a href="vendor-resale.html">Vendor Resale</a>
           <a href="3d-printing.html">3D Printing</a>
-          <a href="jiggs-and-glo.html">Jiggs &amp; Glo (Book)</a>
         </div>
         <div>
           <h3>Community</h3>
