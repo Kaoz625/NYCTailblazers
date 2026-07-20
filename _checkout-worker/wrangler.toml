@@ -1,0 +1,7 @@
+name = "nyctb-checkout"
+main = "src/index.js"
+compatibility_date = "2026-07-01"
+workers_dev = true
+
+# STRIPE_SECRET_KEY is set as a secret via: wrangler secret put STRIPE_SECRET_KEY
+# (never stored in this file or in git)

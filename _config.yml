@@ -7,6 +7,7 @@ exclude:
   - README.md
   - REDESIGN-NOTES.md
   - _archive
+  - _checkout-worker
   - _headers
   - node_modules
   - "**/node_modules"
