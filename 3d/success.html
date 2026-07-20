@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order received | NYC Tailblazers 3D Studio</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="../tailblazers-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="studio.css">
+    <style>main.ok{min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center}
+    .ok-card{max-width:560px;padding:0 24px}
+    .ok-badge{width:76px;height:76px;border-radius:50%;background:var(--mint);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+    .ok-badge svg{width:38px;height:38px}
+    .ok-card h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:14px}
+    .ok-card p{color:var(--ink-2);font-size:1.08rem;margin-bottom:10px}
+    .ok-id{font-family:var(--mono);font-size:.72rem;color:var(--ink-3);margin-top:18px}
+    .ok-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}</style>
+</head>
+<body>
+    <header class="tb3"><div class="wrap"><nav class="tb3-nav">
+        <a href="../3d-printing.html#top" class="tb3-brand"><img src="../tailblazers-logo.png" alt="NYC Tailblazers logo"><span class="bn">3D Studio<small>NYC Tailblazers</small></span></a>
+        <div class="tb3-links"><a href="../3d-printing.html#shop">Shop</a><a href="../index.html" class="back">← nyctailblazers.com</a></div>
+    </nav></div></header>
+    <main class="ok">
+        <div class="ok-card">
+            <div class="ok-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <span class="spec plain" style="justify-content:center">Order received</span>
+            <h1>Thank you — we&rsquo;re on it.</h1>
+            <p>Your order is in. We&rsquo;ll email you a confirmation, and if your piece is personalized we&rsquo;ll follow up to confirm the details (names, text, or your photo) before it goes on the printer.</p>
+            <p>Everything is printed to order in NYC and shipped to the address you provided.</p>
+            <div class="ok-btns">
+                <a href="../3d-printing.html#shop" class="btn btn-ink">Back to the shop</a>
+                <a href="mailto:info@nyctailblazers.com?subject=My%203D%20Studio%20order" class="btn btn-ghost">Email us about my order</a>
+            </div>
+            <div class="ok-id" id="oid"></div>
+        </div>
+    </main>
+    <script>
+      // clear the cart on success + surface the session id
+      try { localStorage.removeItem("tb3_cart_v1"); } catch (e) {}
+      var s = new URLSearchParams(location.search).get("session_id");
+      if (s) document.getElementById("oid").textContent = "Reference: " + s;
+    </script>
+</body>
+</html>
