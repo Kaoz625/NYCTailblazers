@@ -1,168 +1,352 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Approved Packages for Loved Ones Inside | NYC Tailblazers</title>
-  <meta name="description" content="Launching soon: a compliant, easy way for NYC families to send NYS DOCCS-approved care packages to incarcerated loved ones.">
-  <link rel="icon" href="tailblazers-logo.png">
-  <link rel="canonical" href="https://nyctailblazers.com/vendor-resale.html">
-  <meta property="og:title" content="Approved Packages for Loved Ones Inside | NYC Tailblazers">
-  <meta property="og:description" content="Launching soon: a compliant, easy way for NYC families to send NYS DOCCS-approved care packages to incarcerated loved ones.">
-  <meta property="og:url" content="https://nyctailblazers.com/vendor-resale.html">
-  <meta property="og:image" content="https://nyctailblazers.com/tailblazers-logo.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Approved Packages for Loved Ones Inside | NYC Tailblazers">
-  <meta name="twitter:description" content="Launching soon: a compliant, easy way for NYC families to send NYS DOCCS-approved care packages to incarcerated loved ones.">
-  <meta name="twitter:image" content="https://nyctailblazers.com/tailblazers-logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-  :root{
-    --bg:#14120d; --bg-2:#1b1810; --bg-3:#241f15;
-    --line:rgba(255,235,190,0.10);
-    --green:#0b5e46;        /* royal emerald-jade */
-    --green-lit:#45cf9a;    /* legible jade on dark */
-    --green-deep:#062e22;
-    --gold:#ffc928; --gold-soft:#ecc558;
-    --cream:#f6f0e2; --muted:rgba(246,240,226,0.60); --muted-2:rgba(246,240,226,0.56);
-    --shadow:0 30px 80px -20px rgba(0,0,0,0.75);
-    --display:'Fraunces',Georgia,'Times New Roman',serif;
-    --ui:'Outfit',system-ui,-apple-system,sans-serif;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-  body{font-family:var(--ui);line-height:1.65;color:var(--cream);background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-  ::selection{background:var(--gold);color:#14120d;}
-  a{color:inherit;}
-  img{max-width:100%;display:block;}
-  a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px;}
-  .skip-link{position:absolute;left:-9999px;top:0;z-index:500;background:var(--gold);color:#14120d;padding:10px 18px;border-radius:0 0 10px 0;font-weight:700;text-decoration:none;}
-  .skip-link:focus{left:0;}
-  .container{max-width:1220px;margin:0 auto;padding:0 24px;}
-  .eyebrow{font-size:0.76rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px;}
-  .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7;}
-  .eyebrow.center{justify-content:center;}
-  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-0.01em;}
-  .italic-gold{font-style:italic;color:var(--gold);font-weight:500;}
-  .pad{padding:clamp(64px,9vw,130px) 0;}
-  section{position:relative;}
-  .section-head{max-width:660px;margin-bottom:52px;}
-  .section-head.center{margin-inline:auto;text-align:center;}
-  .section-head h2{font-size:clamp(2rem,4.6vw,3.4rem);margin:16px 0 14px;}
-  .section-head p{color:var(--muted);font-size:1.06rem;}
-  .alt{background:linear-gradient(180deg,var(--bg),var(--bg-2));border-block:1px solid var(--line);}
-  .alt-2{background:linear-gradient(180deg,var(--bg-2),var(--bg));border-block:1px solid var(--line);}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approved Packages for Loved Ones Inside | NYC Tailblazers</title>
+    <meta name="description" content="Launching soon: a compliant, easy way for NYC families to send NYS DOCCS-approved care packages to incarcerated loved ones.">
+    <link rel="icon" href="tailblazers-logo.png">
+    <link rel="canonical" href="https://nyctailblazers.com/vendor-resale.html">
 
-  /* buttons */
-  .btn{display:inline-flex;align-items:center;gap:9px;padding:15px 30px;border-radius:100px;font-family:var(--ui);font-weight:600;font-size:0.98rem;text-decoration:none;cursor:pointer;border:none;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .2s,color .2s;white-space:nowrap;}
-  .btn-gold{background:var(--gold);color:#14120d;box-shadow:0 10px 30px -8px rgba(255,201,40,0.5);}
-  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 18px 44px -10px rgba(255,201,40,0.65);}
-  .btn-ghost{background:transparent;color:var(--cream);border:1.5px solid rgba(246,240,226,0.28);}
-  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px);}
-  .btn-emerald{background:var(--green);color:var(--cream);}
-  .btn-emerald:hover{background:#0e7457;transform:translateY(-3px);}
+    <!-- Open Graph -->
+    <meta property="og:title" content="Approved Packages for Loved Ones Inside | NYC Tailblazers" />
+    <meta property="og:description" content="Launching soon: a compliant, easy way for NYC families to send NYS DOCCS-approved care packages to incarcerated loved ones." />
+    <meta property="og:image" content="https://nyctailblazers.com/tailblazers-logo.png" />
+    <meta property="og:url" content="https://nyctailblazers.com/vendor-resale.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NYC Tailblazers" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Approved Packages for Loved Ones Inside | NYC Tailblazers" />
+    <meta name="twitter:description" content="Launching soon: a compliant, easy way for NYC families to send NYS DOCCS-approved care packages to incarcerated loved ones." />
+    <meta name="twitter:image" content="https://nyctailblazers.com/tailblazers-logo.png" />
 
-  /* reveal */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1);}
-  .reveal.in{opacity:1;transform:none;}
-  .reveal.d1{transition-delay:.08s;}.reveal.d2{transition-delay:.16s;}.reveal.d3{transition-delay:.24s;}.reveal.d4{transition-delay:.32s;}.reveal.d5{transition-delay:.40s;}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+    <!-- Fonts: Saira Condensed (structure) + Fraunces (warmth, incl. italic) + Outfit (body/UI) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  /* header / nav */
-  header{position:sticky;top:0;z-index:200;background:rgba(20,18,13,0.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
-  nav{display:flex;align-items:center;justify-content:space-between;height:74px;}
-  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
-  .brand img{width:42px;height:42px;border-radius:10px;object-fit:cover;}
-  .brand-name{font-family:var(--display);font-weight:700;font-size:1.18rem;color:var(--cream);line-height:1;}
-  .brand-name small{display:block;font-family:var(--ui);font-weight:500;font-size:0.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:3px;}
-  .nav-links{display:flex;align-items:center;gap:26px;}
-  .nav-links a{color:var(--muted);text-decoration:none;font-size:0.95rem;font-weight:500;transition:color .2s;}
-  .nav-links a:hover{color:var(--cream);}
-  .nav-cta{background:var(--gold);color:#14120d !important;padding:10px 22px;border-radius:100px;font-weight:700 !important;transition:transform .2s;}
-  .nav-cta:hover{transform:translateY(-2px);}
-  .nav-social{display:flex;gap:14px;}
-  .nav-social a{color:var(--muted-2);display:flex;align-items:center;justify-content:center;min-width:32px;min-height:32px;transition:color .2s;}
-  .nav-social a:hover{color:var(--gold);}
-  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;min-width:44px;min-height:44px;align-items:center;justify-content:center;}
-  .hamburger span{width:26px;height:2px;background:var(--cream);border-radius:2px;transition:.3s;}
-  @media (max-width:1050px){
-    .hamburger{display:flex;}
-    .nav-links{position:absolute;top:74px;left:0;right:0;background:rgba(20,18,13,0.98);backdrop-filter:blur(14px);flex-direction:column;align-items:stretch;gap:4px;padding:16px 24px 24px;border-bottom:1px solid var(--line);transform:translateY(-8px);opacity:0;visibility:hidden;pointer-events:none;transition:.3s;}
-    .nav-links.open{transform:none;opacity:1;visibility:visible;pointer-events:auto;}
-    .nav-links a{padding:12px 4px;border-bottom:1px solid var(--line);}
-    .nav-cta{text-align:center;margin-top:8px;}
-    .nav-social{display:none;}
-  }
+    <style>
+        :root {
+            --bg:        #14120d;   /* warm near-black (never pure #000) */
+            --bg-2:      #1b1810;
+            --bg-3:      #241f15;
+            --line:      rgba(255,235,190,0.10);
+            --green:     #0b5e46;   /* royal emerald-jade */
+            --green-lit: #45cf9a;   /* legible jade on dark */
+            --gold:      #ffc928;   /* brand gold */
+            --gold-soft: #ecc558;
+            --cream:     #f6f0e2;   /* primary text on dark */
+            --muted:     rgba(246,240,226,0.60);
+            --muted-2:   rgba(246,240,226,0.56);
+            --shadow:    0 30px 80px -20px rgba(0,0,0,0.75);
+            --display: 'Fraunces', Georgia, 'Times New Roman', serif;   /* warmth / emotion */
+            --cond:    'Saira Condensed', Impact, sans-serif;           /* structure / discipline */
+            --ui:      'Outfit', system-ui, -apple-system, sans-serif;  /* utility / body */
+            --hair:    rgba(255,201,40,0.22);                           /* gold-tinted dog-tag hairline */
+            --lede:    rgba(246,240,226,0.82);                          /* AA-safe secondary body */
+        }
 
-  /* generic content components */
-  .lede{max-width:760px;color:var(--muted);font-size:1.14rem;}
-  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  .card-grid.two{grid-template-columns:repeat(2,1fr);}
-  .card{background:var(--bg-2);border:1px solid var(--line);border-radius:20px;padding:32px 28px;transition:transform .3s,border-color .3s;}
-  .card:hover{transform:translateY(-6px);border-color:rgba(255,201,40,0.4);}
-  .card .ic{font-size:1.9rem;margin-bottom:14px;}
-  .card h3{font-size:1.28rem;margin-bottom:10px;}
-  .card p{color:var(--muted);font-size:0.95rem;}
-  .card ul{list-style:none;margin-top:12px;}
-  .card li{font-size:0.9rem;color:var(--muted);padding:5px 0 5px 22px;position:relative;}
-  .card li::before{content:"→";position:absolute;left:0;color:var(--gold);}
-  @media (max-width:900px){.card-grid,.card-grid.two{grid-template-columns:1fr;}}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: var(--ui);
+            line-height: 1.65;
+            color: var(--cream);
+            background: var(--bg);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        ::selection { background: var(--gold); color: #14120d; }
+        a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+        .skip-link { position: absolute; left: -9999px; top: 0; z-index: 500; background: var(--gold); color: #14120d; padding: 10px 18px; border-radius: 0 0 10px 0; font-weight: 700; text-decoration: none; }
+        .skip-link:focus { left: 0; }
 
-  /* page hero (sub-pages) */
-  .page-hero{position:relative;overflow:hidden;}
-  .page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 55% at 78% 12%,rgba(255,201,40,0.14),transparent 60%),radial-gradient(50% 60% at 6% 92%,rgba(11,94,70,0.42),transparent 65%);pointer-events:none;}
-  .page-hero .inner{position:relative;z-index:2;max-width:820px;padding:clamp(56px,8vw,104px) 0 clamp(40px,5vw,64px);}
-  .page-hero.center .inner{margin:0 auto;text-align:center;}
-  .page-hero h1{font-size:clamp(2.5rem,6vw,4.4rem);margin:18px 0 20px;}
-  .page-hero p{color:var(--muted);font-size:1.14rem;max-width:640px;}
-  .page-hero.center p{margin-inline:auto;}
-  .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,201,40,0.10);border:1px solid rgba(255,201,40,0.32);color:var(--gold);padding:7px 16px;border-radius:100px;font-size:0.78rem;font-weight:600;margin-bottom:22px;}
-  .badge.emerald{background:rgba(11,94,70,0.22);border-color:rgba(69,207,154,0.4);color:var(--green-lit);}
+        img { max-width: 100%; display: block; }
+        a { color: inherit; }
 
-  /* metrics row */
-  .metrics{display:flex;gap:40px;flex-wrap:wrap;margin-top:44px;}
-  .metrics.center{justify-content:center;}
-  .metric strong{font-family:var(--display);display:block;font-size:2.1rem;color:var(--gold);font-weight:600;line-height:1;}
-  .metric span{font-size:0.82rem;color:var(--muted);}
+        .container { max-width: 1220px; margin: 0 auto; padding: 0 24px; }
+        .eyebrow {
+            font-family: var(--ui);
+            font-size: 0.76rem; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: var(--gold);
+            display: inline-flex; align-items: center; gap: 12px;
+        }
+        .eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--gold); opacity: 0.7; }
+        h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; letter-spacing: -0.01em; }
+        /* Gradient accent word — one per major headline (replaces the old italic-gold tic) */
+        .accent {
+            background: linear-gradient(100deg, var(--gold) 0%, var(--gold-soft) 40%, var(--green-lit) 118%);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
 
-  /* CTA band */
-  .cta-band{background:linear-gradient(135deg,var(--green),var(--green-deep));position:relative;overflow:hidden;text-align:center;}
-  .cta-band::before{content:"";position:absolute;left:50%;top:-80px;width:400px;height:400px;transform:translateX(-50%);background:radial-gradient(circle,rgba(255,201,40,0.22),transparent 70%);}
-  .cta-inner{position:relative;max-width:680px;margin:0 auto;}
-  .cta-inner h2{font-size:clamp(2rem,4.6vw,3.2rem);margin:16px 0;}
-  .cta-inner p{color:rgba(246,240,226,0.85);font-size:1.08rem;margin-bottom:30px;}
-  .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+        /* ── BUTTONS ── */
+        .btn {
+            display: inline-flex; align-items: center; gap: 9px;
+            padding: 15px 30px; border-radius: 100px;
+            font-family: var(--ui); font-weight: 600; font-size: 0.98rem;
+            text-decoration: none; cursor: pointer; border: none;
+            transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s, background .2s, color .2s;
+            letter-spacing: 0.2px; white-space: nowrap;
+        }
+        .btn svg { width: 18px; height: 18px; }
+        .btn-gold { background: var(--gold); color: #14120d; box-shadow: 0 10px 30px -8px rgba(255,201,40,0.5); }
+        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 18px 44px -10px rgba(255,201,40,0.65); }
+        .btn-ghost { background: transparent; color: var(--cream); border: 1.5px solid rgba(246,240,226,0.28); }
+        .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); }
 
-  /* footer */
-  footer{background:#100e09;border-top:1px solid var(--line);padding:60px 0 28px;}
-  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:36px;}
-  .footer-brand p{color:var(--muted);font-size:0.9rem;margin-top:14px;max-width:300px;}
-  .footer-brand .brand{margin-bottom:0;}
-  footer h3{font-family:var(--ui);color:var(--cream);font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;}
-  footer a{color:var(--muted);text-decoration:none;display:block;margin-bottom:8px;font-size:0.9rem;transition:color .2s;}
-  footer a:hover{color:var(--gold);}
-  .footer-bottom{border-top:1px solid var(--line);padding-top:22px;text-align:center;color:var(--muted-2);font-size:0.82rem;}
-  .footer-bottom a{display:inline;color:var(--gold);}
-  @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;}}
-  @media (max-width:520px){.footer-grid{grid-template-columns:1fr;}}
-  </style>
-  <style>
-    .compliance-note{max-width:760px;color:var(--muted);font-size:0.95rem;background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin-top:28px;}
-    .compliance-note strong{color:var(--cream);}
-  </style>
-</head><body>
-  <noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
-  <a href="#main" class="skip-link">Skip to content</a>
-  <header>
-    <div class="container">
-      <nav>
-        <a href="index.html" class="brand">
-          <img src="tailblazers-logo.png" alt="NYC Tailblazers logo">
-          <span class="brand-name">NYC Tailblazers<small>Blaze New Trails, Wag New Tails</small></span>
-        </a>
-        <button class="hamburger" aria-label="Toggle menu" aria-controls="navlinks" aria-expanded="false" onclick="var n=document.getElementById('navlinks');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="nav-links" id="navlinks">
+        /* ── SECTION SCAFFOLD ── */
+        section { position: relative; }
+        .pad { padding: clamp(64px, 9vw, 130px) 0; }
+        .section-head { max-width: 640px; margin-bottom: 44px; }
+        .section-head h2 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .01em; font-size: clamp(2rem, 4.6vw, 3.4rem); line-height: .95; margin: 14px 0 12px; }
+        .section-head p { color: var(--lede); font-size: 1.06rem; }
+        /* "Field-note" hairline divider: a full rule with one short gold segment */
+        .fieldnote { position: relative; height: 1px; background: var(--line); margin: clamp(48px,7vw,90px) 0 0; }
+        .fieldnote::before { content: ""; position: absolute; left: 24px; top: 0; width: 40px; height: 1px; background: var(--gold); }
+
+        /* ── REVEAL ANIMATION ── */
+        .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+        .reveal.in { opacity: 1; transform: none; }
+        .reveal.d1 { transition-delay: .08s; } .reveal.d2 { transition-delay: .16s; }
+        .reveal.d3 { transition-delay: .24s; } .reveal.d4 { transition-delay: .32s; }
+
+        /* ── FILM-GRAIN OVERLAY (self-contained SVG, no external asset) ── */
+        .grain {
+            position: fixed; inset: 0; z-index: 5; pointer-events: none;
+            opacity: .05; mix-blend-mode: overlay;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 300px 300px;
+            animation: grainShift 1.2s steps(4) infinite;
+        }
+        @keyframes grainShift {
+            0%{transform:translate(0,0)} 25%{transform:translate(-2%,1%)}
+            50%{transform:translate(1%,-2%)} 75%{transform:translate(-1%,2%)} 100%{transform:translate(0,0)}
+        }
+
+        /* ── ANNOUNCE BAR ── */
+        .announce {
+            position: relative; z-index: 6;
+            background: linear-gradient(90deg, var(--green), #0f7d5c);
+            color: var(--cream); text-align: center;
+            padding: 9px 20px; font-size: 0.84rem; font-weight: 500; letter-spacing: .2px;
+        }
+        .announce a { color: var(--gold); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(255,201,40,0.4); }
+
+        /* ── HEADER ── */
+        header {
+            position: sticky; top: 0; z-index: 200;
+            background: rgba(20,18,13,0.72);
+            backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
+        }
+        nav { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand img { width: 42px; height: 42px; border-radius: 10px; object-fit: cover; }
+        .brand-name { font-family: var(--display); font-weight: 700; font-size: 1.18rem; color: var(--cream); line-height: 1; }
+        .brand-name small { display: block; font-family: var(--ui); font-weight: 500; font-size: 0.66rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-top: 3px; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color .2s; }
+        .nav-links a:hover { color: var(--cream); }
+        .nav-links a.tab-webdesign { color: var(--gold); font-weight: 600; }
+        .nav-cta { background: var(--gold); color: #14120d !important; padding: 10px 22px; border-radius: 100px; font-weight: 700 !important; transition: transform .2s; }
+        .nav-cta:hover { transform: translateY(-2px); }
+        .nav-social { display: flex; gap: 14px; }
+        .nav-social a { color: var(--muted-2); display: flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; transition: color .2s; }
+        .nav-social a:hover { color: var(--gold); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+        .hamburger span { width: 26px; height: 2px; background: var(--cream); border-radius: 2px; transition: .3s; }
+        @media (max-width: 1050px) {
+            .hamburger { display: flex; }
+            .nav-links { position: absolute; top: 74px; left: 0; right: 0; background: rgba(20,18,13,0.98); backdrop-filter: blur(14px); flex-direction: column; align-items: stretch; gap: 4px; padding: 16px 24px 24px; border-bottom: 1px solid var(--line); transform: translateY(-8px); opacity: 0; visibility: hidden; pointer-events: none; transition: .3s; }
+            .nav-links.open { transform: none; opacity: 1; visibility: visible; pointer-events: auto; }
+            .nav-links a { padding: 12px 4px; border-bottom: 1px solid var(--line); }
+            .nav-cta { text-align: center; margin-top: 8px; }
+            .nav-social { display: none; }
+        }
+
+        /* ══════════════ HERO = "OUR HEART" ══════════════ */
+        .heart { overflow: hidden; background: var(--bg); color: var(--cream); isolation: isolate; padding: clamp(80px,12vw,150px) 0 clamp(56px,7vw,92px); }
+        .heart::before {
+            content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+            background: radial-gradient(58% 48% at 20% 32%, rgba(11,94,70,.50), transparent 68%),
+                        radial-gradient(40% 30% at 86% 82%, rgba(255,201,40,.09), transparent 72%),
+                        radial-gradient(120% 120% at 50% 42%, transparent 55%, rgba(0,0,0,.42));
+            animation: glowBreathe 14s ease-in-out infinite;
+        }
+        @keyframes glowBreathe { 0%,100%{transform:scale(1);opacity:.82} 50%{transform:scale(1.06);opacity:1} }
+        .heart-ghost {
+            position: absolute; z-index: 1; top: -.12em; right: -.04em; font-family: var(--cond); font-weight: 800;
+            font-size: clamp(9rem,26vw,24rem); letter-spacing: -.02em; line-height: .8; color: rgba(69,207,154,.05);
+            pointer-events: none; user-select: none; white-space: nowrap;
+        }
+        .heart-wrap { position: relative; z-index: 3; max-width: 1220px; margin: 0 auto; padding: 0 24px;
+            display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px,5vw,64px); align-items: center; }
+        .mast { font-family: var(--cond); font-weight: 800; text-transform: uppercase; letter-spacing: .004em; line-height: .9;
+            font-size: clamp(2.7rem,7vw,5.6rem); margin: 22px 0 0; max-width: 17ch; color: var(--cream);
+            text-shadow: 0 1px 0 rgba(255,235,190,.08), 0 -1px 0 rgba(0,0,0,.4); }
+        .mast-warm { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--cream); font-size: clamp(1.2rem,2.3vw,1.7rem); margin: 20px 0 0; opacity: .92; }
+        .mast-lede { font-family: var(--ui); color: var(--lede); font-size: 1.06rem; line-height: 1.7; max-width: 52ch; margin: 22px 0 0; }
+        .mast-lede b { color: var(--cream); font-weight: 600; }
+        .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+        .tags { display: flex; flex-wrap: wrap; align-items: flex-end; margin-top: 52px; border-top: 1px solid var(--hair); }
+        .tag { padding: 22px 34px 0 0; margin-right: 34px; border-right: 1px solid var(--hair); }
+        .tag:last-child { border-right: 0; margin-right: 0; }
+        .tag .n { font-family: var(--cond); font-weight: 700; line-height: .85; color: var(--cream); display: block; }
+        .tag.big .n { font-size: clamp(3rem,6vw,4.4rem); } .tag.mid .n { font-size: clamp(2.4rem,4.5vw,3.3rem); } .tag.sm .n { font-size: clamp(2rem,3.6vw,2.6rem); }
+        .tag .n em { font-style: normal; color: var(--green-lit); }
+        .tag .k { font-family: var(--ui); font-size: .74rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 8px; max-width: 16ch; display: block; }
+        .heart-fig { position: relative; }
+        .fig-frame { position: relative; aspect-ratio: 4/5; border-radius: 24px; overflow: hidden;
+            background: linear-gradient(155deg, rgba(11,94,70,.5), var(--bg-3) 72%);
+            border: 1px solid var(--line); box-shadow: var(--shadow); }
+        .fig-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .1; mix-blend-mode: overlay;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g2)'/%3E%3C/svg%3E"); }
+        .fig-icon { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+        .fig-icon svg { width: 44%; height: 44%; color: var(--gold); opacity: .92; }
+        .fig-cap { position: absolute; left: 20px; bottom: 16px; font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); z-index: 2; }
+        @media (max-width: 900px) {
+            .heart-wrap { grid-template-columns: 1fr; gap: 40px; }
+            .heart-fig { max-width: 420px; width: 100%; margin: 0 auto; }
+            .tag { padding-right: 20px; margin-right: 20px; }
+        }
+
+        /* ══════════════ BATTLE BUDDY ══════════════ */
+        .buddy-band { background: linear-gradient(180deg, var(--bg-2), var(--bg)); border-block: 1px solid var(--line); }
+        .buddy { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px,5vw,64px); align-items: center; }
+        .buddy .body p { color: var(--lede); font-size: 1.05rem; }
+        .buddy .body p + p { margin-top: 16px; }
+        .buddy .body strong { color: var(--cream); font-weight: 600; }
+        .buddy-quote { position: relative; background: linear-gradient(160deg, rgba(11,94,70,.42), var(--bg-2)); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 18px; padding: clamp(28px,3.5vw,38px); box-shadow: var(--shadow); }
+        .buddy-quote::before { content: "\201C"; position: absolute; left: 20px; top: 6px; font-family: var(--display); font-size: 3.2rem; color: var(--gold); opacity: .55; line-height: 1; }
+        .buddy-quote blockquote { font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(1.15rem,2vw,1.35rem); line-height: 1.4; color: var(--cream); }
+        .buddy-quote cite { display: block; margin-top: 18px; font-style: normal; font-family: var(--ui); font-size: .78rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+        @media (max-width: 900px) { .buddy { grid-template-columns: 1fr; gap: 34px; } }
+
+        /* ══════════════ WHERE THEY SERVE ══════════════ */
+        .serve-feature { position: relative; overflow: hidden; display: grid; grid-template-columns: auto 1fr; gap: clamp(20px,3vw,40px); align-items: center;
+            background: linear-gradient(135deg, rgba(11,94,70,.55), var(--bg-2)); border: 1px solid var(--hair); border-radius: 24px; padding: clamp(28px,4vw,46px); box-shadow: var(--shadow); }
+        .serve-feature::after { content: ""; position: absolute; right: -70px; top: -70px; width: 280px; height: 280px; background: radial-gradient(circle, rgba(255,201,40,.14), transparent 70%); pointer-events: none; }
+        .serve-badge { position: relative; z-index: 1; width: clamp(76px,10vw,112px); height: clamp(76px,10vw,112px); border: 1px solid var(--hair); border-radius: 22px; display: flex; align-items: center; justify-content: center; color: var(--gold); flex: 0 0 auto; }
+        .serve-badge svg { width: 52%; height: 52%; }
+        .serve-feature .txt { position: relative; z-index: 1; }
+        .serve-feature .k { font-family: var(--ui); font-size: .74rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-lit); display: block; margin-bottom: 8px; }
+        .serve-feature h3 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .03em; font-size: clamp(1.6rem,3.2vw,2.3rem); color: var(--cream); margin-bottom: 10px; line-height: .98; }
+        .serve-feature p { color: var(--lede); font-size: 1.04rem; max-width: 58ch; }
+        .serve-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 26px; }
+        .serve-card { background: var(--bg-2); border: 1px solid var(--line); border-radius: 20px; padding: 30px 26px; transition: transform .3s, border-color .3s; }
+        .serve-card:nth-child(2) { margin-top: clamp(0px, 3.4vw, 40px); }
+        .serve-card:nth-child(3) { margin-top: clamp(0px, 6.4vw, 76px); }
+        .serve-card:hover { transform: translateY(-6px); border-color: rgba(255,201,40,.4); }
+        .serve-ic { width: 50px; height: 50px; border: 1px solid var(--hair); border-radius: 13px; display: inline-flex; align-items: center; justify-content: center; color: var(--green-lit); margin-bottom: 16px; }
+        .serve-ic svg { width: 25px; height: 25px; }
+        .serve-card h3 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .03em; font-size: 1.16rem; color: var(--cream); margin-bottom: 10px; }
+        .serve-card p { color: var(--muted); font-size: .95rem; }
+        @media (max-width: 820px) { .serve-feature { grid-template-columns: 1fr; } .serve-row { grid-template-columns: 1fr; } .serve-card:nth-child(2), .serve-card:nth-child(3) { margin-top: 0; } }
+
+        /* ══════════════ SCHOOL BENEFITS ══════════════ */
+        .benefits { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 44px; max-width: 980px; }
+        .benefits li { display: flex; gap: 15px; align-items: flex-start; font-size: 1.04rem; color: var(--cream); padding: 15px 0; border-top: 1px solid var(--line); }
+        .benefits li:nth-child(1), .benefits li:nth-child(2) { border-top: none; }
+        .benefits .chk { flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: rgba(69,207,154,.14); border: 1px solid rgba(69,207,154,.4); color: var(--green-lit); display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+        .benefits .chk svg { width: 15px; height: 15px; }
+        @media (max-width: 760px) { .benefits { grid-template-columns: 1fr; } .benefits li:nth-child(2) { border-top: 1px solid var(--line); } }
+
+        /* ══════════════ HOW THEY'RE RAISED — vertical journey ══════════════ */
+        .journey { position: relative; max-width: 840px; margin-top: 8px; }
+        .journey::before { content: ""; position: absolute; left: 26px; top: 12px; bottom: 12px; width: 1px; background: var(--hair); }
+        .jstep { position: relative; padding: 0 0 clamp(28px,4vw,46px) 82px; }
+        .jstep:last-child { padding-bottom: 0; }
+        .jnode { position: absolute; left: 0; top: -2px; width: 54px; height: 54px; border-radius: 50%; background: var(--bg-2); border: 1px solid var(--hair); display: flex; align-items: center; justify-content: center; font-family: var(--cond); font-weight: 700; font-size: 1.45rem; color: var(--gold); z-index: 1; }
+        .jstep h3 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .03em; font-size: 1.22rem; color: var(--cream); margin: 8px 0 8px; }
+        .jstep p { color: var(--muted); font-size: .98rem; max-width: 58ch; }
+        .trainnote { margin-top: clamp(30px,4vw,48px); max-width: 780px; display: flex; gap: 16px; align-items: flex-start; color: var(--lede); font-size: 1.02rem; }
+        .trainnote .ic { flex: 0 0 auto; color: var(--green-lit); margin-top: 2px; }
+        .trainnote .ic svg { width: 26px; height: 26px; }
+        .trainnote b { color: var(--cream); font-weight: 600; }
+
+        /* ══════════════ TWO TRACKS ══════════════ */
+        .tracks-band { background: linear-gradient(180deg, var(--bg-2), var(--bg)); border-block: 1px solid var(--line); }
+        .tracks { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(22px,3vw,40px); align-items: start; }
+        .track { background: linear-gradient(180deg, var(--bg-2), var(--bg-3)); border: 1px solid var(--line); border-radius: 22px; padding: clamp(28px,3.5vw,42px); }
+        .track.b { margin-top: clamp(0px,4vw,52px); }
+        .track .ttag { display: inline-block; font-family: var(--ui); font-size: .72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green-lit); background: rgba(11,94,70,.28); border: 1px solid rgba(69,207,154,.35); padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
+        .track h3 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .03em; font-size: 1.5rem; color: var(--cream); margin-bottom: 10px; }
+        .track > p { color: var(--muted); font-size: .98rem; margin-bottom: 20px; }
+        .track ul { list-style: none; }
+        .track li { display: flex; gap: 12px; align-items: flex-start; font-size: .96rem; color: var(--lede); padding: 11px 0; border-top: 1px solid var(--line); }
+        .track li:first-child { border-top: none; }
+        .track li .dash { flex: 0 0 auto; color: var(--gold); margin-top: 3px; }
+        .track li .dash svg { width: 16px; height: 16px; }
+        .tracks-note { margin-top: 28px; font-family: var(--ui); font-size: .95rem; color: var(--muted); max-width: 60ch; }
+        .tracks-note a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--hair); }
+        .tracks-note a:hover { border-color: var(--gold); }
+        @media (max-width: 900px) { .tracks { grid-template-columns: 1fr; } .track.b { margin-top: 0; } }
+
+        /* ══════════════ PARTNER / CTA ══════════════ */
+        .cta-band { position: relative; overflow: hidden; text-align: center; background: linear-gradient(135deg, var(--green), #062e22); border-block: 1px solid var(--line); }
+        .cta-band::before { content: ""; position: absolute; left: 50%; top: -90px; width: 420px; height: 420px; transform: translateX(-50%); background: radial-gradient(circle, rgba(255,201,40,.20), transparent 70%); pointer-events: none; }
+        .cta-inner { position: relative; max-width: 680px; margin: 0 auto; }
+        .cta-inner .eyebrow { justify-content: center; }
+        .cta-inner h2 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .01em; font-size: clamp(2rem,4.6vw,3.2rem); line-height: .98; margin: 14px 0 14px; }
+        .cta-inner p { color: rgba(246,240,226,.86); font-size: 1.08rem; margin-bottom: 28px; }
+        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        /* ── FOOTER ── */
+        footer { background: #100e09; border-top: 1px solid var(--line); padding: 60px 0 28px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 36px; margin-bottom: 36px; }
+        .footer-brand p { color: var(--muted); font-size: 0.9rem; margin-top: 14px; max-width: 320px; }
+        footer h3 { font-family: var(--ui); color: var(--cream); font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+        footer a { color: var(--muted); text-decoration: none; display: block; margin-bottom: 8px; font-size: 0.9rem; transition: color .2s; }
+        footer a:hover { color: var(--gold); }
+        .footer-bottom { border-top: 1px solid var(--line); padding-top: 22px; text-align: center; color: var(--muted-2); font-size: 0.82rem; }
+        .footer-bottom a { display: inline; color: var(--gold); }
+        @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
+
+        /* ── GLOBAL REDUCED-MOTION ── */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal { opacity: 1; transform: none; transition: none; }
+            .grain { opacity: .045; animation: none; }
+            .heart::before { animation: none; }
+        }
+    </style>
+
+    <!-- Page-specific additions (Inmate Services / launching-soon) — reuse tokens only -->
+    <style>
+        /* "Launching soon" status pill, sits above the mast */
+        .status-pill { display: inline-flex; align-items: center; gap: 9px; font-family: var(--ui); font-size: .72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green-lit); background: rgba(11,94,70,.28); border: 1px solid rgba(69,207,154,.35); padding: 7px 15px; border-radius: 100px; margin-top: 18px; }
+        .status-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green-lit); box-shadow: 0 0 0 3px rgba(69,207,154,.22); }
+        /* Standalone prose lede for the "why" section */
+        .prose-lede { color: var(--lede); font-size: 1.12rem; line-height: 1.72; max-width: 66ch; }
+        .prose-lede b { color: var(--cream); font-weight: 600; }
+        /* Dignified pull-quote line in --display */
+        .why-quote { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--cream); font-size: clamp(1.25rem,2.4vw,1.7rem); line-height: 1.4; max-width: 22ch; }
+    </style>
+</head>
+<body>
+    <noscript><style>.reveal{opacity:1!important;transform:none!important;transition:none!important;}</style></noscript>
+
+    <div class="grain" aria-hidden="true"></div>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- ANNOUNCE -->
+    <div class="announce">
+        Youth raising service dogs for veterans. <a href="service-dogs.html">Meet the program</a>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="brand">
+                    <img src="tailblazers-logo.png" alt="NYC Tailblazers logo">
+                    <span class="brand-name">NYC Tailblazers<small>Raised by the Next Generation</small></span>
+                </a>
+                <button class="hamburger" aria-label="Toggle menu" aria-controls="navlinks" aria-expanded="false" onclick="var n=document.getElementById('navlinks');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-links" id="navlinks">
                     <a href="index.html#about">Our Mission</a>
                     <a href="service-dogs.html">Service Dogs</a>
                     <a href="index.html#ventures">Our Ventures</a>
@@ -170,127 +354,178 @@
                     <a href="dog-run.html">Dog Run</a>
                     <a href="index.html#support" class="nav-cta">Donate</a>
                 </div>
-        <div class="nav-social">
-          <a href="https://instagram.com/nyctailblazers" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-          <a href="https://facebook.com/NYCTailblazers" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="https://tiktok.com/@nyctailblazers" target="_blank" rel="noopener" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+                <div class="nav-social">
+                    <a href="https://instagram.com/nyctailblazers" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                    <a href="https://facebook.com/NYCTailblazers" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <a href="https://tiktok.com/@nyctailblazers" target="_blank" rel="noopener" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+                </div>
+            </nav>
         </div>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
+    </header>
 
-    <section class="page-hero center">
-      <div class="container inner">
-        <div class="reveal">
-          <span class="badge emerald">Launching Soon</span>
+    <main id="main">
+    <!-- ══════════════ HERO ══════════════ -->
+    <section class="heart" id="top" aria-labelledby="vr-title">
+        <span class="heart-ghost" aria-hidden="true">CARE</span>
+        <div class="heart-wrap">
+            <div class="heart-copy">
+                <span class="eyebrow reveal">Inmate Services &mdash; A NYC Tailblazers Venture</span>
+                <h1 id="vr-title" class="mast reveal d1">Approved packages, sent with <span class="accent">care</span>.</h1>
+                <p class="mast-warm reveal d1">Staying close shouldn't come down to a rejected box.</p>
+                <p class="mast-lede reveal d2">A compliant, easy way for families to send NYS-approved care packages to loved ones who are incarcerated &mdash; <b>food, hygiene items, and other essentials</b> that meet DOCCS Directive 4911 rules, without the guesswork.</p>
+                <span class="status-pill reveal d2"><span class="dot" aria-hidden="true"></span> Launching Soon</span>
+                <div class="hero-btns reveal d3">
+                    <a href="mailto:info@nyctailblazers.com?subject=Vendor%20Resale%20Interest" class="btn btn-gold">Notify Me at Launch
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                    <a href="index.html#ventures" class="btn btn-ghost">Back to Ventures</a>
+                </div>
+            </div>
+
+            <div class="heart-fig reveal d2">
+                <div class="fig-frame">
+                    <div class="fig-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6l8 4v8.8l-8 4-8-4V6.6l8-4z"/><path d="M4 6.6l8 4 8-4"/><path d="M12 10.6v8.8"/><path d="M12 10.4l-1.4-2.6M12 10.4l1.4-2.6"/></svg>
+                    </div>
+                    <span class="fig-cap">NYS DOCCS Directive 4911</span>
+                </div>
+            </div>
         </div>
-        <h1 class="reveal d1">Approved Packages, Sent With Care</h1>
-        <p class="reveal d2">A compliant, easy way for families to send NYS-approved care packages to loved ones who are incarcerated: food, hygiene items, and other essentials that meet DOCCS Directive 4911 rules, without the guesswork.</p>
-        <div class="reveal d3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px;">
-          <a href="mailto:info@nyctailblazers.com?subject=Vendor%20Resale%20Interest" class="btn btn-gold">Notify Me at Launch →</a>
-          <a href="index.html#ventures" class="btn btn-ghost">Back to Ventures</a>
-        </div>
-      </div>
     </section>
 
-    <section class="pad alt">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow center">The Process</span>
-          <h2>How it will work</h2>
-          <p>Three simple steps, built around New York State facility rules from day one.</p>
+    <!-- ══════════════ HOW IT WILL WORK ══════════════ -->
+    <section class="pad alt-band" id="how" style="background:linear-gradient(180deg,var(--bg-2),var(--bg));border-block:1px solid var(--line);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">The Process</span>
+                <h2>How it will <span class="accent">work</span>.</h2>
+                <p>Three simple steps, built around New York State facility rules from day one.</p>
+            </div>
+            <div class="journey reveal d1">
+                <div class="jstep">
+                    <span class="jnode" aria-hidden="true">01</span>
+                    <h3>Browse Approved Items</h3>
+                    <p>Only items that meet facility rules will show up to choose from. No dead ends, no guessing what's allowed.</p>
+                </div>
+                <div class="jstep">
+                    <span class="jnode" aria-hidden="true">02</span>
+                    <h3>We Handle Compliance</h3>
+                    <p>Every package is assembled to meet DOCCS Directive 4911 and 4911A packaging rules, so it isn't rejected at intake.</p>
+                </div>
+                <div class="jstep">
+                    <span class="jnode" aria-hidden="true">03</span>
+                    <h3>Shipped Direct</h3>
+                    <p>Once approved, your package is sent straight to the facility your loved one is housed at.</p>
+                </div>
+            </div>
         </div>
-        <div class="card-grid">
-          <div class="card reveal d1">
-            <div class="ic" aria-hidden="true">📦</div>
-            <h3>Browse Approved Items</h3>
-            <p>Only items that meet facility rules will show up to choose from. No dead ends, no guessing what's allowed.</p>
-          </div>
-          <div class="card reveal d2">
-            <div class="ic" aria-hidden="true">✅</div>
-            <h3>We Handle Compliance</h3>
-            <p>Every package is assembled to meet DOCCS Directive 4911 and 4911A packaging rules, so it isn't rejected at intake.</p>
-          </div>
-          <div class="card reveal d3">
-            <div class="ic" aria-hidden="true">🚚</div>
-            <h3>Shipped Direct</h3>
-            <p>Once approved, your package is sent straight to the facility your loved one is housed at.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section class="pad">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Why This Matters</span>
-          <h2>Why we're building this</h2>
+    <!-- ══════════════ WHY WE'RE BUILDING THIS ══════════════ -->
+    <section class="pad" id="why">
+        <div class="container">
+            <div class="buddy">
+                <div class="body reveal">
+                    <span class="eyebrow">Why This Matters</span>
+                    <h2 style="font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(1.9rem,4vw,2.9rem);line-height:.96;margin:14px 0 18px;">Why we're <span class="accent">building</span> this.</h2>
+                    <p class="prose-lede">Sending a package to someone inside is confusing and easy to get wrong. Facility rules vary, requirements change, and one mistake &mdash; the wrong brand, the wrong packaging, an item that isn't on the approved list &mdash; can get the whole package rejected. <b>That's a real cost to families who are already carrying a lot.</b> We're building a simple, compliant service so care packages make it to the people they're meant for.</p>
+                </div>
+                <div class="buddy-quote reveal d1">
+                    <blockquote class="why-quote">A package that makes it through is one more way to say: I'm still here.</blockquote>
+                </div>
+            </div>
+
+            <div class="fieldnote" aria-hidden="true"></div>
+
+            <div class="serve-feature reveal" style="margin-top:clamp(40px,6vw,72px);">
+                <span class="serve-badge" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.2-2.9 6.9-7 8.6C7.9 16.9 5 14.2 5 10V6l7-3z"/><path d="M8.5 12.5l2.2 2.2 4.8-4.8"/></svg>
+                </span>
+                <div class="txt">
+                    <span class="k">Compliance First</span>
+                    <h3>Built the right way, before we open</h3>
+                    <p>This service follows New York State DOCCS Directive 4911 and 4911A. It isn't live yet. We're building it carefully, the right way, before we open it to families.</p>
+                </div>
+            </div>
         </div>
-        <p class="lede reveal d1">Sending a package to someone inside is confusing and easy to get wrong. Facility rules vary, requirements change, and one mistake (the wrong brand, the wrong packaging, an item that isn't on the approved list) can get the whole package rejected. That's a real cost to families who are already carrying a lot. We're building a simple, compliant service so care packages make it to the people they're meant for.</p>
-        <p class="compliance-note reveal d2"><strong>Compliance first.</strong> This service follows New York State DOCCS Directive 4911 and 4911A. It isn't live yet. We're building it carefully, the right way, before we open it to families.</p>
-      </div>
     </section>
 
-    <section class="cta-band pad reveal">
-      <div class="container cta-inner">
-        <span class="eyebrow center">Coming Soon</span>
-        <h2>Want to know when we open?</h2>
-        <p>Leave your contact info and we'll reach out the moment Vendor Resale launches.</p>
-        <div class="cta-btns">
-          <a href="mailto:info@nyctailblazers.com?subject=Vendor%20Resale%20Interest" class="btn btn-gold">Email Us →</a>
-          <a href="sms:+13472608305" class="btn btn-ghost">Text Us</a>
+    <!-- ══════════════ CTA ══════════════ -->
+    <section class="pad cta-band" id="notify">
+        <div class="container">
+            <div class="cta-inner reveal">
+                <span class="eyebrow">Coming Soon</span>
+                <h2>Want to know when we <span class="accent">open</span>?</h2>
+                <p>Leave your contact info and we'll reach out the moment Inmate Services launches. No spam &mdash; just one message when families can start sending.</p>
+                <div class="cta-btns">
+                    <a href="mailto:info@nyctailblazers.com?subject=Vendor%20Resale%20Interest" class="btn btn-gold">Notify Me at Launch
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
+                    </a>
+                    <a href="sms:+13472608305" class="btn btn-ghost">Text (347) 260-8305</a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-  </main>
+    </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="brand"><img src="tailblazers-logo.png" alt="NYC Tailblazers" style="width:44px;height:44px;border-radius:10px;"><span class="brand-name">NYC Tailblazers</span></a>
-          <p>A mission-driven family of ventures in NYC. Veterans get service dogs trained by at-risk youth. Blaze new trails, wag new tails. 🐾</p>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#top" class="brand"><img src="tailblazers-logo.png" alt="NYC Tailblazers" style="width:44px;height:44px;border-radius:10px;"><span class="brand-name">NYC Tailblazers</span></a>
+                    <p>A family of NYC ventures raising service dogs for veterans &mdash; trained by the next generation. Blaze new trails, wag new tails.</p>
+                </div>
+                <div>
+                    <h3>Ventures</h3>
+                    <a href="service-dogs.html">Service &amp; Facility Dogs</a>
+                    <a href="dog-walking.html">Dog Walking</a>
+                    <a href="jiggs-and-glo.html">Books</a>
+                    <a href="web-design.html">Web Design</a>
+                    <a href="personal-training.html">Personal Training</a>
+                    <a href="vendor-resale.html">Inmate Services</a>
+                    <a href="3d-printing.html">3D Printing</a>
+                </div>
+                <div>
+                    <h3>Community</h3>
+                    <a href="index.html#about">Our Mission</a>
+                    <a href="dog-run.html">Dog Run Petition</a>
+                    <a href="index.html#support">Donate</a>
+                    <a href="dog-walking.html#faq">FAQ</a>
+                </div>
+                <div>
+                    <h3>Get In Touch</h3>
+                    <a href="mailto:info@nyctailblazers.com">info@nyctailblazers.com</a>
+                    <a href="sms:+13472608305">(347) 260-8305</a>
+                    <a href="https://instagram.com/nyctailblazers" target="_blank" rel="noopener">@nyctailblazers</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> NYC Tailblazers. All Rights Reserved. &middot; Blaze new trails, wag new tails.</p>
+                <p style="margin-top:6px;">Site by <a href="web-design.html">NYC Tailblazers Web Design</a></p>
+            </div>
         </div>
-        <div>
-          <h3>Ventures</h3>
-          <a href="service-dogs.html">Service &amp; Facility Dogs</a>
-          <a href="dog-walking.html">Dog Walking</a>
-          <a href="web-design.html">Web Design</a>
-          <a href="personal-training.html">Personal Training</a>
-          <a href="vendor-resale.html">Inmate Services</a>
-          <a href="3d-printing.html">3D Printing</a>
-          <a href="jiggs-and-glo.html">Books</a>
-        </div>
-        <div>
-          <h3>Community</h3>
-          <a href="index.html#mission">Our Mission</a>
-          <a href="dog-run.html">Dog Run Petition</a>
-          <a href="index.html#support">Donate</a>
-          <a href="mailto:info@nyctailblazers.com">Contact</a>
-        </div>
-        <div>
-          <h3>Get In Touch</h3>
-          <a href="mailto:info@nyctailblazers.com">info@nyctailblazers.com</a>
-          <a href="sms:+13472608305">(347) 260-8305</a>
-          <a href="https://instagram.com/nyctailblazers" target="_blank" rel="noopener">@nyctailblazers</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span id="year">2026</span> NYC Tailblazers. All Rights Reserved. · Blaze new trails, wag new tails.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    (function(){
-      var els=document.querySelectorAll('.reveal');
-      if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
-      var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
-      els.forEach(function(e){io.observe(e);});
-    })();
-    document.querySelectorAll('#navlinks a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navlinks').classList.remove('open');});});
-  </script>
-</body></html>
+    <script>
+        // Current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll reveal
+        (function () {
+            var els = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+            }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+            els.forEach(function (e) { io.observe(e); });
+        })();
+
+        // Close mobile nav on link click
+        document.querySelectorAll('#navlinks a').forEach(function (a) {
+            a.addEventListener('click', function () { document.getElementById('navlinks').classList.remove('open'); });
+        });
+    </script>
+</body>
+</html>

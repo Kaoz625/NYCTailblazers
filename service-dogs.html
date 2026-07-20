@@ -1,206 +1,340 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Service &amp; Facility Dogs | NYC Tailblazers</title>
-  <meta name="description" content="At-risk youth and adults raise and train service dogs for veterans — dogs that go on to serve as facility dogs in schools, hospitals, and alongside first responders and police. Every dog is a battle buddy.">
-  <link rel="icon" href="tailblazers-logo.png">
-  <link rel="canonical" href="https://nyctailblazers.com/service-dogs.html">
-  <meta property="og:title" content="Service &amp; Facility Dogs | NYC Tailblazers">
-  <meta property="og:description" content="Service dogs for veterans, raised by the next generation — and facility dogs for schools, hospitals, first responders, and police. Every dog is a battle buddy.">
-  <meta property="og:url" content="https://nyctailblazers.com/service-dogs.html">
-  <meta property="og:image" content="https://nyctailblazers.com/tailblazers-logo.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Service &amp; Facility Dogs | NYC Tailblazers">
-  <meta name="twitter:description" content="Service dogs for veterans, raised by the next generation — and facility dogs for schools, hospitals, first responders, and police.">
-  <meta name="twitter:image" content="https://nyctailblazers.com/tailblazers-logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#14120d; --bg-2:#1b1810; --bg-3:#241f15;
-      --line:rgba(255,235,190,0.10);
-      --green:#0b5e46;        /* royal emerald-jade */
-      --green-lit:#45cf9a;    /* legible jade on dark */
-      --green-deep:#062e22;
-      --gold:#ffc928; --gold-soft:#ecc558;
-      --cream:#f6f0e2; --muted:rgba(246,240,226,0.60); --muted-2:rgba(246,240,226,0.56);
-      --shadow:0 30px 80px -20px rgba(0,0,0,0.75);
-      --display:'Fraunces',Georgia,'Times New Roman',serif;
-      --ui:'Outfit',system-ui,-apple-system,sans-serif;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-    body{font-family:var(--ui);line-height:1.65;color:var(--cream);background:var(--bg);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-    ::selection{background:var(--gold);color:#14120d;}
-    a{color:inherit;}
-    img{max-width:100%;display:block;}
-    a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px;}
-    .skip-link{position:absolute;left:-9999px;top:0;z-index:500;background:var(--gold);color:#14120d;padding:10px 18px;border-radius:0 0 10px 0;font-weight:700;text-decoration:none;}
-    .skip-link:focus{left:0;}
-    .container{max-width:1220px;margin:0 auto;padding:0 24px;}
-    .eyebrow{font-size:0.76rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px;}
-    .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7;}
-    .eyebrow.center{justify-content:center;}
-    h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-0.01em;}
-    .italic-gold{font-style:italic;color:var(--gold);font-weight:500;}
-    .pad{padding:clamp(64px,9vw,130px) 0;}
-    section{position:relative;}
-    .section-head{max-width:680px;margin-bottom:52px;}
-    .section-head.center{margin-inline:auto;text-align:center;}
-    .section-head h2{font-size:clamp(2rem,4.6vw,3.4rem);margin:16px 0 14px;}
-    .section-head p{color:var(--muted);font-size:1.06rem;}
-    .alt{background:linear-gradient(180deg,var(--bg),var(--bg-2));border-block:1px solid var(--line);}
-    .alt-2{background:linear-gradient(180deg,var(--bg-2),var(--bg));border-block:1px solid var(--line);}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service &amp; Facility Dogs | NYC Tailblazers</title>
+    <meta name="description" content="At-risk youth and adults raise and train service dogs for veterans — dogs that go on to serve as facility dogs in schools, hospitals, and alongside first responders and police. Every dog is a battle buddy.">
+    <link rel="icon" href="tailblazers-logo.png">
+    <link rel="canonical" href="https://nyctailblazers.com/service-dogs.html">
 
-    /* buttons */
-    .btn{display:inline-flex;align-items:center;gap:9px;padding:15px 30px;border-radius:100px;font-family:var(--ui);font-weight:600;font-size:0.98rem;text-decoration:none;cursor:pointer;border:none;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .2s,color .2s;white-space:nowrap;}
-    .btn-gold{background:var(--gold);color:#14120d;box-shadow:0 10px 30px -8px rgba(255,201,40,0.5);}
-    .btn-gold:hover{transform:translateY(-3px);box-shadow:0 18px 44px -10px rgba(255,201,40,0.65);}
-    .btn-ghost{background:transparent;color:var(--cream);border:1.5px solid rgba(246,240,226,0.28);}
-    .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px);}
-    .btn-emerald{background:var(--green);color:var(--cream);}
-    .btn-emerald:hover{background:#0e7457;transform:translateY(-3px);}
+    <!-- Open Graph -->
+    <meta property="og:title" content="Service &amp; Facility Dogs | NYC Tailblazers" />
+    <meta property="og:description" content="Service dogs for veterans, raised by the next generation — and facility dogs for schools, hospitals, first responders, and police. Every dog is a battle buddy." />
+    <meta property="og:image" content="https://nyctailblazers.com/tailblazers-logo.png" />
+    <meta property="og:url" content="https://nyctailblazers.com/service-dogs.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NYC Tailblazers" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Service &amp; Facility Dogs | NYC Tailblazers" />
+    <meta name="twitter:description" content="Service dogs for veterans, raised by the next generation — and facility dogs for schools, hospitals, first responders, and police." />
+    <meta name="twitter:image" content="https://nyctailblazers.com/tailblazers-logo.png" />
 
-    /* reveal */
-    .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1);}
-    .reveal.in{opacity:1;transform:none;}
-    .reveal.d1{transition-delay:.08s;}.reveal.d2{transition-delay:.16s;}.reveal.d3{transition-delay:.24s;}.reveal.d4{transition-delay:.32s;}.reveal.d5{transition-delay:.40s;}
-    @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+    <!-- Fonts: Saira Condensed (structure) + Fraunces (warmth, incl. italic) + Outfit (body/UI) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    /* header / nav */
-    header{position:sticky;top:0;z-index:200;background:rgba(20,18,13,0.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
-    nav{display:flex;align-items:center;justify-content:space-between;height:74px;}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
-    .brand img{width:42px;height:42px;border-radius:10px;object-fit:cover;}
-    .brand-name{font-family:var(--display);font-weight:700;font-size:1.18rem;color:var(--cream);line-height:1;}
-    .brand-name small{display:block;font-family:var(--ui);font-weight:500;font-size:0.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:3px;}
-    .nav-links{display:flex;align-items:center;gap:26px;}
-    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.95rem;font-weight:500;transition:color .2s;}
-    .nav-links a:hover{color:var(--cream);}
-    .nav-links a.active{color:var(--gold);}
-    .nav-cta{background:var(--gold);color:#14120d !important;padding:10px 22px;border-radius:100px;font-weight:700 !important;transition:transform .2s;}
-    .nav-cta:hover{transform:translateY(-2px);}
-    .nav-social{display:flex;gap:14px;}
-    .nav-social a{color:var(--muted-2);display:flex;align-items:center;justify-content:center;min-width:32px;min-height:32px;transition:color .2s;}
-    .nav-social a:hover{color:var(--gold);}
-    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;min-width:44px;min-height:44px;align-items:center;justify-content:center;}
-    .hamburger span{width:26px;height:2px;background:var(--cream);border-radius:2px;transition:.3s;}
-    @media (max-width:1050px){
-      .hamburger{display:flex;}
-      .nav-links{position:absolute;top:74px;left:0;right:0;background:rgba(20,18,13,0.98);backdrop-filter:blur(14px);flex-direction:column;align-items:stretch;gap:4px;padding:16px 24px 24px;border-bottom:1px solid var(--line);transform:translateY(-8px);opacity:0;visibility:hidden;pointer-events:none;transition:.3s;}
-      .nav-links.open{transform:none;opacity:1;visibility:visible;pointer-events:auto;}
-      .nav-links a{padding:12px 4px;border-bottom:1px solid var(--line);}
-      .nav-cta{text-align:center;margin-top:8px;}
-      .nav-social{display:none;}
-    }
+    <style>
+        :root {
+            --bg:        #14120d;   /* warm near-black (never pure #000) */
+            --bg-2:      #1b1810;
+            --bg-3:      #241f15;
+            --line:      rgba(255,235,190,0.10);
+            --green:     #0b5e46;   /* royal emerald-jade */
+            --green-lit: #45cf9a;   /* legible jade on dark */
+            --gold:      #ffc928;   /* brand gold */
+            --gold-soft: #ecc558;
+            --cream:     #f6f0e2;   /* primary text on dark */
+            --muted:     rgba(246,240,226,0.60);
+            --muted-2:   rgba(246,240,226,0.56);
+            --shadow:    0 30px 80px -20px rgba(0,0,0,0.75);
+            --display: 'Fraunces', Georgia, 'Times New Roman', serif;   /* warmth / emotion */
+            --cond:    'Saira Condensed', Impact, sans-serif;           /* structure / discipline */
+            --ui:      'Outfit', system-ui, -apple-system, sans-serif;  /* utility / body */
+            --hair:    rgba(255,201,40,0.22);                           /* gold-tinted dog-tag hairline */
+            --lede:    rgba(246,240,226,0.82);                          /* AA-safe secondary body */
+        }
 
-    /* generic content components */
-    .lede{max-width:760px;color:var(--muted);font-size:1.14rem;}
-    .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-    .card-grid.two{grid-template-columns:repeat(2,1fr);}
-    .card-grid.four{grid-template-columns:repeat(4,1fr);}
-    .card{background:var(--bg-2);border:1px solid var(--line);border-radius:20px;padding:32px 28px;transition:transform .3s,border-color .3s;}
-    .card:hover{transform:translateY(-6px);border-color:rgba(255,201,40,0.4);}
-    .card .ic{font-size:1.9rem;margin-bottom:14px;}
-    .card h3{font-size:1.28rem;margin-bottom:10px;}
-    .card p{color:var(--muted);font-size:0.95rem;}
-    .card ul{list-style:none;margin-top:12px;}
-    .card li{font-size:0.9rem;color:var(--muted);padding:5px 0 5px 22px;position:relative;}
-    .card li::before{content:"→";position:absolute;left:0;color:var(--gold);}
-    @media (max-width:1000px){.card-grid.four{grid-template-columns:1fr 1fr;}}
-    @media (max-width:900px){.card-grid,.card-grid.two{grid-template-columns:1fr;}}
-    @media (max-width:560px){.card-grid.four{grid-template-columns:1fr;}}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: var(--ui);
+            line-height: 1.65;
+            color: var(--cream);
+            background: var(--bg);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        ::selection { background: var(--gold); color: #14120d; }
+        a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+        .skip-link { position: absolute; left: -9999px; top: 0; z-index: 500; background: var(--gold); color: #14120d; padding: 10px 18px; border-radius: 0 0 10px 0; font-weight: 700; text-decoration: none; }
+        .skip-link:focus { left: 0; }
 
-    /* page hero (sub-pages) */
-    .page-hero{position:relative;overflow:hidden;}
-    .page-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 55% at 78% 12%,rgba(255,201,40,0.14),transparent 60%),radial-gradient(50% 60% at 6% 92%,rgba(11,94,70,0.42),transparent 65%);pointer-events:none;}
-    .page-hero .inner{position:relative;z-index:2;max-width:860px;padding:clamp(56px,8vw,104px) 0 clamp(40px,5vw,64px);}
-    .page-hero.center .inner{margin:0 auto;text-align:center;}
-    .page-hero h1{font-size:clamp(2.5rem,6vw,4.4rem);margin:18px 0 20px;}
-    .page-hero p{color:var(--muted);font-size:1.14rem;max-width:680px;}
-    .page-hero.center p{margin-inline:auto;}
-    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,201,40,0.10);border:1px solid rgba(255,201,40,0.32);color:var(--gold);padding:7px 16px;border-radius:100px;font-size:0.78rem;font-weight:600;margin-bottom:22px;}
-    .badge.emerald{background:rgba(11,94,70,0.22);border-color:rgba(69,207,154,0.4);color:var(--green-lit);}
+        img { max-width: 100%; display: block; }
+        a { color: inherit; }
 
-    /* metrics row */
-    .metrics{display:flex;gap:40px;flex-wrap:wrap;margin-top:44px;}
-    .metrics.center{justify-content:center;}
-    .metric strong{font-family:var(--display);display:block;font-size:2.1rem;color:var(--gold);font-weight:600;line-height:1;}
-    .metric span{font-size:0.82rem;color:var(--muted);}
+        .container { max-width: 1220px; margin: 0 auto; padding: 0 24px; }
+        .eyebrow {
+            font-family: var(--ui);
+            font-size: 0.76rem; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: var(--gold);
+            display: inline-flex; align-items: center; gap: 12px;
+        }
+        .eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--gold); opacity: 0.7; }
+        h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; letter-spacing: -0.01em; }
+        /* Gradient accent word — one per major headline (replaces the old italic-gold tic) */
+        .accent {
+            background: linear-gradient(100deg, var(--gold) 0%, var(--gold-soft) 40%, var(--green-lit) 118%);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
 
-    /* CTA band */
-    .cta-band{background:linear-gradient(135deg,var(--green),var(--green-deep));position:relative;overflow:hidden;text-align:center;}
-    .cta-band::before{content:"";position:absolute;left:50%;top:-80px;width:400px;height:400px;transform:translateX(-50%);background:radial-gradient(circle,rgba(255,201,40,0.22),transparent 70%);}
-    .cta-inner{position:relative;max-width:680px;margin:0 auto;}
-    .cta-inner h2{font-size:clamp(2rem,4.6vw,3.2rem);margin:16px 0;}
-    .cta-inner p{color:rgba(246,240,226,0.85);font-size:1.08rem;margin-bottom:30px;}
-    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+        /* ── BUTTONS ── */
+        .btn {
+            display: inline-flex; align-items: center; gap: 9px;
+            padding: 15px 30px; border-radius: 100px;
+            font-family: var(--ui); font-weight: 600; font-size: 0.98rem;
+            text-decoration: none; cursor: pointer; border: none;
+            transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s, background .2s, color .2s;
+            letter-spacing: 0.2px; white-space: nowrap;
+        }
+        .btn svg { width: 18px; height: 18px; }
+        .btn-gold { background: var(--gold); color: #14120d; box-shadow: 0 10px 30px -8px rgba(255,201,40,0.5); }
+        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 18px 44px -10px rgba(255,201,40,0.65); }
+        .btn-ghost { background: transparent; color: var(--cream); border: 1.5px solid rgba(246,240,226,0.28); }
+        .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); }
 
-    /* footer */
-    footer{background:#100e09;border-top:1px solid var(--line);padding:60px 0 28px;}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:36px;}
-    .footer-brand p{color:var(--muted);font-size:0.9rem;margin-top:14px;max-width:300px;}
-    .footer-brand .brand{margin-bottom:0;}
-    footer h3{font-family:var(--ui);color:var(--cream);font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;}
-    footer a{color:var(--muted);text-decoration:none;display:block;margin-bottom:8px;font-size:0.9rem;transition:color .2s;}
-    footer a:hover{color:var(--gold);}
-    .footer-bottom{border-top:1px solid var(--line);padding-top:22px;text-align:center;color:var(--muted-2);font-size:0.82rem;}
-    .footer-bottom a{display:inline;color:var(--gold);}
-    @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;}}
-    @media (max-width:520px){.footer-grid{grid-template-columns:1fr;}}
-  </style>
-  <style>
-    /* page-specific */
-    .buddy{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;}
-    .buddy h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:18px;}
-    .buddy p{color:var(--muted);font-size:1.05rem;}
-    .buddy p+p{margin-top:16px;}
-    .buddy-quote{background:var(--bg-2);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:16px;padding:30px 32px;}
-    .buddy-quote blockquote{font-family:var(--display);font-size:1.35rem;line-height:1.35;color:var(--cream);font-style:italic;}
-    .buddy-quote cite{display:block;margin-top:16px;font-style:normal;font-size:0.85rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
-    @media (max-width:900px){.buddy{grid-template-columns:1fr;gap:30px;}}
+        /* ── SECTION SCAFFOLD ── */
+        section { position: relative; }
+        .pad { padding: clamp(64px, 9vw, 130px) 0; }
+        .section-head { max-width: 640px; margin-bottom: 44px; }
+        .section-head h2 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .01em; font-size: clamp(2rem, 4.6vw, 3.4rem); line-height: .95; margin: 14px 0 12px; }
+        .section-head p { color: var(--lede); font-size: 1.06rem; }
+        /* "Field-note" hairline divider: a full rule with one short gold segment */
+        .fieldnote { position: relative; height: 1px; background: var(--line); margin: clamp(48px,7vw,90px) 0 0; }
+        .fieldnote::before { content: ""; position: absolute; left: 24px; top: 0; width: 40px; height: 1px; background: var(--gold); }
 
-    /* benefits list */
-    .benefits{background:var(--bg-2);border:1px solid var(--line);border-radius:22px;padding:clamp(28px,4vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:14px 34px;}
-    .benefits li{list-style:none;display:flex;gap:14px;align-items:flex-start;font-size:1.02rem;color:var(--cream);padding:8px 0;}
-    .benefits li .chk{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:rgba(69,207,154,0.16);border:1px solid rgba(69,207,154,0.4);color:var(--green-lit);display:flex;align-items:center;justify-content:center;font-size:0.85rem;margin-top:1px;}
-    @media (max-width:760px){.benefits{grid-template-columns:1fr;}}
+        /* ── REVEAL ANIMATION ── */
+        .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+        .reveal.in { opacity: 1; transform: none; }
+        .reveal.d1 { transition-delay: .08s; } .reveal.d2 { transition-delay: .16s; }
+        .reveal.d3 { transition-delay: .24s; } .reveal.d4 { transition-delay: .32s; }
 
-    /* journey / steps */
-    .journey{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:step;}
-    .jstep{background:var(--bg-2);border:1px solid var(--line);border-radius:18px;padding:26px 22px;position:relative;}
-    .jstep .jn{font-family:var(--display);font-size:1.4rem;color:var(--gold);font-weight:600;line-height:1;margin-bottom:12px;}
-    .jstep h3{font-size:1.06rem;margin-bottom:8px;}
-    .jstep p{color:var(--muted);font-size:0.88rem;}
-    @media (max-width:1000px){.journey{grid-template-columns:1fr 1fr;}}
-    @media (max-width:560px){.journey{grid-template-columns:1fr;}}
+        /* ── FILM-GRAIN OVERLAY (self-contained SVG, no external asset) ── */
+        .grain {
+            position: fixed; inset: 0; z-index: 5; pointer-events: none;
+            opacity: .05; mix-blend-mode: overlay;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 300px 300px;
+            animation: grainShift 1.2s steps(4) infinite;
+        }
+        @keyframes grainShift {
+            0%{transform:translate(0,0)} 25%{transform:translate(-2%,1%)}
+            50%{transform:translate(1%,-2%)} 75%{transform:translate(-1%,2%)} 100%{transform:translate(0,0)}
+        }
 
-    /* two tracks */
-    .tracks{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
-    .track{background:linear-gradient(180deg,var(--bg-2),var(--bg-3));border:1px solid var(--line);border-radius:22px;padding:clamp(28px,3.5vw,40px);}
-    .track .tag{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green-lit);background:rgba(11,94,70,0.28);border:1px solid rgba(69,207,154,0.35);padding:6px 14px;border-radius:100px;margin-bottom:16px;}
-    .track h3{font-size:1.5rem;margin-bottom:10px;}
-    .track>p{color:var(--muted);font-size:0.98rem;margin-bottom:18px;}
-    .track ul{list-style:none;}
-    .track li{font-size:0.94rem;color:var(--muted);padding:7px 0 7px 24px;position:relative;border-top:1px solid var(--line);}
-    .track li:first-child{border-top:none;}
-    .track li::before{content:"→";position:absolute;left:0;color:var(--gold);}
-    @media (max-width:900px){.tracks{grid-template-columns:1fr;}}
-  </style>
-</head><body>
-  <noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
-  <a href="#main" class="skip-link">Skip to content</a>
-  <header>
-    <div class="container">
-      <nav>
-        <a href="index.html" class="brand">
-          <img src="tailblazers-logo.png" alt="NYC Tailblazers logo">
-          <span class="brand-name">NYC Tailblazers<small>Blaze New Trails, Wag New Tails</small></span>
-        </a>
-        <button class="hamburger" aria-label="Toggle menu" aria-controls="navlinks" aria-expanded="false" onclick="var n=document.getElementById('navlinks');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="nav-links" id="navlinks">
+        /* ── ANNOUNCE BAR ── */
+        .announce {
+            position: relative; z-index: 6;
+            background: linear-gradient(90deg, var(--green), #0f7d5c);
+            color: var(--cream); text-align: center;
+            padding: 9px 20px; font-size: 0.84rem; font-weight: 500; letter-spacing: .2px;
+        }
+        .announce a { color: var(--gold); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(255,201,40,0.4); }
+
+        /* ── HEADER ── */
+        header {
+            position: sticky; top: 0; z-index: 200;
+            background: rgba(20,18,13,0.72);
+            backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
+        }
+        nav { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand img { width: 42px; height: 42px; border-radius: 10px; object-fit: cover; }
+        .brand-name { font-family: var(--display); font-weight: 700; font-size: 1.18rem; color: var(--cream); line-height: 1; }
+        .brand-name small { display: block; font-family: var(--ui); font-weight: 500; font-size: 0.66rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-top: 3px; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color .2s; }
+        .nav-links a:hover { color: var(--cream); }
+        .nav-links a.tab-webdesign { color: var(--gold); font-weight: 600; }
+        .nav-cta { background: var(--gold); color: #14120d !important; padding: 10px 22px; border-radius: 100px; font-weight: 700 !important; transition: transform .2s; }
+        .nav-cta:hover { transform: translateY(-2px); }
+        .nav-social { display: flex; gap: 14px; }
+        .nav-social a { color: var(--muted-2); display: flex; align-items: center; justify-content: center; min-width: 32px; min-height: 32px; transition: color .2s; }
+        .nav-social a:hover { color: var(--gold); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+        .hamburger span { width: 26px; height: 2px; background: var(--cream); border-radius: 2px; transition: .3s; }
+        @media (max-width: 1050px) {
+            .hamburger { display: flex; }
+            .nav-links { position: absolute; top: 74px; left: 0; right: 0; background: rgba(20,18,13,0.98); backdrop-filter: blur(14px); flex-direction: column; align-items: stretch; gap: 4px; padding: 16px 24px 24px; border-bottom: 1px solid var(--line); transform: translateY(-8px); opacity: 0; visibility: hidden; pointer-events: none; transition: .3s; }
+            .nav-links.open { transform: none; opacity: 1; visibility: visible; pointer-events: auto; }
+            .nav-links a { padding: 12px 4px; border-bottom: 1px solid var(--line); }
+            .nav-cta { text-align: center; margin-top: 8px; }
+            .nav-social { display: none; }
+        }
+
+        /* ══════════════ HERO = "OUR HEART" ══════════════ */
+        .heart { overflow: hidden; background: var(--bg); color: var(--cream); isolation: isolate; padding: clamp(80px,12vw,150px) 0 clamp(56px,7vw,92px); }
+        .heart::before {
+            content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+            background: radial-gradient(58% 48% at 20% 32%, rgba(11,94,70,.50), transparent 68%),
+                        radial-gradient(40% 30% at 86% 82%, rgba(255,201,40,.09), transparent 72%),
+                        radial-gradient(120% 120% at 50% 42%, transparent 55%, rgba(0,0,0,.42));
+            animation: glowBreathe 14s ease-in-out infinite;
+        }
+        @keyframes glowBreathe { 0%,100%{transform:scale(1);opacity:.82} 50%{transform:scale(1.06);opacity:1} }
+        .heart-ghost {
+            position: absolute; z-index: 1; top: -.12em; right: -.04em; font-family: var(--cond); font-weight: 800;
+            font-size: clamp(9rem,26vw,24rem); letter-spacing: -.02em; line-height: .8; color: rgba(69,207,154,.05);
+            pointer-events: none; user-select: none; white-space: nowrap;
+        }
+        .heart-wrap { position: relative; z-index: 3; max-width: 1220px; margin: 0 auto; padding: 0 24px;
+            display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px,5vw,64px); align-items: center; }
+        .mast { font-family: var(--cond); font-weight: 800; text-transform: uppercase; letter-spacing: .004em; line-height: .9;
+            font-size: clamp(2.7rem,7vw,5.6rem); margin: 22px 0 0; max-width: 17ch; color: var(--cream);
+            text-shadow: 0 1px 0 rgba(255,235,190,.08), 0 -1px 0 rgba(0,0,0,.4); }
+        .mast-warm { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--cream); font-size: clamp(1.2rem,2.3vw,1.7rem); margin: 20px 0 0; opacity: .92; }
+        .mast-lede { font-family: var(--ui); color: var(--lede); font-size: 1.06rem; line-height: 1.7; max-width: 52ch; margin: 22px 0 0; }
+        .mast-lede b { color: var(--cream); font-weight: 600; }
+        .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+        .tags { display: flex; flex-wrap: wrap; align-items: flex-end; margin-top: 52px; border-top: 1px solid var(--hair); }
+        .tag { padding: 22px 34px 0 0; margin-right: 34px; border-right: 1px solid var(--hair); }
+        .tag:last-child { border-right: 0; margin-right: 0; }
+        .tag .n { font-family: var(--cond); font-weight: 700; line-height: .85; color: var(--cream); display: block; }
+        .tag.big .n { font-size: clamp(3rem,6vw,4.4rem); } .tag.mid .n { font-size: clamp(2.4rem,4.5vw,3.3rem); } .tag.sm .n { font-size: clamp(2rem,3.6vw,2.6rem); }
+        .tag .n em { font-style: normal; color: var(--green-lit); }
+        .tag .k { font-family: var(--ui); font-size: .74rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 8px; max-width: 16ch; display: block; }
+        .heart-fig { position: relative; }
+        .fig-frame { position: relative; aspect-ratio: 4/5; border-radius: 24px; overflow: hidden;
+            background: linear-gradient(155deg, rgba(11,94,70,.5), var(--bg-3) 72%);
+            border: 1px solid var(--line); box-shadow: var(--shadow); }
+        .fig-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .1; mix-blend-mode: overlay;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g2)'/%3E%3C/svg%3E"); }
+        .fig-icon { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+        .fig-icon svg { width: 44%; height: 44%; color: var(--gold); opacity: .92; }
+        .fig-cap { position: absolute; left: 20px; bottom: 16px; font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); z-index: 2; }
+        @media (max-width: 900px) {
+            .heart-wrap { grid-template-columns: 1fr; gap: 40px; }
+            .heart-fig { max-width: 420px; width: 100%; margin: 0 auto; }
+            .tag { padding-right: 20px; margin-right: 20px; }
+        }
+
+        /* ══════════════ BATTLE BUDDY ══════════════ */
+        .buddy-band { background: linear-gradient(180deg, var(--bg-2), var(--bg)); border-block: 1px solid var(--line); }
+        .buddy { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px,5vw,64px); align-items: center; }
+        .buddy .body p { color: var(--lede); font-size: 1.05rem; }
+        .buddy .body p + p { margin-top: 16px; }
+        .buddy .body strong { color: var(--cream); font-weight: 600; }
+        .buddy-quote { position: relative; background: linear-gradient(160deg, rgba(11,94,70,.42), var(--bg-2)); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 18px; padding: clamp(28px,3.5vw,38px); box-shadow: var(--shadow); }
+        .buddy-quote::before { content: "\201C"; position: absolute; left: 20px; top: 6px; font-family: var(--display); font-size: 3.2rem; color: var(--gold); opacity: .55; line-height: 1; }
+        .buddy-quote blockquote { font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(1.15rem,2vw,1.35rem); line-height: 1.4; color: var(--cream); }
+        .buddy-quote cite { display: block; margin-top: 18px; font-style: normal; font-family: var(--ui); font-size: .78rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+        @media (max-width: 900px) { .buddy { grid-template-columns: 1fr; gap: 34px; } }
+
+        /* ══════════════ WHERE THEY SERVE ══════════════ */
+        .serve-feature { position: relative; overflow: hidden; display: grid; grid-template-columns: auto 1fr; gap: clamp(20px,3vw,40px); align-items: center;
+            background: linear-gradient(135deg, rgba(11,94,70,.55), var(--bg-2)); border: 1px solid var(--hair); border-radius: 24px; padding: clamp(28px,4vw,46px); box-shadow: var(--shadow); }
+        .serve-feature::after { content: ""; position: absolute; right: -70px; top: -70px; width: 280px; height: 280px; background: radial-gradient(circle, rgba(255,201,40,.14), transparent 70%); pointer-events: none; }
+        .serve-badge { position: relative; z-index: 1; width: clamp(76px,10vw,112px); height: clamp(76px,10vw,112px); border: 1px solid var(--hair); border-radius: 22px; display: flex; align-items: center; justify-content: center; color: var(--gold); flex: 0 0 auto; }
+        .serve-badge svg { width: 52%; height: 52%; }
+        .serve-feature .txt { position: relative; z-index: 1; }
+        .serve-feature .k { font-family: var(--ui); font-size: .74rem; letter-spacing: 2px; text-transform: uppercase; color: var(--green-lit); display: block; margin-bottom: 8px; }
+        .serve-feature h3 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .03em; font-size: clamp(1.6rem,3.2vw,2.3rem); color: var(--cream); margin-bottom: 10px; line-height: .98; }
+        .serve-feature p { color: var(--lede); font-size: 1.04rem; max-width: 58ch; }
+        .serve-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 26px; }
+        .serve-card { background: var(--bg-2); border: 1px solid var(--line); border-radius: 20px; padding: 30px 26px; transition: transform .3s, border-color .3s; }
+        .serve-card:nth-child(2) { margin-top: clamp(0px, 3.4vw, 40px); }
+        .serve-card:nth-child(3) { margin-top: clamp(0px, 6.4vw, 76px); }
+        .serve-card:hover { transform: translateY(-6px); border-color: rgba(255,201,40,.4); }
+        .serve-ic { width: 50px; height: 50px; border: 1px solid var(--hair); border-radius: 13px; display: inline-flex; align-items: center; justify-content: center; color: var(--green-lit); margin-bottom: 16px; }
+        .serve-ic svg { width: 25px; height: 25px; }
+        .serve-card h3 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .03em; font-size: 1.16rem; color: var(--cream); margin-bottom: 10px; }
+        .serve-card p { color: var(--muted); font-size: .95rem; }
+        @media (max-width: 820px) { .serve-feature { grid-template-columns: 1fr; } .serve-row { grid-template-columns: 1fr; } .serve-card:nth-child(2), .serve-card:nth-child(3) { margin-top: 0; } }
+
+        /* ══════════════ SCHOOL BENEFITS ══════════════ */
+        .benefits { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 44px; max-width: 980px; }
+        .benefits li { display: flex; gap: 15px; align-items: flex-start; font-size: 1.04rem; color: var(--cream); padding: 15px 0; border-top: 1px solid var(--line); }
+        .benefits li:nth-child(1), .benefits li:nth-child(2) { border-top: none; }
+        .benefits .chk { flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: rgba(69,207,154,.14); border: 1px solid rgba(69,207,154,.4); color: var(--green-lit); display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+        .benefits .chk svg { width: 15px; height: 15px; }
+        @media (max-width: 760px) { .benefits { grid-template-columns: 1fr; } .benefits li:nth-child(2) { border-top: 1px solid var(--line); } }
+
+        /* ══════════════ HOW THEY'RE RAISED — vertical journey ══════════════ */
+        .journey { position: relative; max-width: 840px; margin-top: 8px; }
+        .journey::before { content: ""; position: absolute; left: 26px; top: 12px; bottom: 12px; width: 1px; background: var(--hair); }
+        .jstep { position: relative; padding: 0 0 clamp(28px,4vw,46px) 82px; }
+        .jstep:last-child { padding-bottom: 0; }
+        .jnode { position: absolute; left: 0; top: -2px; width: 54px; height: 54px; border-radius: 50%; background: var(--bg-2); border: 1px solid var(--hair); display: flex; align-items: center; justify-content: center; font-family: var(--cond); font-weight: 700; font-size: 1.45rem; color: var(--gold); z-index: 1; }
+        .jstep h3 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .03em; font-size: 1.22rem; color: var(--cream); margin: 8px 0 8px; }
+        .jstep p { color: var(--muted); font-size: .98rem; max-width: 58ch; }
+        .trainnote { margin-top: clamp(30px,4vw,48px); max-width: 780px; display: flex; gap: 16px; align-items: flex-start; color: var(--lede); font-size: 1.02rem; }
+        .trainnote .ic { flex: 0 0 auto; color: var(--green-lit); margin-top: 2px; }
+        .trainnote .ic svg { width: 26px; height: 26px; }
+        .trainnote b { color: var(--cream); font-weight: 600; }
+
+        /* ══════════════ TWO TRACKS ══════════════ */
+        .tracks-band { background: linear-gradient(180deg, var(--bg-2), var(--bg)); border-block: 1px solid var(--line); }
+        .tracks { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(22px,3vw,40px); align-items: start; }
+        .track { background: linear-gradient(180deg, var(--bg-2), var(--bg-3)); border: 1px solid var(--line); border-radius: 22px; padding: clamp(28px,3.5vw,42px); }
+        .track.b { margin-top: clamp(0px,4vw,52px); }
+        .track .ttag { display: inline-block; font-family: var(--ui); font-size: .72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green-lit); background: rgba(11,94,70,.28); border: 1px solid rgba(69,207,154,.35); padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
+        .track h3 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .03em; font-size: 1.5rem; color: var(--cream); margin-bottom: 10px; }
+        .track > p { color: var(--muted); font-size: .98rem; margin-bottom: 20px; }
+        .track ul { list-style: none; }
+        .track li { display: flex; gap: 12px; align-items: flex-start; font-size: .96rem; color: var(--lede); padding: 11px 0; border-top: 1px solid var(--line); }
+        .track li:first-child { border-top: none; }
+        .track li .dash { flex: 0 0 auto; color: var(--gold); margin-top: 3px; }
+        .track li .dash svg { width: 16px; height: 16px; }
+        .tracks-note { margin-top: 28px; font-family: var(--ui); font-size: .95rem; color: var(--muted); max-width: 60ch; }
+        .tracks-note a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--hair); }
+        .tracks-note a:hover { border-color: var(--gold); }
+        @media (max-width: 900px) { .tracks { grid-template-columns: 1fr; } .track.b { margin-top: 0; } }
+
+        /* ══════════════ PARTNER / CTA ══════════════ */
+        .cta-band { position: relative; overflow: hidden; text-align: center; background: linear-gradient(135deg, var(--green), #062e22); border-block: 1px solid var(--line); }
+        .cta-band::before { content: ""; position: absolute; left: 50%; top: -90px; width: 420px; height: 420px; transform: translateX(-50%); background: radial-gradient(circle, rgba(255,201,40,.20), transparent 70%); pointer-events: none; }
+        .cta-inner { position: relative; max-width: 680px; margin: 0 auto; }
+        .cta-inner .eyebrow { justify-content: center; }
+        .cta-inner h2 { font-family: var(--cond); font-weight: 700; text-transform: uppercase; letter-spacing: .01em; font-size: clamp(2rem,4.6vw,3.2rem); line-height: .98; margin: 14px 0 14px; }
+        .cta-inner p { color: rgba(246,240,226,.86); font-size: 1.08rem; margin-bottom: 28px; }
+        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        /* ── FOOTER ── */
+        footer { background: #100e09; border-top: 1px solid var(--line); padding: 60px 0 28px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 36px; margin-bottom: 36px; }
+        .footer-brand p { color: var(--muted); font-size: 0.9rem; margin-top: 14px; max-width: 320px; }
+        footer h3 { font-family: var(--ui); color: var(--cream); font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+        footer a { color: var(--muted); text-decoration: none; display: block; margin-bottom: 8px; font-size: 0.9rem; transition: color .2s; }
+        footer a:hover { color: var(--gold); }
+        .footer-bottom { border-top: 1px solid var(--line); padding-top: 22px; text-align: center; color: var(--muted-2); font-size: 0.82rem; }
+        .footer-bottom a { display: inline; color: var(--gold); }
+        @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
+
+        /* ── GLOBAL REDUCED-MOTION ── */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal { opacity: 1; transform: none; transition: none; }
+            .grain { opacity: .045; animation: none; }
+            .heart::before { animation: none; }
+        }
+    </style>
+</head>
+<body>
+    <noscript><style>.reveal{opacity:1!important;transform:none!important;transition:none!important;}</style></noscript>
+
+    <div class="grain" aria-hidden="true"></div>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- ANNOUNCE -->
+    <div class="announce">
+        Youth raising service dogs for veterans. <a href="service-dogs.html">Meet the program</a>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="brand">
+                    <img src="tailblazers-logo.png" alt="NYC Tailblazers logo">
+                    <span class="brand-name">NYC Tailblazers<small>Raised by the Next Generation</small></span>
+                </a>
+                <button class="hamburger" aria-label="Toggle menu" aria-controls="navlinks" aria-expanded="false" onclick="var n=document.getElementById('navlinks');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-links" id="navlinks">
                     <a href="index.html#about">Our Mission</a>
                     <a href="service-dogs.html">Service Dogs</a>
                     <a href="index.html#ventures">Our Ventures</a>
@@ -208,243 +342,292 @@
                     <a href="dog-run.html">Dog Run</a>
                     <a href="index.html#support" class="nav-cta">Donate</a>
                 </div>
-        <div class="nav-social">
-          <a href="https://instagram.com/nyctailblazers" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-          <a href="https://facebook.com/NYCTailblazers" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="https://tiktok.com/@nyctailblazers" target="_blank" rel="noopener" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+                <div class="nav-social">
+                    <a href="https://instagram.com/nyctailblazers" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                    <a href="https://facebook.com/NYCTailblazers" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <a href="https://tiktok.com/@nyctailblazers" target="_blank" rel="noopener" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+                </div>
+            </nav>
         </div>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
+    </header>
 
-    <!-- HERO -->
-    <section class="page-hero">
-      <div class="container">
-        <div class="inner reveal">
-          <span class="badge"><span aria-hidden="true">🐕‍🦺</span> Our Mission in Action</span>
-          <h1>Service dogs for veterans.<br>Facility dogs for <span class="italic-gold">everyone who needs a battle buddy.</span></h1>
-          <p class="lede">Our dogs are raised and trained by the next generation — at-risk youth and adults learning discipline, purpose, and patience one puppy at a time. Those dogs go on to serve veterans as service dogs, and to work as facility dogs in schools, hospitals, and beside first responders and police. One program. A whole community changed.</p>
-          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:34px;">
-            <a href="#partner" class="btn btn-gold">Bring a Facility Dog to Your Team →</a>
-            <a href="#raise" class="btn btn-ghost">How the Dogs Are Raised</a>
-          </div>
-          <div class="metrics">
-            <div class="metric"><strong>2</strong><span>Youth &amp; adult training tracks</span></div>
-            <div class="metric"><strong>4+</strong><span>Places our dogs serve</span></div>
-            <div class="metric"><strong>1</strong><span>Mission: change lives, both ends of the leash</span></div>
-          </div>
+    <main id="main">
+    <!-- ══════════════ HERO ══════════════ -->
+    <section class="heart" id="top" aria-labelledby="sd-title">
+        <span class="heart-ghost" aria-hidden="true">BUDDY</span>
+        <div class="heart-wrap">
+            <div class="heart-copy">
+                <span class="eyebrow reveal">The Heart Program &mdash; Service &amp; Facility Dogs</span>
+                <h1 id="sd-title" class="mast reveal d1">Service dogs for veterans, facility dogs for everyone who needs a <span class="accent">battle buddy</span>.</h1>
+                <p class="mast-warm reveal d1">No one should have to stand post alone.</p>
+                <p class="mast-lede reveal d2">Our dogs are raised and trained by the next generation &mdash; at-risk youth and adults learning discipline, purpose, and patience as they raise a working dog. Those dogs go on to serve <b>veterans as service dogs</b>, and to work as facility dogs in schools, hospitals, and beside first responders and police.</p>
+                <div class="hero-btns reveal d3">
+                    <a href="#partner" class="btn btn-gold">Bring a Facility Dog to Your Team
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                    <a href="#raise" class="btn btn-ghost">How the Dogs Are Raised</a>
+                </div>
+                <div class="tags reveal d4">
+                    <div class="tag big"><span class="n">2</span><span class="k">youth &amp; adult training tracks</span></div>
+                    <div class="tag mid"><span class="n">4<em>+</em></span><span class="k">places our dogs serve</span></div>
+                    <div class="tag sm"><span class="n">1</span><span class="k">mission, both ends of the leash</span></div>
+                </div>
+            </div>
+
+            <div class="heart-fig reveal d2">
+                <div class="fig-frame">
+                    <div class="fig-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.2-2.9 6.9-7 8.6C7.9 16.9 5 14.2 5 10V6l7-3z"/><circle cx="9.7" cy="10" r=".9"/><circle cx="14.3" cy="10" r=".9"/><circle cx="12" cy="13" r="1.1"/><path d="M10.2 14.6c1.1 .9 2.5 .9 3.6 0"/></svg>
+                    </div>
+                    <span class="fig-cap">A battle buddy on four legs</span>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- BATTLE BUDDY -->
-    <section class="pad alt" id="battle-buddy">
-      <div class="container">
-        <div class="buddy">
-          <div class="reveal">
-            <span class="eyebrow">The Battle Buddy</span>
-            <h2>No one should have to stand post alone.</h2>
-            <p>In the military, every soldier gets a <strong>battle buddy</strong> — someone who has your back, notices when you're not okay, and pulls you through the hard days. It's one of the simplest, most effective things the service does to keep people alive.</p>
-            <p>Veterans come home and lose that. So do a lot of people who never wore the uniform: a kid who dreads walking into school, a patient facing a long recovery, an officer or first responder carrying what they saw on shift. What they all need is the same thing — a steady presence that shows up, every day, no matter what.</p>
-            <p>That's what our dogs are trained to be. A battle buddy on four legs. And the young people who raise them get one too — a purpose, a routine, and a reason to show up. That bond runs both ways.</p>
-          </div>
-          <div class="buddy-quote reveal d1">
-            <blockquote>"We teach the next generation what we learned in the service — discipline, accountability, and how to have someone's back. Then we hand that lesson to a dog, and that dog spends its whole life having someone else's."</blockquote>
-            <cite>— NYC Tailblazers</cite>
-          </div>
+    <!-- ══════════════ THE BATTLE BUDDY ══════════════ -->
+    <section class="pad buddy-band" id="battle-buddy">
+        <div class="container">
+            <div class="buddy">
+                <div class="body reveal">
+                    <span class="eyebrow">The Battle Buddy</span>
+                    <h2 style="font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(1.9rem,4vw,2.9rem);line-height:.96;margin:14px 0 18px;">Every soldier gets someone who has their <span class="accent">back</span>.</h2>
+                    <p>In the military, every soldier gets a <strong>battle buddy</strong> &mdash; someone who has your back, notices when you're not okay, and pulls you through the hard days. It's one of the simplest, most effective things the service does to keep people alive.</p>
+                    <p>Veterans come home and lose that. So do a lot of people who never wore the uniform: a kid who dreads walking into school, a patient facing a long recovery, an officer or first responder carrying what they saw on shift. What they all need is the same thing &mdash; a steady presence that shows up, every day, no matter what.</p>
+                    <p>That's what our dogs are trained to be. A battle buddy on four legs. And the young people who raise them get one too &mdash; a purpose, a routine, and a reason to show up. That bond runs both ways.</p>
+                </div>
+                <div class="buddy-quote reveal d1">
+                    <blockquote>We teach the next generation what we learned in the service &mdash; discipline, accountability, and how to have someone's back. Then we hand that lesson to a dog, and that dog spends its whole life having someone else's.</blockquote>
+                    <cite>&mdash; NYC Tailblazers</cite>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- WHERE THEY SERVE -->
+    <!-- ══════════════ WHERE THEY SERVE ══════════════ -->
     <section class="pad" id="serve">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow center">Where They Serve</span>
-          <h2>One kind of dog. Four kinds of hope.</h2>
-          <p>Every dog is raised and trained to the same high standard, then matched to where it's needed most.</p>
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Where They Serve</span>
+                <h2>Where our dogs go to <span class="accent">work</span>.</h2>
+                <p>Every dog is raised and trained to the same high standard, then matched to where it's needed most.</p>
+            </div>
+
+            <div class="serve-feature reveal">
+                <span class="serve-badge" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="5"/><path d="M12 11.6l.9 1.9 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2-1.5-1.4 2-.3.9-1.9z"/><path d="M8.5 9 6.5 3.5M15.5 9l2-5.5"/></svg>
+                </span>
+                <div class="txt">
+                    <span class="k">Service dogs &mdash; the heart of the program</span>
+                    <h3>Veterans</h3>
+                    <p>Service dogs trained to support veterans living with PTSD, mobility challenges, and the weight of coming home. A trained companion that can steady a hard moment &mdash; and, sometimes, save a life.</p>
+                </div>
+            </div>
+
+            <div class="serve-row">
+                <div class="serve-card reveal">
+                    <span class="serve-ic" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5 2 9l10 4 10-4-10-4z"/><path d="M6 11v4c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-4"/><path d="M22 9v5.5"/></svg>
+                    </span>
+                    <h3>Schools</h3>
+                    <p>Facility dogs that work alongside counselors and staff, helping students feel calm, safe, and ready to learn. A friendly face in the hallway can change a whole day.</p>
+                </div>
+                <div class="serve-card reveal d1">
+                    <span class="serve-ic" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8.5v7M8.5 12h7"/></svg>
+                    </span>
+                    <h3>Hospitals</h3>
+                    <p>Facility dogs that bring comfort to patients and families during treatment, recovery, and the moments that are hardest to sit with alone.</p>
+                </div>
+                <div class="serve-card reveal d2">
+                    <span class="serve-ic" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.2-2.9 6.9-7 8.6C7.9 16.9 5 14.2 5 10V6l7-3z"/><path d="M12 8.3l1 2 2.2.2-1.7 1.5.5 2.2-2-1.2-2 1.2.5-2.2-1.7-1.5 2.2-.2 1-2z"/></svg>
+                    </span>
+                    <h3>First Responders &amp; Police</h3>
+                    <p>Facility dogs stationed with departments and response teams &mdash; supporting officers, EMS, and firefighters through the stress of the job and the calls that stay with them.</p>
+                </div>
+            </div>
+
+            <div class="fieldnote" aria-hidden="true"></div>
         </div>
-        <div class="card-grid four">
-          <div class="card reveal">
-            <div class="ic" aria-hidden="true">🎖️</div>
-            <h3>Veterans</h3>
-            <p>Service dogs trained to support veterans living with PTSD, mobility challenges, and the weight of coming home. A trained companion that can steady a hard moment — and, sometimes, save a life.</p>
-          </div>
-          <div class="card reveal d1">
-            <div class="ic" aria-hidden="true">🏫</div>
-            <h3>Schools</h3>
-            <p>Facility dogs that work alongside counselors and staff, helping students feel calm, safe, and ready to learn. A friendly face in the hallway can change a whole day.</p>
-          </div>
-          <div class="card reveal d2">
-            <div class="ic" aria-hidden="true">🏥</div>
-            <h3>Hospitals</h3>
-            <p>Facility dogs that bring comfort to patients and families during treatment, recovery, and the moments that are hardest to sit with alone.</p>
-          </div>
-          <div class="card reveal d3">
-            <div class="ic" aria-hidden="true">🚓</div>
-            <h3>First Responders &amp; Police</h3>
-            <p>Facility dogs stationed with departments and response teams — supporting officers, EMS, and firefighters through the stress of the job and the calls that stay with them.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- SCHOOL BENEFITS -->
-    <section class="pad alt" id="schools">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Facility Dogs in Schools</span>
-          <h2>A calmer, kinder school day.</h2>
-          <p>Placed with a trained handler on staff, a facility dog becomes part of the school community. Here's what that presence does, every single day.</p>
+    <!-- ══════════════ FACILITY DOGS IN SCHOOLS ══════════════ -->
+    <section class="pad buddy-band" id="schools">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Facility Dogs in Schools</span>
+                <h2>A calmer, kinder school <span class="accent">day</span>.</h2>
+                <p>Placed with a trained handler on staff, a facility dog becomes part of the school community. Here's what that presence does, every single day.</p>
+            </div>
+            <ul class="benefits reveal d1">
+                <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Encourage positive social interactions</li>
+                <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Help students settle and refocus during the school day</li>
+                <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Provide comfort during difficult moments</li>
+                <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Strengthen connections between students and staff</li>
+                <li><span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Contribute to a more welcoming and supportive school environment</li>
+            </ul>
         </div>
-        <ul class="benefits reveal d1">
-          <li><span class="chk" aria-hidden="true">✓</span> Encourage positive social interactions</li>
-          <li><span class="chk" aria-hidden="true">✓</span> Help students settle and refocus during the school day</li>
-          <li><span class="chk" aria-hidden="true">✓</span> Provide comfort during difficult moments</li>
-          <li><span class="chk" aria-hidden="true">✓</span> Strengthen connections between students and staff</li>
-          <li><span class="chk" aria-hidden="true">✓</span> Contribute to a more welcoming and supportive school environment</li>
-        </ul>
-      </div>
     </section>
 
-    <!-- HOW DOGS ARE RAISED -->
+    <!-- ══════════════ HOW THE DOGS ARE RAISED ══════════════ -->
     <section class="pad" id="raise">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">How the Dogs Are Raised</span>
-          <h2>From an eight-week-old puppy to a working partner.</h2>
-          <p>Every dog moves through the same structured journey, built on positive reinforcement, consistency, and trust — never shortcuts. The people raising them grow right alongside them.</p>
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">How the Dogs Are Raised</span>
+                <h2>From an eight-week-old puppy to a working <span class="accent">partner</span>.</h2>
+                <p>Every dog moves through the same structured journey, built on positive reinforcement, consistency, and trust &mdash; never shortcuts. The people raising them grow right alongside them.</p>
+            </div>
+            <div class="journey reveal d1">
+                <div class="jstep">
+                    <span class="jnode" aria-hidden="true">01</span>
+                    <h3>Foundations</h3>
+                    <p>Housebreaking, crate training, a settled routine, and early socialization to the sights, sounds, and surfaces of everyday life.</p>
+                </div>
+                <div class="jstep">
+                    <span class="jnode" aria-hidden="true">02</span>
+                    <h3>Obedience</h3>
+                    <p>Sit, down, stay, heel, come, and rock-solid impulse control &mdash; the manners a working dog needs before it can work.</p>
+                </div>
+                <div class="jstep">
+                    <span class="jnode" aria-hidden="true">03</span>
+                    <h3>Public Access</h3>
+                    <p>Calm, focused behavior in busy, distracting places &mdash; buses, stores, elevators, crowds &mdash; so the dog is steady anywhere its person goes.</p>
+                </div>
+                <div class="jstep">
+                    <span class="jnode" aria-hidden="true">04</span>
+                    <h3>Specialized Skills</h3>
+                    <p>The tasks that fit the placement &mdash; from service-dog work for a veteran to the gentle, people-first temperament of a facility dog.</p>
+                </div>
+                <div class="jstep">
+                    <span class="jnode" aria-hidden="true">05</span>
+                    <h3>Placement</h3>
+                    <p>Matched with the veteran, school, hospital, or department that needs them &mdash; and supported after placement, too.</p>
+                </div>
+            </div>
+
+            <p class="trainnote reveal d2">
+                <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.2 2.2 4.8-4.8"/></svg></span>
+                <span><b>How they're trained:</b> training isn't a separate service &mdash; it lives inside this program. Every dog is shaped in-house with positive reinforcement and steady, consistent handling by the people raising it. No shock, no shortcuts. That same method is what we teach our youth and adult handlers below.</span>
+            </p>
         </div>
-        <div class="journey reveal d1">
-          <div class="jstep">
-            <div class="jn">01</div>
-            <h3>Foundations</h3>
-            <p>Housebreaking, crate training, a settled routine, and early socialization to the sights, sounds, and surfaces of everyday life.</p>
-          </div>
-          <div class="jstep">
-            <div class="jn">02</div>
-            <h3>Obedience</h3>
-            <p>Sit, down, stay, heel, come, and rock-solid impulse control — the manners a working dog needs before it can work.</p>
-          </div>
-          <div class="jstep">
-            <div class="jn">03</div>
-            <h3>Public Access</h3>
-            <p>Calm, focused behavior in busy, distracting places — buses, stores, elevators, crowds — so the dog is steady anywhere its person goes.</p>
-          </div>
-          <div class="jstep">
-            <div class="jn">04</div>
-            <h3>Specialized Skills</h3>
-            <p>The tasks that fit the placement — from service-dog work for a veteran to the gentle, people-first temperament of a facility dog.</p>
-          </div>
-          <div class="jstep">
-            <div class="jn">05</div>
-            <h3>Placement</h3>
-            <p>Matched with the veteran, school, hospital, or department that needs them — and supported after placement, too.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- TWO TRACKS / CURRICULUMS -->
-    <section class="pad alt" id="tracks">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow center">Raised by the Next Generation</span>
-          <h2>Two ways to learn. One standard of care.</h2>
-          <p>We built two curriculums from our service-dog training manual — one for young people, one for adults — so everyone can learn to raise a dog the right way.</p>
+    <!-- ══════════════ RAISED BY THE NEXT GENERATION — two tracks ══════════════ -->
+    <section class="pad tracks-band" id="tracks">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Raised by the Next Generation</span>
+                <h2>How new handlers learn the <span class="accent">work</span>.</h2>
+                <p>We built our service-dog training manual into two curriculums &mdash; a youth track and an adult track &mdash; so anyone can learn to raise a dog the right way.</p>
+            </div>
+            <div class="tracks">
+                <div class="track a reveal">
+                    <span class="ttag">Ages 8&ndash;17</span>
+                    <h3>Youth Handlers</h3>
+                    <p>A hands-on program that teaches responsibility, patience, and empathy through raising a real working dog &mdash; in language and steps built for young people.</p>
+                    <ul>
+                        <li><span class="dash" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Dog care, safety, and body language</li>
+                        <li><span class="dash" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Positive-reinforcement basics they can actually run</li>
+                        <li><span class="dash" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Responsibility, routine, and follow-through</li>
+                        <li><span class="dash" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Confidence, teamwork, and public manners</li>
+                        <li><span class="dash" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Understanding what a service &amp; facility dog does</li>
+                    </ul>
+                </div>
+                <div class="track b reveal d1">
+                    <span class="ttag">Adults</span>
+                    <h3>Adult Handlers</h3>
+                    <p>The full raiser's curriculum &mdash; the complete training progression that prepares a dog for service and facility work, and prepares the handler to lead it.</p>
+                    <ul>
+                        <li><span class="dash" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Full obedience &amp; behavior foundations</li>
+                        <li><span class="dash" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Public-access training and standards</li>
+                        <li><span class="dash" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Health, grooming, nutrition, and records</li>
+                        <li><span class="dash" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Service-dog tasks &amp; facility-dog temperament</li>
+                        <li><span class="dash" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Handling, troubleshooting, and placement readiness</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="tracks-note reveal d2">Curriculum guides are available for partner schools and programs &mdash; <a href="#partner">get in touch</a> to bring one to your community.</p>
         </div>
-        <div class="tracks reveal d1">
-          <div class="track">
-            <span class="tag">Ages 8–17</span>
-            <h3>Youth Handlers</h3>
-            <p>A hands-on program that teaches responsibility, patience, and empathy through raising a real working dog — in language and steps built for young people.</p>
-            <ul>
-              <li>Dog care, safety, and body language</li>
-              <li>Positive-reinforcement basics they can actually run</li>
-              <li>Responsibility, routine, and follow-through</li>
-              <li>Confidence, teamwork, and public manners</li>
-              <li>Understanding what a service &amp; facility dog does</li>
-            </ul>
-          </div>
-          <div class="track">
-            <span class="tag">Adults</span>
-            <h3>Adult Handlers</h3>
-            <p>The full raiser's curriculum — the complete training progression that prepares a dog for service and facility work, and prepares the handler to lead it.</p>
-            <ul>
-              <li>Full obedience &amp; behavior foundations</li>
-              <li>Public-access training and standards</li>
-              <li>Health, grooming, nutrition, and records</li>
-              <li>Service-dog tasks &amp; facility-dog temperament</li>
-              <li>Handling, troubleshooting, and placement readiness</li>
-            </ul>
-          </div>
-        </div>
-        <p class="reveal d2" style="text-align:center;margin-top:26px;color:var(--muted);font-size:0.95rem;">Curriculum guides are available for partner schools and programs — <a href="#partner" style="color:var(--gold);text-decoration:underline;">get in touch</a> to bring one to your community.</p>
-      </div>
     </section>
 
-    <!-- PARTNER / CTA -->
-    <section class="pad cta-band reveal" id="partner">
-      <div class="container">
-        <div class="cta-inner">
-          <span class="eyebrow center">Get Involved</span>
-          <h2>Bring a battle buddy to your community.</h2>
-          <p>Whether you're a school, hospital, or department looking to place a facility dog — a family wanting to get a young person into the program — or someone who just wants to help fund the mission, we'd love to talk.</p>
-          <div class="cta-btns">
-            <a href="mailto:info@nyctailblazers.com?subject=Service%20%26%20Facility%20Dog%20Program" class="btn btn-gold">Partner With Us</a>
-            <a href="index.html#support" class="btn btn-ghost">Support the Mission</a>
-            <a href="sms:+13472608305" class="btn btn-ghost">Text (347) 260-8305</a>
-          </div>
+    <!-- ══════════════ PARTNER / CTA ══════════════ -->
+    <section class="pad cta-band" id="partner">
+        <div class="container">
+            <div class="cta-inner reveal">
+                <span class="eyebrow">Get Involved</span>
+                <h2>Bring a battle buddy to your <span class="accent">community</span>.</h2>
+                <p>Whether you're a school, hospital, or department looking to place a facility dog &mdash; a family wanting to get a young person into the program &mdash; or someone who just wants to help fund the mission, we'd love to talk.</p>
+                <div class="cta-btns">
+                    <a href="mailto:info@nyctailblazers.com?subject=Service%20%26%20Facility%20Dog%20Program" class="btn btn-gold">Partner With Us
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                    <a href="index.html#support" class="btn btn-ghost">Support the Mission</a>
+                    <a href="sms:+13472608305" class="btn btn-ghost">Text (347) 260-8305</a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-  </main>
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="brand"><img src="tailblazers-logo.png" alt="NYC Tailblazers" style="width:44px;height:44px;border-radius:10px;"><span class="brand-name">NYC Tailblazers</span></a>
-          <p>A mission-driven family of ventures in NYC, helping veterans through service dogs raised and trained by the next generation. Blaze new trails, wag new tails. 🐾</p>
-        </div>
-        <div>
-          <h3>Ventures</h3>
-          <a href="service-dogs.html">Service &amp; Facility Dogs</a>
-          <a href="dog-walking.html">Dog Walking</a>
-          <a href="web-design.html">Web Design</a>
-          <a href="personal-training.html">Personal Training</a>
-          <a href="vendor-resale.html">Inmate Services</a>
-          <a href="3d-printing.html">3D Printing</a>
-        </div>
-        <div>
-          <h3>Community</h3>
-          <a href="index.html#mission">Our Mission</a>
-          <a href="dog-run.html">Dog Run Petition</a>
-          <a href="index.html#support">Donate</a>
-          <a href="mailto:info@nyctailblazers.com">Contact</a>
-        </div>
-        <div>
-          <h3>Get In Touch</h3>
-          <a href="mailto:info@nyctailblazers.com">info@nyctailblazers.com</a>
-          <a href="sms:+13472608305">(347) 260-8305</a>
-          <a href="https://instagram.com/nyctailblazers" target="_blank" rel="noopener">@nyctailblazers</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span id="year">2026</span> NYC Tailblazers. All Rights Reserved. · Blaze new trails, wag new tails.</p>
-      </div>
-    </div>
-  </footer>
+    </main>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    (function(){
-      var els=document.querySelectorAll('.reveal');
-      if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
-      var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
-      els.forEach(function(e){io.observe(e);});
-    })();
-    document.querySelectorAll('#navlinks a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navlinks').classList.remove('open');});});
-  </script>
-</body></html>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#top" class="brand"><img src="tailblazers-logo.png" alt="NYC Tailblazers" style="width:44px;height:44px;border-radius:10px;"><span class="brand-name">NYC Tailblazers</span></a>
+                    <p>A family of NYC ventures raising service dogs for veterans &mdash; trained by the next generation. Blaze new trails, wag new tails.</p>
+                </div>
+                <div>
+                    <h3>Ventures</h3>
+                    <a href="service-dogs.html">Service &amp; Facility Dogs</a>
+                    <a href="dog-walking.html">Dog Walking</a>
+                    <a href="jiggs-and-glo.html">Books</a>
+                    <a href="web-design.html">Web Design</a>
+                    <a href="personal-training.html">Personal Training</a>
+                    <a href="vendor-resale.html">Inmate Services</a>
+                    <a href="3d-printing.html">3D Printing</a>
+                </div>
+                <div>
+                    <h3>Community</h3>
+                    <a href="index.html#about">Our Mission</a>
+                    <a href="dog-run.html">Dog Run Petition</a>
+                    <a href="index.html#support">Donate</a>
+                    <a href="dog-walking.html#faq">FAQ</a>
+                </div>
+                <div>
+                    <h3>Get In Touch</h3>
+                    <a href="mailto:info@nyctailblazers.com">info@nyctailblazers.com</a>
+                    <a href="sms:+13472608305">(347) 260-8305</a>
+                    <a href="https://instagram.com/nyctailblazers" target="_blank" rel="noopener">@nyctailblazers</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> NYC Tailblazers. All Rights Reserved. &middot; Blaze new trails, wag new tails.</p>
+                <p style="margin-top:6px;">Site by <a href="web-design.html">NYC Tailblazers Web Design</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll reveal
+        (function () {
+            var els = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+            }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+            els.forEach(function (e) { io.observe(e); });
+        })();
+
+        // Close mobile nav on link click
+        document.querySelectorAll('#navlinks a').forEach(function (a) {
+            a.addEventListener('click', function () { document.getElementById('navlinks').classList.remove('open'); });
+        });
+    </script>
+</body>
+</html>
