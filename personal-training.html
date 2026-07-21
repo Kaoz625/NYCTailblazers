@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Training | NYC Tailblazers</title>
-    <meta name="description" content="Military-inspired personal training coming soon from NYC Tailblazers, built on the same discipline and accountability behind everything we do.">
+    <meta name="description" content="Marine-forged hybrid training in NYC, led by a U.S. Marine Corps veteran. Strength and conditioning on a foundation of discipline and standards. Founding-member waitlist now open.">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="canonical" href="https://nyctailblazers.com/personal-training.html">
     <meta property="og:title" content="Personal Training | NYC Tailblazers" />
-    <meta property="og:description" content="Military-inspired personal training coming soon — discipline, accountability, and a routine you can actually stick to." />
+    <meta property="og:description" content="Marine-forged hybrid training in NYC — strength, conditioning, and standards. Join the founding-member waitlist." />
     <meta property="og:image" content="https://nyctailblazers.com/tailblazers-logo.png" />
     <meta property="og:url" content="https://nyctailblazers.com/personal-training.html" />
     <meta property="og:type" content="website" />
@@ -71,66 +71,176 @@
         @media(max-width:940px){.burger{display:flex}.links{position:absolute;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px 20px;transform:translateY(-10px);opacity:0;visibility:hidden;pointer-events:none;transition:.25s}.links.open{transform:none;opacity:1;visibility:visible;pointer-events:auto}.links a{padding:13px 2px;border-bottom:1px solid var(--line2)}.links .cta{text-align:center;margin-top:10px}}
 
         /* hero */
-        .hero{position:relative;overflow:hidden;padding:clamp(56px,9vw,120px) 0 clamp(48px,7vw,96px)}
+        .hero{position:relative;overflow:hidden;padding:clamp(52px,8vw,104px) 0 clamp(48px,7vw,88px)}
         .hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:
             radial-gradient(60% 60% at 82% 12%,rgba(204,255,0,.12),transparent 60%),
             radial-gradient(50% 50% at 8% 92%,rgba(255,83,38,.12),transparent 62%)}
-        .hero-ghost{position:absolute;z-index:0;font-family:var(--display);font-size:clamp(10rem,30vw,28rem);color:rgba(255,255,255,.025);top:-.1em;right:-.03em;line-height:.8;pointer-events:none;user-select:none}
+        .hero-ghost{position:absolute;z-index:0;font-family:var(--display);font-size:clamp(9rem,26vw,24rem);color:rgba(255,255,255,.025);top:-.1em;right:-.03em;line-height:.8;pointer-events:none;-webkit-user-select:none;user-select:none}
         .hero .wrap{position:relative;z-index:2}
-        .soon{display:inline-flex;align-items:center;gap:10px;background:rgba(204,255,0,.1);border:1px solid rgba(204,255,0,.32);color:var(--volt);padding:8px 18px;border-radius:100px;font-family:var(--cond);font-weight:700;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase}
+        .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(28px,4vw,56px);align-items:center}
+        .soon{display:inline-flex;align-items:center;gap:10px;background:rgba(204,255,0,.1);border:1px solid rgba(204,255,0,.32);color:var(--volt);padding:8px 18px;border-radius:100px;font-family:var(--cond);font-weight:700;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
         .soon .dot{width:8px;height:8px;border-radius:50%;background:var(--volt);box-shadow:0 0 0 4px rgba(204,255,0,.16);animation:pulse 2.4s ease-in-out infinite}
         @keyframes pulse{0%,100%{opacity:.5;transform:scale(.85)}50%{opacity:1;transform:scale(1)}}
-        .hero h1{font-size:clamp(3rem,10vw,8rem);margin:22px 0 0;max-width:14ch}
+        .hero h1{font-size:clamp(2.7rem,8.4vw,6.6rem);margin:22px 0 0;max-width:13ch}
         .hero h1 .hl{color:var(--volt)}
-        .hero .sub{font-family:var(--cond);font-weight:700;font-size:clamp(1.1rem,2.4vw,1.7rem);text-transform:uppercase;letter-spacing:.02em;color:var(--ink);margin-top:18px}
-        .hero .lede{color:var(--mut);font-size:1.1rem;max-width:56ch;margin-top:18px}
+        .hero .sub{font-family:var(--cond);font-weight:700;font-size:clamp(1.05rem,2.2vw,1.55rem);text-transform:uppercase;letter-spacing:.02em;color:var(--ink);margin-top:18px}
+        .hero .lede{color:var(--mut);font-size:1.1rem;max-width:52ch;margin-top:18px}
         .hero .lede b{color:var(--ink);font-weight:600}
         .hero-btns{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
-        .stats{display:flex;flex-wrap:wrap;gap:0;margin-top:52px;border-top:2px solid var(--volt)}
+        .hero-media{position:relative}
+        .hero-media img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow)}
+        .hero-media .tag{position:absolute;left:16px;bottom:16px;background:rgba(11,12,14,.86);border:1px solid var(--line);border-left:3px solid var(--volt);padding:10px 15px;border-radius:8px;font-family:var(--cond);font-weight:700;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);max-width:80%}
+        .hero-media .tag span{color:var(--volt);display:block;font-size:.64rem;letter-spacing:.18em;margin-top:3px}
+        .stats{display:flex;flex-wrap:wrap;gap:0;margin-top:48px;border-top:2px solid var(--volt)}
         .stat{padding:20px 40px 0 0;margin-right:40px;border-right:1px solid var(--line)}
         .stat:last-child{border-right:0;margin-right:0}
-        .stat .n{font-family:var(--display);font-size:clamp(2rem,4vw,3rem);color:var(--ink);line-height:.9}
+        .stat .n{font-family:var(--display);font-size:clamp(1.8rem,3.6vw,2.8rem);color:var(--ink);line-height:.9}
         .stat .k{font-family:var(--cond);font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-top:8px}
+        @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-media{order:-1;max-width:440px}}
 
         /* section head */
-        .shead{max-width:640px;margin-bottom:44px}
-        .shead h2{font-size:clamp(2.2rem,5.5vw,4rem);margin:12px 0 10px}
+        .shead{max-width:660px;margin-bottom:44px}
+        .shead.center{margin-left:auto;margin-right:auto;text-align:center}
+        .shead.center .eyebrow{justify-content:center}
+        .shead h2{font-size:clamp(2.1rem,5.2vw,3.7rem);margin:12px 0 10px}
         .shead p{color:var(--mut);font-size:1.06rem}
         .hl{color:var(--volt)}
 
+        /* coach */
+        .coach{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(32px,5vw,64px);align-items:center}
+        .coach-shots{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:auto auto;gap:14px}
+        .coach-shots img{width:100%;height:100%;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+        .coach-shots .a{grid-row:1 / span 2;aspect-ratio:3/4;object-position:50% 30%}
+        .coach-shots .b{aspect-ratio:1/1;object-position:50% 20%}
+        .coach-shots .c{aspect-ratio:1/1;object-position:50% 25%}
+        .coach h2{font-size:clamp(2rem,4.6vw,3.2rem);margin:12px 0 18px}
+        .coach p{color:var(--mut);font-size:1.06rem}.coach p+p{margin-top:14px}.coach p b{color:var(--ink)}
+        .coach .cred{list-style:none;margin-top:24px;display:flex;flex-wrap:wrap;gap:10px}
+        .coach .cred li{font-family:var(--cond);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--bg3);border:1px solid var(--line);border-radius:100px;padding:8px 16px}
+        @media(max-width:900px){.coach{grid-template-columns:1fr;gap:32px}}
+
+        /* philosophy */
+        .philo-band{background:var(--bg2);border-block:1px solid var(--line)}
+        .philo{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:center}
+        .philo h2{font-size:clamp(1.9rem,4.4vw,3rem);margin:12px 0 18px}
+        .philo p{color:var(--mut);font-size:1.05rem}.philo p+p{margin-top:14px}.philo p b{color:var(--ink)}
+        .pillars{list-style:none;margin-top:24px;display:grid;gap:12px}
+        .pillars li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;color:var(--mut);font-size:.98rem}
+        .pillars .num{font-family:var(--display);font-size:1.1rem;color:var(--volt);line-height:1.3}
+        .pillars b{color:var(--ink)}
+        .quote-card{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+        .quote-card img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
+        .quote-card .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;background:linear-gradient(180deg,rgba(11,12,14,.15) 0%,rgba(11,12,14,.85) 78%)}
+        .quote-card blockquote{font-family:var(--display);font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:.98;text-transform:uppercase;color:var(--ink)}
+        .quote-card blockquote .hl{color:var(--volt)}
+        .quote-card cite{display:block;margin-top:12px;font-family:var(--cond);font-weight:700;font-style:normal;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+        @media(max-width:900px){.philo{grid-template-columns:1fr;gap:32px}.quote-card{max-width:440px}}
+
         /* programs */
-        .progs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-        .prog{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:32px 28px;overflow:hidden;transition:transform .25s,border-color .25s}
+        .progs{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+        .prog{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:32px 30px;overflow:hidden;transition:transform .25s,border-color .25s}
         .prog:hover{transform:translateY(-6px);border-color:var(--volt)}
-        .prog .no{font-family:var(--display);font-size:2.4rem;color:var(--line);line-height:1;position:absolute;top:22px;right:24px}
-        .prog .ic{width:52px;height:52px;border:2px solid var(--volt);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--volt);margin-bottom:20px}
+        .prog.feat{border-color:rgba(204,255,0,.4)}
+        .prog .no{font-family:var(--display);font-size:2.4rem;color:var(--line);line-height:1;position:absolute;top:24px;right:26px}
+        .prog .ic{width:52px;height:52px;border:2px solid var(--volt);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--volt);margin-bottom:18px}
         .prog .ic svg{width:26px;height:26px}
-        .prog h3{font-size:1.35rem;margin-bottom:10px;color:var(--ink)}
-        .prog p{color:var(--mut);font-size:.96rem}
+        .prog .flag{display:inline-block;font-family:var(--cond);font-weight:700;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#0b0c0e;background:var(--volt);padding:4px 10px;border-radius:4px;margin-bottom:12px}
+        .prog h3{font-size:1.5rem;margin-bottom:12px;color:var(--ink)}
+        .prog dl{margin-top:14px;display:grid;gap:12px}
+        .prog dt{font-family:var(--cond);font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--volt);margin-bottom:3px}
+        .prog dd{color:var(--mut);font-size:.95rem}
+        .prog dd b{color:var(--ink);font-weight:600}
         @media(max-width:820px){.progs{grid-template-columns:1fr}}
 
-        /* why / ledger */
-        .why-band{background:var(--bg2);border-block:1px solid var(--line)}
-        .principle{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:center}
-        .principle h2{font-size:clamp(1.9rem,4.4vw,3rem);margin:12px 0 18px}
-        .principle p{color:var(--mut);font-size:1.05rem}.principle p+p{margin-top:14px}.principle p b{color:var(--ink)}
-        .ledger{list-style:none;background:var(--bg3);border:1px solid var(--line);border-left:4px solid var(--volt);border-radius:14px;padding:8px 28px}
-        .ledger li{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)}
-        .ledger li:first-child{border-top:none}
-        .ledger .who{font-family:var(--display);font-size:1.25rem;color:var(--ink);text-transform:uppercase}
-        .ledger .who.you{color:var(--volt)}
-        .ledger .what{color:var(--mut);font-size:.98rem}
-        @media(max-width:900px){.principle{grid-template-columns:1fr;gap:32px}}
-        @media(max-width:520px){.ledger li{grid-template-columns:1fr;gap:4px}}
+        /* delivery formats */
+        .fmt{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+        .fmt div{background:var(--bg3);border:1px solid var(--line);border-radius:12px;padding:24px}
+        .fmt h4{font-family:var(--display);font-weight:400;font-size:1.3rem;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+        .fmt p{color:var(--mut);font-size:.92rem}
+        .shead-tight{margin-top:56px;margin-bottom:0;max-width:none}
+        @media(max-width:760px){.fmt{grid-template-columns:1fr}}
 
-        /* cta */
-        .cta-band{position:relative;overflow:hidden;text-align:center;background:linear-gradient(135deg,#1a1d22,#0b0c0e)}
-        .cta-band::before{content:"";position:absolute;left:50%;top:-100px;width:440px;height:440px;transform:translateX(-50%);background:radial-gradient(circle,rgba(204,255,0,.16),transparent 70%);pointer-events:none}
-        .cta-inner{position:relative;max-width:680px;margin:0 auto}
-        .cta-inner .eyebrow{justify-content:center}
-        .cta-inner h2{font-size:clamp(2.2rem,5.5vw,3.6rem);margin:12px 0 14px}
-        .cta-inner p{color:var(--mut);font-size:1.08rem;margin-bottom:26px}
-        .cta-btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+        /* sample week */
+        .week-band{background:var(--bg2);border-block:1px solid var(--line)}
+        .scrollx{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--bg3)}
+        table.week{width:100%;border-collapse:collapse;min-width:660px}
+        table.week th,table.week td{text-align:left;padding:16px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+        table.week tr:last-child td{border-bottom:none}
+        table.week .day{font-family:var(--display);font-size:1.15rem;text-transform:uppercase;color:var(--ink);white-space:nowrap;width:150px}
+        table.week .focus{font-family:var(--cond);font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--volt);width:180px}
+        table.week td.det{color:var(--mut);font-size:.95rem}
+        table.week tr.rest .focus{color:var(--mut2)}
+        .phases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+        .phase{background:var(--bg3);border:1px solid var(--line);border-top:3px solid var(--volt);border-radius:12px;padding:24px}
+        .phase .wk{font-family:var(--cond);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut2)}
+        .phase h4{font-family:var(--display);font-weight:400;font-size:1.5rem;text-transform:uppercase;color:var(--ink);margin:6px 0 10px}
+        .phase p{color:var(--mut);font-size:.94rem}
+        @media(max-width:760px){.phases{grid-template-columns:1fr}}
+
+        /* standards */
+        .std-note{color:var(--mut);font-size:.9rem;margin-top:16px;max-width:70ch}
+        .std-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+        .std-card h3{font-size:1.5rem;color:var(--ink);margin-bottom:6px}
+        .std-card .sub{font-family:var(--cond);font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:16px}
+        table.std{width:100%;border-collapse:collapse;min-width:460px}
+        table.std th,table.std td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);font-size:.92rem}
+        table.std thead th{font-family:var(--cond);font-weight:700;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--volt)}
+        table.std tbody th{font-family:var(--cond);font-weight:700;color:var(--ink);white-space:nowrap}
+        table.std td{color:var(--mut)}
+        table.std td b{color:var(--ink);font-weight:600}
+        table.std tr:last-child th,table.std tr:last-child td{border-bottom:none}
+        @media(max-width:900px){.std-grid{grid-template-columns:1fr}}
+
+        /* pricing */
+        .price-band{background:var(--bg2);border-block:1px solid var(--line)}
+        .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+        .price{background:var(--bg3);border:1px solid var(--line);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column}
+        .price.feat{border-color:var(--volt);box-shadow:0 20px 50px -26px rgba(204,255,0,.4)}
+        .price .k{font-family:var(--cond);font-weight:700;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--volt)}
+        .price h3{font-size:1.6rem;color:var(--ink);margin:8px 0 14px}
+        .price .amt{font-family:var(--display);font-size:clamp(2.2rem,5vw,3rem);color:var(--ink);line-height:.9}
+        .price .amt small{font-family:var(--cond);font-weight:600;font-size:.8rem;letter-spacing:.04em;color:var(--mut);display:block;text-transform:none;margin-top:8px}
+        .price ul{list-style:none;margin:20px 0 24px;display:grid;gap:10px}
+        .price li{display:grid;grid-template-columns:auto 1fr;gap:10px;color:var(--mut);font-size:.94rem}
+        .price li svg{width:16px;height:16px;color:var(--volt);margin-top:4px}
+        .price .btn{margin-top:auto;justify-content:center}
+        .price-foot{text-align:center;color:var(--mut2);font-size:.86rem;margin-top:24px}
+        @media(max-width:900px){.prices{grid-template-columns:1fr}}
+
+        /* faq */
+        .faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
+        .faq details{background:var(--bg2);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+        .faq summary{list-style:none;cursor:pointer;padding:20px 24px;font-family:var(--cond);font-weight:700;font-size:1.04rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:16px}
+        .faq summary::-webkit-details-marker{display:none}
+        .faq summary::after{content:"+";font-family:var(--display);color:var(--volt);font-size:1.6rem;line-height:1;transition:transform .25s}
+        .faq details[open] summary::after{transform:rotate(45deg)}
+        .faq .ans{padding:0 24px 22px;color:var(--mut);font-size:.98rem}
+        .faq .ans a{color:var(--volt);border-bottom:1px solid rgba(204,255,0,.4)}
+
+        /* waitlist / form */
+        .cta-band{position:relative;overflow:hidden;background:linear-gradient(135deg,#1a1d22,#0b0c0e)}
+        .cta-band::before{content:"";position:absolute;left:50%;top:-120px;width:520px;height:520px;transform:translateX(-50%);background:radial-gradient(circle,rgba(204,255,0,.14),transparent 70%);pointer-events:none}
+        .wl-grid{position:relative;display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(32px,5vw,64px);align-items:start}
+        .wl-copy h2{font-size:clamp(2.1rem,5.2vw,3.4rem);margin:12px 0 14px}
+        .wl-copy p{color:var(--mut);font-size:1.06rem}.wl-copy p+p{margin-top:14px}
+        .wl-direct{margin-top:26px;display:grid;gap:12px}
+        .wl-direct a{display:inline-flex;align-items:center;gap:12px;font-family:var(--cond);font-weight:700;font-size:1rem;color:var(--ink)}
+        .wl-direct a:hover{color:var(--volt)}
+        .wl-direct svg{width:20px;height:20px;color:var(--volt)}
+        .wl-direct .big{font-size:1.3rem;letter-spacing:.02em}
+        form.wl{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,4vw,38px);box-shadow:var(--shadow)}
+        form.wl .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        form.wl .field{margin-bottom:16px}
+        form.wl label{display:block;font-family:var(--cond);font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+        form.wl label .opt{color:var(--mut2);letter-spacing:.06em}
+        form.wl input,form.wl select,form.wl textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:13px 15px;color:var(--ink);font-family:var(--body);font-size:1rem;transition:border-color .2s}
+        form.wl input:focus,form.wl select:focus,form.wl textarea:focus{outline:none;border-color:var(--volt)}
+        form.wl select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ccff00' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:16px;padding-right:42px}
+        form.wl textarea{resize:vertical;min-height:96px}
+        form.wl .btn{width:100%;justify-content:center;margin-top:6px}
+        form.wl .fine{color:var(--mut2);font-size:.8rem;margin-top:14px;text-align:center}
+        @media(max-width:900px){.wl-grid{grid-template-columns:1fr}}
+        @media(max-width:480px){form.wl .row{grid-template-columns:1fr}}
 
         /* footer */
         footer{background:#08090b;border-top:1px solid var(--line);padding:54px 0 28px}
@@ -142,14 +252,14 @@
         .fbot{border-top:1px solid var(--line);padding-top:22px;text-align:center;color:var(--mut2);font-family:var(--cond);font-size:.78rem;letter-spacing:.04em}
         .fbot a{color:var(--volt)}
         @media(max-width:820px){.fgrid{grid-template-columns:1fr 1fr}}@media(max-width:480px){.fgrid{grid-template-columns:1fr}}
-        @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.soon .dot{animation:none}}
+        @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.soon .dot{animation:none}.faq summary::after{transition:none}}
     </style>
 </head>
 <body>
     <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
     <a href="#main" class="skip">Skip to content</a>
 
-    <div class="announce">Discipline builds everything we do. <a href="service-dogs.html">Meet the service-dog program</a></div>
+    <div class="announce">Founding-member waitlist is open. <a href="#waitlist">Claim your spot</a></div>
 
     <header>
         <div class="wrap">
@@ -157,12 +267,12 @@
                 <a href="index.html" class="brand"><img src="tailblazers-logo.png" alt="NYC Tailblazers logo"><span><b>Tailblazers</b><small>Personal Training</small></span></a>
                 <button type="button" class="burger" aria-label="Menu" aria-controls="links" aria-expanded="false" onclick="var n=document.getElementById('links');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
                 <div class="links" id="links">
-                    <a href="#vision">The Vision</a>
+                    <a href="#coach">Coach</a>
                     <a href="#programs">Programs</a>
-                    <a href="#why">Why</a>
-                    <a href="service-dogs.html">Service Dogs</a>
+                    <a href="#standards">Standards</a>
+                    <a href="#pricing">Pricing</a>
                     <a href="index.html">Main Site</a>
-                    <a href="mailto:info@nyctailblazers.com?subject=Personal%20Training%20Interest" class="cta">Join Early List</a>
+                    <a href="#waitlist" class="cta">Join Waitlist</a>
                 </div>
             </nav>
         </div>
@@ -170,21 +280,81 @@
 
     <main id="main">
     <section class="hero" id="top">
-        <span class="hero-ghost" aria-hidden="true">TRAIN</span>
+        <span class="hero-ghost" aria-hidden="true">PT</span>
         <div class="wrap">
-            <span class="soon reveal"><span class="dot" aria-hidden="true"></span> Coming Soon</span>
-            <h1 class="reveal d1">Built on <span class="hl">discipline</span>.</h1>
-            <p class="sub reveal d1">Show up. Follow the structure. The results follow.</p>
-            <p class="lede reveal d2">Military-inspired personal training, built on the same discipline that runs through everything we do at NYC Tailblazers &mdash; <b>accountability and a routine you can actually stick to</b>. It&rsquo;s still taking shape, and we&rsquo;d love to have you in early.</p>
-            <div class="hero-btns reveal d3">
-                <a href="mailto:info@nyctailblazers.com?subject=Personal%20Training%20Interest" class="btn btn-volt">Join the Early List
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                <a href="index.html#ventures" class="btn btn-ghost">Back to Ventures</a>
+            <div class="hero-grid">
+                <div>
+                    <span class="soon reveal"><span class="dot" aria-hidden="true"></span> Now enrolling founding members</span>
+                    <h1 class="reveal d1">Marine-forged <span class="hl">hybrid</span> training.</h1>
+                    <p class="sub reveal d1">Strength and engine, built on standards.</p>
+                    <p class="lede reveal d2">Coaching from a U.S. Marine Corps veteran who trains strength and conditioning together, not one at the cost of the other. <b>You show up, you follow the plan, you hit the numbers.</b> Programs launch soon, and founding members get in first at launch pricing.</p>
+                    <div class="hero-btns reveal d3">
+                        <a href="#waitlist" class="btn btn-volt">Join the founding-member waitlist
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        <a href="#programs" class="btn btn-ghost">See the programs</a>
+                    </div>
+                    <div class="stats reveal d3">
+                        <div class="stat"><div class="n">Hybrid</div><div class="k">Strength + engine</div></div>
+                        <div class="stat"><div class="n">USMC</div><div class="k">Standards-based</div></div>
+                        <div class="stat"><div class="n">NYC</div><div class="k">In-person &amp; online</div></div>
+                    </div>
+                </div>
+                <div class="hero-media reveal d2">
+                    <img src="images/training/combat-gear.jpg" alt="Markus in full Marine Corps combat gear with a rifle" width="1200" height="1500">
+                    <div class="tag">Your coach served here first<span>U.S. Marine Corps veteran</span></div>
+                </div>
             </div>
-            <div class="stats reveal d3">
-                <div class="stat"><div class="n">1:1</div><div class="k">Coaching</div></div>
-                <div class="stat"><div class="n">100%</div><div class="k">Accountability</div></div>
-                <div class="stat"><div class="n">NYC</div><div class="k">Built here</div></div>
+        </div>
+    </section>
+
+    <section class="pad" id="coach">
+        <div class="wrap">
+            <div class="coach">
+                <div class="coach-shots reveal">
+                    <img class="a" src="images/training/marine-tattoo.jpg" alt="Markus in a green USMC tee with an eagle-globe-and-anchor tattoo, smiling" loading="lazy" width="900" height="1200">
+                    <img class="b" src="images/training/dress-blues.jpg" alt="Markus in Marine Corps dress blue uniform" loading="lazy" width="900" height="900">
+                    <img class="c" src="images/training/blues-flag.jpg" alt="Markus in dress blues beside an American flag" loading="lazy" width="900" height="900">
+                </div>
+                <div class="reveal d1">
+                    <span class="eyebrow">Meet your coach</span>
+                    <h2>A Marine who <span class="hl">coaches like one</span>.</h2>
+                    <p>Markus is a U.S. Marine Corps veteran, now coaching in New York City. The Corps taught him one thing above all: the standard doesn&rsquo;t care how you feel that morning. You meet it anyway, and then you beat it.</p>
+                    <p><b>That&rsquo;s the whole method here.</b> No hype, no shortcuts, no motivational speeches. A plan written for where you actually are, benchmarks you can see on paper, and someone in your corner who expects you to show up. Every session runs like it matters, because it does.</p>
+                    <p>He isn&rsquo;t going to sell you a fantasy. He&rsquo;ll tell you what the work is, why it&rsquo;s built that way, and what it takes to hit the number. Then you go do it.</p>
+                    <ul class="cred">
+                        <li>Marine Corps veteran</li>
+                        <li>Hybrid strength &amp; conditioning</li>
+                        <li>NYC-based</li>
+                        <li>1:1, small-group &amp; online</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pad philo-band" id="philosophy">
+        <div class="wrap">
+            <div class="philo">
+                <div class="reveal">
+                    <span class="eyebrow">The method</span>
+                    <h2>Build strength and engine at the <span class="hl">same time</span>.</h2>
+                    <p>Hybrid training means you get stronger and better-conditioned together, on purpose, instead of picking a lane and giving up the other. Done right, you don&rsquo;t have to trade your deadlift for your mile or your mile for your deadlift.</p>
+                    <p><b>The catch is that it has to be managed.</b> Heavy lifting and hard intervals pull on the same recovery. Put them on top of each other and both stall. So we sequence the week so the hard days don&rsquo;t collide, keep most of the conditioning easy, and add weight to the bar and volume to the engine week over week.</p>
+                    <ul class="pillars">
+                        <li><span class="num">01</span><span><b>Recovery first.</b> The plan is only as good as what your body can absorb between sessions.</span></li>
+                        <li><span class="num">02</span><span><b>Keep the systems separate.</b> Max-effort lifting and hard intervals land on different days so one doesn&rsquo;t blunt the other.</span></li>
+                        <li><span class="num">03</span><span><b>Progressive overload on both sides.</b> The lifting climbs and the conditioning climbs, tracked and on paper.</span></li>
+                        <li><span class="num">04</span><span><b>Most cardio is easy.</b> Roughly 80% of conditioning sits at an easy pace; the hard intervals are rare and specific.</span></li>
+                    </ul>
+                    <p>Everything runs in blocks: four-week phases stacked into a twelve-to-sixteen-week cycle that shifts the emphasis over time instead of trying to peak everything at once. Base, then build, then peak, then retest.</p>
+                </div>
+                <figure class="quote-card reveal d1">
+                    <img src="images/training/pain-weakness.jpg" alt="A shirt reading &lsquo;Pain is weakness leaving the body&rsquo;" loading="lazy" width="900" height="1125">
+                    <div class="ov">
+                        <blockquote>&ldquo;Pain is weakness <span class="hl">leaving the body</span>.&rdquo;</blockquote>
+                        <cite>The Marine Corps ethos &mdash; the standard we train to</cite>
+                    </div>
+                </figure>
             </div>
         </div>
     </section>
@@ -192,63 +362,263 @@
     <section class="pad" id="programs">
         <div class="wrap">
             <div class="shead reveal">
-                <span class="eyebrow">The Vision</span>
-                <h2>What we&rsquo;re building <span class="hl">toward</span>.</h2>
-                <p>A training program still taking shape. Here&rsquo;s the direction we&rsquo;re headed.</p>
+                <span class="eyebrow">Programs</span>
+                <h2>Pick the track that fits <span class="hl">where you are</span>.</h2>
+                <p>Every track runs on the same engine: standards-based benchmarks, block periodization, and real accountability. Where you start is up to your training history, not your ego.</p>
             </div>
             <div class="progs">
                 <div class="prog reveal">
                     <span class="no">01</span>
-                    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".6"/></svg></span>
-                    <h3>1-on-1 Coaching</h3>
-                    <p>Personalized programming built around your goals, with direct accountability that keeps you showing up.</p>
+                    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                    <h3>Foundations</h3>
+                    <dl>
+                        <dt>Who it&rsquo;s for</dt><dd>New to training, coming back after a layoff, or anyone who hasn&rsquo;t trained steadily in six months or more.</dd>
+                        <dt>What&rsquo;s inside</dt><dd>Clean movement patterns first &mdash; squat, hinge, push, pull, carry &mdash; plus an aerobic base built mostly at easy pace. Bodyweight benchmarks (plank hold, push-up count) used as friendly baselines, not punishment.</dd>
+                        <dt>Structure</dt><dd><b>4&ndash;5x per week, 8&ndash;12 week block.</b> Base-phase programming, no maxing out, just enough conditioning to build a habit and a floor.</dd>
+                    </dl>
+                </div>
+                <div class="prog feat reveal d1">
+                    <span class="no">02</span>
+                    <span class="flag">Signature program</span>
+                    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3.5l2-6 3.5 12 2.5-8 1.5 2H21"/></svg></span>
+                    <h3>Hybrid Athlete</h3>
+                    <dl>
+                        <dt>Who it&rsquo;s for</dt><dd>You already train and you want both: a bigger squat and deadlift and a real engine at the same time.</dd>
+                        <dt>What&rsquo;s inside</dt><dd>Concurrent barbell strength (squat, deadlift, press progressions) and conditioning (intervals, rucks, loaded carries, steady-state) sequenced on non-consecutive days. Benchmark days &mdash; loaded carry for time, sprint shuttle, overhead lift for reps &mdash; used to test and re-test, not to grind you down.</dd>
+                        <dt>Structure</dt><dd><b>5&ndash;6x per week split.</b> Base &rarr; build &rarr; peak periodization across a 12&ndash;16 week cycle. 1:1 or small-group.</dd>
+                    </dl>
+                </div>
+                <div class="prog reveal">
+                    <span class="no">03</span>
+                    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 5 5 .7-3.6 3.6.9 5.2L12 19l-5.2 2.5.9-5.2L4 12.7 9 12z"/></svg></span>
+                    <h3>Marine Corps Prep</h3>
+                    <dl>
+                        <dt>Who it&rsquo;s for</dt><dd>Poolees, recruits, and anyone training toward the USMC Physical Fitness Test or Combat Fitness Test.</dd>
+                        <dt>What&rsquo;s inside</dt><dd>Direct work against the real PFT and CFT events: pull-ups, push-ups, plank, the three-mile run, the movement-to-contact run, ammo can lift, and the maneuver-under-fire shuttle. We test your baseline, program the gaps, and re-test on a schedule. Coached by someone who lived the standard.</dd>
+                        <dt>Structure</dt><dd><b>Timeline built around your ship or test date.</b> Standards-first, with running and calisthenics volume managed so you peak when it counts.</dd>
+                    </dl>
                 </div>
                 <div class="prog reveal d1">
-                    <span class="no">02</span>
-                    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9.5 4a2.5 2.5 0 0 1 5 0"/><path d="M9 10l1.2 1.2L12.5 9M9 15.5l1.2 1.2 2.3-2.2"/></svg></span>
-                    <h3>Structure &amp; Habits</h3>
-                    <p>Routine over motivation. We build repeatable systems and daily discipline so consistency does the heavy lifting.</p>
+                    <span class="no">04</span>
+                    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M4 10a4 4 0 0 1 8 0v10M12 20V8M12 8a4 4 0 0 1 8 0v12"/></svg></span>
+                    <h3>Fat-Loss &amp; Recomp</h3>
+                    <dl>
+                        <dt>Who it&rsquo;s for</dt><dd>You want to change your body composition and keep your strength while you do it.</dd>
+                        <dt>What&rsquo;s inside</dt><dd>Strength training three to four times a week to hold onto and build lean mass, conditioning dosed for calorie burn without wrecking recovery, and nutrition and accountability check-ins on top. Not cardio-until-you-drop &mdash; a lifting split with the conditioning that actually fits it.</dd>
+                        <dt>Structure</dt><dd><b>3&ndash;4x lifting + 2&ndash;3x conditioning weekly.</b> Ongoing monthly cycle with regular check-ins.</dd>
+                    </dl>
                 </div>
-                <div class="prog reveal d2">
-                    <span class="no">03</span>
-                    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3.5l2-6 3.5 12 2.5-8 1.5 2H21"/></svg></span>
-                    <h3>Strength &amp; Conditioning</h3>
-                    <p>Functional fitness for real life: strength and conditioning that carry over off the training floor.</p>
-                </div>
+            </div>
+
+            <div class="shead shead-tight reveal">
+                <span class="eyebrow">How we deliver it</span>
+            </div>
+            <div class="fmt">
+                <div class="reveal"><h4>1:1 Private</h4><p>Fully custom programming built around your own baseline numbers. Highest-touch coaching, technique correction, adjustments made in the moment. Typically 2&ndash;4x per week, in person.</p></div>
+                <div class="reveal d1"><h4>Small-Group</h4><p>Same program logic as the tracks above, run for two or three people who want coach oversight and form checks while splitting the cost. Loading stays individual.</p></div>
+                <div class="reveal d2"><h4>Online / Remote</h4><p>Written block programming, video-checked lifts, and regular check-ins for anyone out of the area or on a budget. You run the plan; the standards keep you honest.</p></div>
             </div>
         </div>
     </section>
 
-    <section class="pad why-band" id="why">
+    <section class="pad week-band" id="week">
         <div class="wrap">
-            <div class="principle">
-                <div class="reveal">
-                    <span class="eyebrow">Why Discipline</span>
-                    <h2>The same principle, wherever we <span class="hl">apply it</span>.</h2>
-                    <p>NYC Tailblazers teaches structure and purpose: to at-risk youth learning a trade, to veterans regaining routine, and to dogs learning discipline through training.</p>
-                    <p><b>Personal training applies that same idea to your body.</b> Show up, follow the structure, and the results follow.</p>
-                </div>
-                <ul class="ledger reveal d1">
-                    <li><span class="who">Youth</span><span class="what">Structure and a trade through our training programs.</span></li>
-                    <li><span class="who">Veterans</span><span class="what">Routine and purpose through service dog partnership.</span></li>
-                    <li><span class="who">Dogs</span><span class="what">Discipline and confidence through consistent training.</span></li>
-                    <li><span class="who you">You</span><span class="what">Accountability and structure through personal training.</span></li>
-                </ul>
+            <div class="shead reveal">
+                <span class="eyebrow">A week in the plan</span>
+                <h2>What a hybrid week <span class="hl">looks like</span>.</h2>
+                <p>A representative base-phase week. Hard days sit apart, easy conditioning fills the gaps, and one day is fully off. As the cycle moves into build and peak, the reps drop, the rest grows, and the intensity climbs.</p>
+            </div>
+            <div class="scrollx reveal">
+                <table class="week">
+                    <tbody>
+                        <tr><td class="day">Monday</td><td class="focus">Strength &mdash; lower / full</td><td class="det">Squat, deadlift or bench variant, pull-ups. Moderate reps (around 4x6), roughly 90 seconds rest.</td></tr>
+                        <tr><td class="day">Tuesday</td><td class="focus">Conditioning / HIIT</td><td class="det">Short hard intervals &mdash; sprints, kettlebell swings, burpees. About 20 minutes, work-to-rest near 30s:30s.</td></tr>
+                        <tr class="rest"><td class="day">Wednesday</td><td class="focus">Active recovery</td><td class="det">Easy mobility, a light swim or yoga, 30&ndash;60 minutes at low intensity.</td></tr>
+                        <tr><td class="day">Thursday</td><td class="focus">Skill / benchmark</td><td class="det">Sport skill or a CFT-style benchmark: loaded carry, shuttle, boxing rounds.</td></tr>
+                        <tr><td class="day">Friday</td><td class="focus">Strength &mdash; upper / full</td><td class="det">Second strength session, upper or full-body emphasis.</td></tr>
+                        <tr><td class="day">Saturday</td><td class="focus">Mixed / endurance</td><td class="det">Longer steady-state conditioning or a mixed circuit &mdash; carries, jumps, deadlifts, pull-ups, running &mdash; for volume.</td></tr>
+                        <tr class="rest"><td class="day">Sunday</td><td class="focus">Full rest</td><td class="det">Off. Recovery is part of the program, not a break from it.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="phases">
+                <div class="phase reveal"><div class="wk">Weeks 1&ndash;4</div><h4>Base</h4><p>Foundational movement patterns, higher reps (around 6), moderate rest (around 90s), and an emphasis on easy-paced conditioning volume.</p></div>
+                <div class="phase reveal d1"><div class="wk">Weeks 5&ndash;8</div><h4>Build</h4><p>Intensity rises, reps drop to four or five, rest extends toward two minutes, and interval conditioning sharpens up.</p></div>
+                <div class="phase reveal d2"><div class="wk">Weeks 9&ndash;12</div><h4>Peak</h4><p>Heaviest, lowest-rep compound lifts (around 3x4), conditioning at its most specific, then a taper and a retest week.</p></div>
             </div>
         </div>
     </section>
 
-    <section class="pad cta-band" id="interest">
+    <section class="pad" id="standards">
         <div class="wrap">
-            <div class="cta-inner reveal">
-                <span class="eyebrow">Get Started</span>
-                <h2>Be first in <span class="hl">line</span>.</h2>
-                <p>Personal Training is still in development. Reach out and we&rsquo;ll keep you posted as the program takes shape.</p>
-                <div class="cta-btns">
-                    <a href="mailto:info@nyctailblazers.com?subject=Personal%20Training%20Interest" class="btn btn-volt">Email Us
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                    <a href="sms:+13472608305" class="btn btn-ghost">Text (347) 260-8305</a>
+            <div class="shead reveal">
+                <span class="eyebrow">Standards &amp; benchmarks</span>
+                <h2>The numbers we <span class="hl">train to</span>.</h2>
+                <p>These are the real USMC fitness standards. In the Corps, a bare passing score hasn&rsquo;t been the goal since 2019 &mdash; exceeding the standard is the standard. We use them the same way: as honest benchmarks you can measure yourself against.</p>
+            </div>
+            <div class="std-grid">
+                <div class="std-card reveal">
+                    <h3>PFT</h3>
+                    <p class="sub">Physical Fitness Test &middot; example age band 21&ndash;25</p>
+                    <div class="scrollx">
+                        <table class="std">
+                            <thead><tr><th>Event</th><th>Male</th><th>Female</th></tr></thead>
+                            <tbody>
+                                <tr><th>Pull-ups</th><td><b>23</b> = 100 pts / 5 = min</td><td><b>11</b> = 100 pts</td></tr>
+                                <tr><th>Push-ups</th><td>~64 = ~75 pts / 40 = min</td><td>~38 = ~60 pts / 18 = min</td></tr>
+                                <tr><th>Plank</th><td><b>3:45</b> = 100 / 1:10 = min</td><td><b>3:45</b> = 100 / 1:10 = min</td></tr>
+                                <tr><th>3-mile run</th><td><b>18:00</b> = 100 / 27:40 = min</td><td><b>21:00</b> = 100 / 30:50 = min</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+                <div class="std-card reveal d1">
+                    <h3>CFT</h3>
+                    <p class="sub">Combat Fitness Test &middot; example age band 21&ndash;25</p>
+                    <div class="scrollx">
+                        <table class="std">
+                            <thead><tr><th>Event</th><th>Male</th><th>Female</th></tr></thead>
+                            <tbody>
+                                <tr><th>Movement to contact<br>(880 yd)</th><td><b>2:38</b> top / 3:45 pass</td><td><b>3:13</b> top / 4:41 pass</td></tr>
+                                <tr><th>Ammo can lift<br>(30 lb, 2 min)</th><td>~115 reps top*</td><td>~74 reps top / 30 pass</td></tr>
+                                <tr><th>Maneuver under fire<br>(300 yd)</th><td><b>2:45</b> top / 3:18 pass</td><td><b>2:45</b> top / 4:34 pass</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <p class="std-note">Standards shift by age bracket; the figures above are the 21&ndash;25 band as a single reference point. *Reported ammo-can-lift numbers vary by source and year. Always treat these as directional and check the current official USMC PFT/CFT order (fitness.marines.mil) before using any hard number as final.</p>
+        </div>
+    </section>
+
+    <section class="pad price-band" id="pricing">
+        <div class="wrap">
+            <div class="shead center reveal">
+                <span class="eyebrow">Launch pricing &middot; now enrolling</span>
+                <h2>Founding-member <span class="hl">rates</span>.</h2>
+                <p>Indicative launch pricing while we build the roster. Founding members lock these rates going in. NYC-market ranges, positioned for a veteran coach without overshooting.</p>
+            </div>
+            <div class="prices">
+                <div class="price reveal">
+                    <span class="k">Small-Group</span>
+                    <h3>Semi-Private</h3>
+                    <div class="amt">$80&ndash;$110<small>per person, per session (2&ndash;3 people)</small></div>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Coach oversight and form checks</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Shared programming, individual loading</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Roughly half the 1:1 rate per person</li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-ghost">Join waitlist</a>
+                </div>
+                <div class="price feat reveal d1">
+                    <span class="k">Most hands-on</span>
+                    <h3>1:1 Private</h3>
+                    <div class="amt">$150&ndash;$220<small>per 60-minute session</small></div>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Fully custom, written block programming</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Built on your own baseline numbers</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>In-session technique correction</li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-volt">Join waitlist</a>
+                </div>
+                <div class="price reveal d2">
+                    <span class="k">Anywhere</span>
+                    <h3>Online / Remote</h3>
+                    <div class="amt">$150&ndash;$250<small>per month, programming + check-ins</small></div>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Written base / build / peak plan</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Video-checked lifts</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Weekly or biweekly check-ins</li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-ghost">Join waitlist</a>
+                </div>
+            </div>
+            <p class="price-foot">Monthly session packages will be available at launch. Founding-member pricing is limited and set at enrollment.</p>
+        </div>
+    </section>
+
+    <section class="pad" id="faq">
+        <div class="wrap">
+            <div class="shead center reveal">
+                <span class="eyebrow">Questions</span>
+                <h2>Straight <span class="hl">answers</span>.</h2>
+            </div>
+            <div class="faq reveal">
+                <details>
+                    <summary>Are the programs running yet?</summary>
+                    <div class="ans">Not quite. We&rsquo;re building the roster now and taking founding members first. Join the waitlist and you get in ahead of the general launch, at launch pricing.</div>
+                </details>
+                <details>
+                    <summary>Do I have to be a Marine or ex-military?</summary>
+                    <div class="ans">No. The coaching comes from a Marine Corps background, but the tracks are built for regular people who want to get strong and conditioned. The standard is the tool, not a gate.</div>
+                </details>
+                <details>
+                    <summary>I&rsquo;ve never really trained. Where do I start?</summary>
+                    <div class="ans">Foundations. We build clean movement and an aerobic base before anything heavy or fast. No maxing out, no ego lifting &mdash; just a floor you can build on.</div>
+                </details>
+                <details>
+                    <summary>I&rsquo;m a poolee or recruit prepping for boot camp. Can you help?</summary>
+                    <div class="ans">Yes &mdash; that&rsquo;s the Marine Corps Prep track. We test your baseline against the real PFT and CFT events, program the gaps, and time your peak to your ship or test date.</div>
+                </details>
+                <details>
+                    <summary>Where do sessions happen?</summary>
+                    <div class="ans">In-person 1:1 and small-group coaching in New York City, plus online programming for anyone out of the area. Locations and scheduling get confirmed with founding members as we launch.</div>
+                </details>
+                <details>
+                    <summary>How do I hold my spot?</summary>
+                    <div class="ans">Fill out the <a href="#waitlist">waitlist form</a> below, or text (347) 260-8305. We&rsquo;ll reach out with next steps and lock your founding-member rate.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="pad cta-band" id="waitlist">
+        <div class="wrap">
+            <div class="wl-grid">
+                <div class="wl-copy reveal">
+                    <span class="eyebrow">Founding-member waitlist</span>
+                    <h2>Claim your <span class="hl">spot</span>.</h2>
+                    <p>Tell us where you are and what you&rsquo;re after. We&rsquo;ll follow up as programs open, and founding members go to the front of the line at launch pricing.</p>
+                    <p>Prefer to talk? Text or call, or send an email &mdash; whatever&rsquo;s easiest.</p>
+                    <div class="wl-direct">
+                        <a href="sms:+13472608305" class="big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Text (347) 260-8305</a>
+                        <a href="mailto:info@nyctailblazers.com?subject=Personal%20Training%20—%20Waitlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@nyctailblazers.com</a>
+                    </div>
+                </div>
+                <form class="wl reveal d1" action="https://formspree.io/f/xwkgvpbz" method="POST">
+                    <input type="hidden" name="_subject" value="Personal Training — Waitlist">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name">
+                    </div>
+                    <div class="row">
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@email.com">
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone <span class="opt">(optional)</span></label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(347) 000-0000">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="experience">Training experience</label>
+                        <select id="experience" name="experience" required>
+                            <option value="" selected disabled>Choose one</option>
+                            <option value="New / returning after a layoff">New, or coming back after a layoff</option>
+                            <option value="Train sometimes">I train sometimes</option>
+                            <option value="Train consistently">I train consistently</option>
+                            <option value="Poolee / recruit (boot camp prep)">Poolee / recruit prepping for boot camp</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="goal">Your main goal</label>
+                        <textarea id="goal" name="goal" required placeholder="Get stronger, drop body fat, pass the PFT, build an engine — tell us what you're after."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-volt">Join the waitlist
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                    <p class="fine">No spam. We only reach out about your spot and the launch.</p>
+                </form>
             </div>
         </div>
     </section>
@@ -267,6 +637,7 @@
                     <a href="dog-walking.html">Dog Walking</a>
                     <a href="jiggs-and-glo.html">Books</a>
                     <a href="web-design.html">Web Design</a>
+                    <a href="personal-training.html">Personal Training</a>
                     <a href="vendor-resale.html">Inmate Services</a>
                     <a href="3d-printing.html">3D Printing</a>
                 </div>
@@ -284,7 +655,7 @@
                 </div>
             </div>
             <div class="fbot">
-                <p>&copy; <span id="year">2026</span> NYC Tailblazers. All Rights Reserved. &middot; Blaze new trails, wag new tails.</p>
+                <p>&copy; <span id="year">2026</span> NYC Tailblazers. All Rights Reserved. &middot; Blaze new trails, wag new tails. &middot; Site by NYC Tailblazers Web Design</p>
             </div>
         </div>
     </footer>

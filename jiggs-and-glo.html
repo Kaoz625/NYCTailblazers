@@ -139,7 +139,7 @@
         }
         nav { display: flex; align-items: center; justify-content: space-between; height: 76px; }
         .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .brand img { width: 44px; height: 44px; border-radius: 12px; object-fit: cover; border: 2px solid var(--line); }
+        .brand img { height: 46px; width: auto; object-fit: contain; }
         .brand-name { font-family: var(--display); font-weight: 400; font-size: 1.24rem; color: var(--ink); line-height: 1; }
         .brand-name small { display: block; font-family: var(--body); font-weight: 800; font-size: 0.6rem; letter-spacing: 1.8px; text-transform: uppercase; color: var(--peach-deep); margin-top: 4px; }
         .nav-links { display: flex; align-items: center; gap: 26px; }
@@ -181,20 +181,14 @@
         .fact .n { font-family: var(--display); font-size: 1.9rem; line-height: 1; color: var(--peach-deep); display: block; }
         .fact .k { font-size: .74rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft); margin-top: 6px; display: block; }
 
-        /* ── BOOK COVER ILLUSTRATION ── */
+        /* ── BOOK COVER (real cover art) ── */
         .cover-stage { position: relative; display: flex; justify-content: center; }
-        .cover { position: relative; width: min(100%, 400px); aspect-ratio: 3/4;
+        .cover { position: relative; width: min(100%, 480px); aspect-ratio: 3/2;
             border-radius: 22px 18px 22px 18px; overflow: hidden; box-shadow: var(--shadow);
             border: 3px solid var(--ink); transform: rotate(-2.4deg);
-            transition: transform .5s cubic-bezier(.2,.8,.2,1); background: var(--sky); }
+            transition: transform .5s cubic-bezier(.2,.8,.2,1); background: var(--paper); }
         .cover:hover { transform: rotate(0deg) translateY(-6px); }
-        .cover-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-        .cover-band { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
-            background: linear-gradient(180deg, rgba(255,255,255,0), var(--paper) 42%);
-            padding: 40px 24px 22px; text-align: center; }
-        .cover-band .ct { font-family: var(--display); font-size: clamp(1.9rem,5.5vw,2.5rem); color: var(--ink); line-height: 1; }
-        .cover-band .ct em { font-style: italic; color: var(--peach-deep); }
-        .cover-band .cs { font-family: var(--body); font-weight: 800; font-size: .68rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--sky-deep); margin-top: 10px; }
+        .cover img { width: 100%; height: 100%; object-fit: cover; }
         .cover-ribbon { position: absolute; top: 16px; right: -34px; z-index: 3; transform: rotate(38deg);
             background: var(--peach-deep); color: #fff; font-weight: 800; font-size: .68rem; letter-spacing: 1.5px;
             text-transform: uppercase; padding: 6px 44px; box-shadow: var(--shadow-sm); }
@@ -220,11 +214,9 @@
         .char:nth-child(1) { transform: rotate(-1.2deg); }
         .char:nth-child(2) { transform: rotate(1.2deg); margin-top: clamp(0px,3vw,36px); }
         .char:hover { transform: rotate(0) translateY(-6px); box-shadow: var(--shadow); }
-        .char-portrait { width: 96px; height: 96px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            margin-bottom: 20px; border: 3px solid var(--ink); }
-        .char:nth-child(1) .char-portrait { background: rgba(240,160,121,.28); color: var(--peach-deep); }
-        .char:nth-child(2) .char-portrait { background: rgba(140,196,222,.34); color: var(--sky-deep); }
-        .char-portrait svg { width: 54px; height: 54px; }
+        .char-portrait { width: 100%; aspect-ratio: 4/5; border-radius: 18px; overflow: hidden;
+            margin-bottom: 20px; border: 3px solid var(--ink); background: var(--paper-3); }
+        .char-portrait img { width: 100%; height: 100%; object-fit: cover; }
         .char h3 { font-size: 2.2rem; color: var(--ink); margin-bottom: 6px; }
         .char .role { font-weight: 800; font-size: .78rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--leaf-deep); margin-bottom: 14px; }
         .char p { color: var(--ink-soft); font-weight: 600; font-size: 1.04rem; }
@@ -251,15 +243,53 @@
         .feature { position: relative; overflow: hidden; display: grid; grid-template-columns: auto 1fr; gap: clamp(24px,4vw,48px); align-items: center;
             background: linear-gradient(140deg, rgba(151,192,90,.24), var(--paper) 60%);
             border: 3px solid var(--ink); border-radius: 30px; padding: clamp(30px,4.5vw,52px); box-shadow: var(--shadow); }
-        .feature-badge { flex: 0 0 auto; width: clamp(92px,12vw,130px); height: clamp(92px,12vw,130px); border-radius: 26px;
-            background: var(--butter); border: 3px solid var(--ink); display: flex; align-items: center; justify-content: center; color: var(--ink); transform: rotate(-5deg); }
-        .feature-badge svg { width: 52%; height: 52%; }
+        .feature-cover { flex: 0 0 auto; width: clamp(160px,24vw,250px); aspect-ratio: 3/2; border-radius: 16px; overflow: hidden;
+            background: var(--paper-3); border: 3px solid var(--ink); box-shadow: var(--shadow-sm); transform: rotate(-3deg); }
+        .feature-cover img { width: 100%; height: 100%; object-fit: cover; }
         .feature .k { display: inline-block; font-weight: 800; font-size: .74rem; letter-spacing: 2px; text-transform: uppercase; color: var(--leaf-deep);
             background: rgba(151,192,90,.22); border: 2px dashed rgba(111,156,60,.5); padding: 5px 14px; border-radius: 100px; margin-bottom: 14px; }
         .feature h3 { font-size: clamp(1.8rem,3.6vw,2.5rem); color: var(--ink); margin-bottom: 12px; line-height: 1.02; }
         .feature p { color: var(--ink-soft); font-weight: 600; font-size: 1.06rem; max-width: 56ch; }
+        .feature p + p { margin-top: 12px; }
         .feature-cta { margin-top: 22px; }
-        @media (max-width: 720px) { .feature { grid-template-columns: 1fr; text-align: center; } .feature-badge { margin: 0 auto; } .feature p { margin-inline: auto; } .feature .k { margin-inline: auto; } }
+        @media (max-width: 720px) { .feature { grid-template-columns: 1fr; text-align: center; } .feature-cover { margin: 0 auto; } .feature p { margin-inline: auto; } .feature .k { margin-inline: auto; } }
+
+        /* ══════════════ INSIDE THE BOOK — peek gallery ══════════════ */
+        .peek-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px,2.2vw,22px); }
+        .peek { position: relative; border: 3px solid var(--ink); border-radius: 18px; overflow: hidden;
+            box-shadow: var(--shadow-sm); background: var(--paper-3); aspect-ratio: 3/2;
+            transition: transform .35s, box-shadow .35s; }
+        .peek:nth-child(odd) { transform: rotate(-1deg); }
+        .peek:nth-child(even) { transform: rotate(1deg); }
+        .peek:hover { transform: rotate(0) translateY(-5px); box-shadow: var(--shadow); }
+        .peek img { width: 100%; height: 100%; object-fit: cover; }
+        @media (max-width: 760px) { .peek-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 460px) { .peek-grid { grid-template-columns: 1fr; } }
+
+        /* ══════════════ CHECKOUT / BUY ══════════════ */
+        .buy { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 660px; margin: 6px auto 24px; text-align: left; }
+        .buy-card { background: var(--paper); border: 3px solid var(--ink); border-radius: 22px; padding: 24px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
+        .buy-card h3 { font-family: var(--display); font-size: 1.5rem; color: var(--ink); line-height: 1; margin: 0; }
+        .buy-price { font-family: var(--display); font-size: 2.1rem; color: var(--peach-deep); margin: 6px 0 4px; line-height: 1; }
+        .buy-card p { color: var(--ink-soft); font-weight: 600; font-size: .92rem; margin: 0 0 16px; flex: 1; }
+        .qty-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+        .qty-row label { font-weight: 800; font-size: .72rem; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-soft); }
+        .qty-row input { width: 66px; padding: 9px 10px; border: 2.5px solid var(--ink); border-radius: 10px; font-family: var(--body); font-weight: 800; font-size: 1rem; background: var(--paper); color: var(--ink); text-align: center; }
+        .buy-card .btn { width: 100%; justify-content: center; }
+        .secure { display: inline-flex; align-items: center; gap: 7px; font-weight: 800; font-size: .82rem; letter-spacing: .3px; color: #3d5a68; margin-bottom: 26px; }
+        .secure svg { width: 15px; height: 15px; }
+        @media (max-width: 620px) { .buy { grid-template-columns: 1fr; } }
+
+        /* ══════════════ MORE BOOKS — notify ══════════════ */
+        .notify { background: var(--paper-2); border-block: 2px dashed var(--line); }
+        .notify-card { max-width: 620px; margin: 0 auto; background: var(--paper); border: 3px solid var(--ink); border-radius: 26px; padding: clamp(28px,4vw,46px); box-shadow: var(--shadow); text-align: center; transform: rotate(-.8deg); }
+        .notify-card .eyebrow { margin-bottom: 4px; }
+        .notify-card h2 { font-size: clamp(1.8rem,4vw,2.6rem); color: var(--ink); margin: 14px 0 10px; line-height: 1.05; }
+        .notify-card p { color: var(--ink-soft); font-weight: 600; margin-bottom: 22px; }
+        .notify-form { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .notify-form input[type=email] { flex: 1; min-width: 220px; padding: 14px 18px; border: 2.5px solid var(--ink); border-radius: 100px; font-family: var(--body); font-weight: 600; font-size: 1rem; background: var(--paper); color: var(--ink); }
+        .notify-msg { margin-top: 16px; font-weight: 800; color: var(--leaf-deep); min-height: 1.2em; }
+        @media (max-width: 520px) { .notify-form .btn { width: 100%; justify-content: center; } }
 
         /* ══════════════ GET THE BOOK / CTA ══════════════ */
         .cta-band { position: relative; overflow: hidden; text-align: center;
@@ -309,19 +339,18 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="brand">
-                    <img src="tailblazers-logo.png" alt="NYC Tailblazers logo">
+                    <img src="images/brand/tb-mark.png" alt="NYC Tailblazers — two illustrated dogs">
                     <span class="brand-name">NYC Tailblazers<small>A Children's Book Series</small></span>
                 </a>
                 <button class="hamburger" aria-label="Toggle menu" aria-controls="navlinks" aria-expanded="false" onclick="var n=document.getElementById('navlinks');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">
                     <span></span><span></span><span></span>
                 </button>
                 <div class="nav-links" id="navlinks">
-                    <a href="#characters">Characters</a>
-                    <a href="#story">The Story</a>
                     <a href="#book-one">Book One</a>
-                    <a href="service-dogs.html">Service Dogs</a>
+                    <a href="#characters">Meet Jiggs &amp; Glo</a>
+                    <a href="#inside">Inside the Book</a>
                     <a href="index.html">Main Site</a>
-                    <a href="index.html#support" class="nav-cta">Donate</a>
+                    <a href="#get-the-book" class="nav-cta">Get the Book</a>
                 </div>
             </nav>
         </div>
@@ -337,17 +366,17 @@
                     A Children's Book Series
                 </span>
                 <h1 id="jg-title" class="hero-title reveal d1">Jiggs <span class="amp">&amp;</span> Glo</h1>
-                <p class="hero-warm reveal d1">Two NYC dogs, one big city, and a friendship that carries the whole story.</p>
-                <p class="hero-lede reveal d2">A heartfelt children's book series about two NYC dogs, friendship, and finding your place in the big city. <b>Book One is finished</b>, with more adventures on the way.</p>
+                <p class="hero-warm reveal d1">Two real NYC dogs, one big city, and a friendship that carries the whole story.</p>
+                <p class="hero-lede reveal d2">A children's book series inspired by two real New York City dogs &mdash; friendship, a little bravery, and a neighborhood worth standing up for. <b>Book One is out now.</b> Every copy helps youth raise service dogs for veterans.</p>
                 <div class="hero-btns reveal d3">
-                    <a href="mailto:info@nyctailblazers.com?subject=Jiggs%20and%20Glo%20Book%20Request" class="btn btn-peach">Request Book One
+                    <a href="#get-the-book" class="btn btn-peach">Get the Book
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                     </a>
-                    <a href="index.html#ventures" class="btn btn-outline">Back to Ventures</a>
+                    <a href="#inside" class="btn btn-outline">Peek Inside</a>
                 </div>
                 <div class="facts reveal d4">
                     <div class="fact"><span class="n">01</span><span class="k">Book One &mdash; out now</span></div>
-                    <div class="fact"><span class="n">2</span><span class="k">best friends, one big city</span></div>
+                    <div class="fact"><span class="n">2</span><span class="k">real dogs behind the story</span></div>
                     <div class="fact"><span class="n">NYC</span><span class="k">where the story lives</span></div>
                 </div>
             </div>
@@ -355,68 +384,9 @@
             <div class="cover-stage reveal d2">
                 <span class="float f1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15a4 4 0 0 1 .4-8A5.5 5.5 0 0 1 17 8.5a3.5 3.5 0 0 1-.5 6.5z"/></svg></span>
                 <span class="float f2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 6.3L21 9l-5 4.2L17.6 20 12 16.3 6.4 20 8 13.2 3 9l6.6-.7z"/></svg></span>
-                <div class="cover" role="img" aria-label="Jiggs and Glo, Book One — an illustrated storybook cover with two dogs beneath a sunny New York City skyline">
+                <div class="cover">
                     <span class="cover-ribbon">Out Now</span>
-                    <svg class="cover-svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                        <!-- sky -->
-                        <rect width="300" height="400" fill="#8cc4de"/>
-                        <rect width="300" height="180" fill="#a9d5e8"/>
-                        <!-- sun -->
-                        <circle cx="242" cy="66" r="34" fill="#f6c95a"/>
-                        <g stroke="#f6c95a" stroke-width="5" stroke-linecap="round">
-                            <line x1="242" y1="12" x2="242" y2="0"/><line x1="292" y1="66" x2="300" y2="66"/>
-                            <line x1="206" y1="30" x2="198" y2="22"/><line x1="278" y1="30" x2="286" y2="22"/>
-                            <line x1="206" y1="102" x2="198" y2="110"/>
-                        </g>
-                        <!-- clouds -->
-                        <g fill="#fdfaf2">
-                            <ellipse cx="70" cy="70" rx="42" ry="20"/><ellipse cx="48" cy="78" rx="26" ry="15"/><ellipse cx="96" cy="80" rx="30" ry="16"/>
-                            <ellipse cx="170" cy="118" rx="30" ry="14"/><ellipse cx="152" cy="124" rx="20" ry="11"/>
-                        </g>
-                        <!-- skyline -->
-                        <g fill="#5a86a0">
-                            <rect x="10" y="150" width="34" height="120"/><rect x="50" y="120" width="26" height="150"/>
-                            <rect x="82" y="165" width="30" height="105"/><rect x="120" y="100" width="30" height="170"/>
-                            <rect x="158" y="140" width="24" height="130"/><rect x="188" y="118" width="34" height="152"/>
-                            <rect x="228" y="158" width="26" height="112"/><rect x="260" y="132" width="30" height="138"/>
-                        </g>
-                        <g fill="#f6c95a" opacity=".85">
-                            <rect x="58" y="132" width="5" height="7"/><rect x="66" y="132" width="5" height="7"/>
-                            <rect x="128" y="112" width="5" height="7"/><rect x="136" y="112" width="5" height="7"/>
-                            <rect x="196" y="130" width="5" height="7"/><rect x="204" y="130" width="5" height="7"/>
-                        </g>
-                        <!-- ground -->
-                        <path d="M0 250 Q150 232 300 250 V400 H0 Z" fill="#97c05a"/>
-                        <path d="M0 262 Q150 246 300 262 V400 H0 Z" fill="#84ad48"/>
-                        <!-- Jiggs (peach dog, left) -->
-                        <g transform="translate(78 250)">
-                            <ellipse cx="0" cy="34" rx="30" ry="9" fill="#000" opacity=".08"/>
-                            <path d="M-24 6 q-4 22 2 30 h8 v-16 h28 v16 h8 q6 -10 2 -30 z" fill="#f0a079"/>
-                            <circle cx="0" cy="-2" r="20" fill="#f0a079"/>
-                            <path d="M-18 -14 q-8 -12 -2 -20 q10 4 12 16 z" fill="#db7f52"/>
-                            <path d="M18 -14 q8 -12 2 -20 q-10 4 -12 16 z" fill="#db7f52"/>
-                            <circle cx="-7" cy="-3" r="2.6" fill="#453a32"/><circle cx="7" cy="-3" r="2.6" fill="#453a32"/>
-                            <circle cx="0" cy="6" r="3.4" fill="#453a32"/>
-                            <path d="M0 9 v4 M0 13 q-5 3 -9 1 M0 13 q5 3 9 1" stroke="#453a32" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-                            <path d="M24 8 q14 -4 12 -18" stroke="#f0a079" stroke-width="7" fill="none" stroke-linecap="round"/>
-                        </g>
-                        <!-- Glo (sky dog, right) -->
-                        <g transform="translate(206 256)">
-                            <ellipse cx="0" cy="32" rx="28" ry="8" fill="#000" opacity=".08"/>
-                            <path d="M-22 6 q-4 20 2 28 h7 v-15 h26 v15 h7 q6 -8 2 -28 z" fill="#cfe6f1"/>
-                            <circle cx="0" cy="-2" r="19" fill="#cfe6f1"/>
-                            <path d="M-19 -8 q-12 -6 -16 4 q10 8 18 4 z" fill="#8cc4de"/>
-                            <path d="M19 -8 q12 -6 16 4 q-10 8 -18 4 z" fill="#8cc4de"/>
-                            <circle cx="-6.5" cy="-3" r="2.5" fill="#453a32"/><circle cx="6.5" cy="-3" r="2.5" fill="#453a32"/>
-                            <circle cx="0" cy="5" r="3.2" fill="#453a32"/>
-                            <path d="M-9 8 q9 7 18 0" stroke="#453a32" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-                            <path d="M-24 10 q-14 -2 -14 -16" stroke="#cfe6f1" stroke-width="7" fill="none" stroke-linecap="round"/>
-                        </g>
-                    </svg>
-                    <div class="cover-band">
-                        <div class="ct">Jiggs <em>&amp;</em> Glo</div>
-                        <div class="cs">A NYC Tailblazers Story</div>
-                    </div>
+                    <img src="images/book/cover.jpg" alt="Cover of Jiggs and Glo, Book One — a bulldog reading a newspaper, a brindle detective dog in a deerstalker cap with a magnifying glass, and a reddish-brown dog in a striped sweater holding a 'Vote Yes for Hydrants!' sign">
                 </div>
             </div>
         </div>
@@ -430,25 +400,25 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5"/></svg>
                     The Characters
                 </span>
-                <h2>Meet the <span class="accent">pack</span>.</h2>
-                <p>Two lovable NYC dogs, two very different outlooks, and a friendship that carries the whole story.</p>
+                <h2>Meet the real <span class="accent">Jiggs &amp; Glo</span>.</h2>
+                <p>The series is inspired by two real NYC dogs. These are their actual photos &mdash; the storybook versions are drawn after them.</p>
             </div>
             <div class="char-row">
                 <div class="char reveal">
-                    <span class="char-portrait" aria-hidden="true">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14C9 10 9 6 10 5c3 1 5 4 6 8"/><path d="M36 14c3-4 3-8 2-9-3 1-5 4-6 8"/><circle cx="24" cy="24" r="13"/><circle cx="19" cy="22" r="1.6" fill="currentColor"/><circle cx="29" cy="22" r="1.6" fill="currentColor"/><path d="M24 27v3M24 30c-2 1.5-4 1-5-.5M24 30c2 1.5 4 1 5-.5"/></svg>
+                    <span class="char-portrait">
+                        <img src="images/dogs/jiggs.jpg" alt="Jiggs, a brindle Catahoula with a tiger-striped brown coat, lying down and looking at the camera" loading="lazy">
                     </span>
                     <h3>Jiggs</h3>
                     <p class="role">Curious &amp; a little scrappy</p>
-                    <p>Jiggs is curious and a little scrappy, always first to explore whatever's around the next corner. Every block of the city looks like a new adventure to him.</p>
+                    <p>The real Jiggs is a brindle Catahoula &mdash; curious and a little scrappy, always first to check out whatever's around the next corner. Every block looks like a new adventure to him.</p>
                 </div>
                 <div class="char reveal d1">
-                    <span class="char-portrait" aria-hidden="true">
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 16c-5-3-7-2-8 1 3 4 7 5 11 3"/><path d="M37 16c5-3 7-2 8 1-3 4-7 5-11 3"/><circle cx="24" cy="24" r="13"/><circle cx="19" cy="22" r="1.6" fill="currentColor"/><circle cx="29" cy="22" r="1.6" fill="currentColor"/><path d="M18 29c3.5 3 8.5 3 12 0"/></svg>
+                    <span class="char-portrait">
+                        <img src="images/dogs/glo.jpg" alt="Glo, a reddish-brown dog with a white blaze on her chest, sitting up and facing the camera" loading="lazy">
                     </span>
                     <h3>Glo</h3>
                     <p class="role">Warm, steady &amp; kind</p>
-                    <p>Warm and steady, Glo is quick with encouragement. She's the friend who makes the big city feel smaller and a lot friendlier for everyone around her.</p>
+                    <p>Glo is the reddish-brown one with the white chest blaze &mdash; warm, steady, and quick with encouragement. She's the friend who makes a big city feel a lot friendlier.</p>
                 </div>
             </div>
         </div>
@@ -474,6 +444,28 @@
         </div>
     </section>
 
+    <!-- ══════════════ INSIDE THE BOOK — peek gallery ══════════════ -->
+    <section class="pad" id="inside">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h9v16H4a2 2 0 0 1-2-2z"/><path d="M22 4h-9v16h7a2 2 0 0 0 2-2z"/></svg>
+                    Inside the Book
+                </span>
+                <h2>Take a peek <span class="accent">inside</span>.</h2>
+                <p>A few real pages from Book One &mdash; the actual illustrations, straight off the page.</p>
+            </div>
+            <div class="peek-grid reveal d1">
+                <figure class="peek"><img src="images/book/spread-3.jpg" alt="Interior illustration from Jiggs and Glo, Book One" loading="lazy"></figure>
+                <figure class="peek"><img src="images/book/spread-8.jpg" alt="Interior illustration from Jiggs and Glo, Book One" loading="lazy"></figure>
+                <figure class="peek"><img src="images/book/spread-12.jpg" alt="Interior illustration from Jiggs and Glo, Book One" loading="lazy"></figure>
+                <figure class="peek"><img src="images/book/spread-16.jpg" alt="Interior illustration from Jiggs and Glo, Book One" loading="lazy"></figure>
+                <figure class="peek"><img src="images/book/spread-24.jpg" alt="Interior illustration from Jiggs and Glo, Book One" loading="lazy"></figure>
+                <figure class="peek"><img src="images/book/spread-32.jpg" alt="Interior illustration from Jiggs and Glo, Book One" loading="lazy"></figure>
+            </div>
+        </div>
+    </section>
+
     <!-- ══════════════ BOOK ONE — OUT NOW ══════════════ -->
     <section class="pad bookone" id="book-one">
         <div class="container">
@@ -486,15 +478,16 @@
                 <p>Where it all begins &mdash; the first adventure in the Jiggs &amp; Glo series, finished and ready to read.</p>
             </div>
             <div class="feature reveal d1">
-                <span class="feature-badge" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h11a2 2 0 0 1 2 2v16l-4-2.6L11 21V3z"/><path d="M6 3a2 2 0 0 0-2 2v13.5"/></svg>
+                <span class="feature-cover">
+                    <img src="images/book/cover.jpg" alt="Cover of Jiggs and Glo, Book One" loading="lazy">
                 </span>
                 <div class="txt">
                     <span class="k">Book One &mdash; out now</span>
-                    <h3>The First Adventure</h3>
-                    <p>Book One of Jiggs &amp; Glo is finished, and it has the same heart as everything else we do. Reach out and we'll follow up with details on how to get a copy.</p>
+                    <h3>Vote Yes for Hydrants</h3>
+                    <p>Something's off in the neighborhood, and Jiggs and Glo aren't about to sit still. With a magnifying glass, a stack of signs, and a few good friends, they set out to make their corner of the city a little better &mdash; one hydrant at a time.</p>
+                    <p>It's a warm, funny story about friendship, standing up for your block, and finding a bit of bravery when it counts. Read it at bedtime; keep it on the shelf.</p>
                     <div class="feature-cta">
-                        <a href="mailto:info@nyctailblazers.com?subject=Jiggs%20and%20Glo%20Book%20Request" class="btn btn-peach">Request Book One
+                        <a href="#get-the-book" class="btn btn-peach">Get the Book
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                         </a>
                     </div>
@@ -509,16 +502,67 @@
             <div class="cta-inner reveal">
                 <span class="eyebrow">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 0 0-7.1 7.1L12 21l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg>
-                    Get Involved
+                    Get the Book
                 </span>
                 <h2>Bring Jiggs &amp; Glo <span class="accent">home</span>.</h2>
-                <p>Want a copy, or a school or library visit? Reach out and we'll follow up with details on Book One and upcoming reading visits.</p>
+                <p>Pick a format below. Every purchase funds youth raising service dogs for veterans.</p>
+
+                <div class="buy reveal d1">
+                    <div class="buy-card">
+                        <h3>Signed Paperback</h3>
+                        <div class="buy-price">$15</div>
+                        <p>Ships in the US &amp; Canada. Signed to a name you leave at checkout.</p>
+                        <div class="qty-row">
+                            <label for="qty-paperback">Qty</label>
+                            <input type="number" id="qty-paperback" min="1" max="20" value="1" inputmode="numeric">
+                        </div>
+                        <button type="button" class="btn btn-peach" onclick="buyBook('paperback', document.getElementById('qty-paperback').value, this)">Buy Paperback
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </button>
+                    </div>
+                    <div class="buy-card">
+                        <h3>Digital PDF</h3>
+                        <div class="buy-price">$8</div>
+                        <p>Emailed to you within 24 hours. Read it on any device.</p>
+                        <div class="qty-row">
+                            <label for="qty-digital">Qty</label>
+                            <input type="number" id="qty-digital" min="1" max="20" value="1" inputmode="numeric">
+                        </div>
+                        <button type="button" class="btn btn-peach" onclick="buyBook('digital', document.getElementById('qty-digital').value, this)">Buy Digital PDF
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <span class="secure">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                    Secure checkout by Stripe.
+                </span>
+
                 <div class="cta-btns">
-                    <a href="mailto:info@nyctailblazers.com?subject=Jiggs%20and%20Glo%20Book%20Request" class="btn btn-peach">Request Book One
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                    </a>
+                    <a href="mailto:info@nyctailblazers.com?subject=School%20or%20library%20reading%20-%20Jiggs%20and%20Glo" class="btn btn-outline">Book a School or Library Reading</a>
                     <a href="sms:+13472608305" class="btn btn-outline">Text (347) 260-8305</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ MORE BOOKS ON THE WAY ══════════════ -->
+    <section class="pad notify" id="more-books">
+        <div class="container">
+            <div class="notify-card reveal">
+                <span class="eyebrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 15.5 7 18.2l1-5.5-4-3.9L9.5 8z"/></svg>
+                    More on the Way
+                </span>
+                <h2>Book Two is in the works.</h2>
+                <p>Jiggs and Glo have more of the city to explore. Leave your email and we'll let you know the day the next book is ready &mdash; no spam, just the news.</p>
+                <form class="notify-form" action="https://formspree.io/f/xwkgvpbz" method="POST" id="notify-form">
+                    <input type="hidden" name="_subject" value="Jiggs & Glo — notify me about new books">
+                    <input type="email" name="email" placeholder="you@email.com" aria-label="Your email address" required>
+                    <button type="submit" class="btn btn-peach">Notify Me</button>
+                </form>
+                <p class="notify-msg" id="notify-msg" role="status" aria-live="polite"></p>
             </div>
         </div>
     </section>
@@ -530,7 +574,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#top" class="brand"><img src="tailblazers-logo.png" alt="NYC Tailblazers" style="width:44px;height:44px;border-radius:12px;border:2px solid rgba(243,233,214,.3);"><span class="brand-name">NYC Tailblazers</span></a>
+                    <a href="#top" class="brand"><img src="images/brand/tb-mark.png" alt="NYC Tailblazers — two illustrated dogs" style="height:46px;width:auto;object-fit:contain;"><span class="brand-name">NYC Tailblazers</span></a>
                     <p>A family of NYC ventures raising service dogs for veterans &mdash; trained by the next generation. Blaze new trails, wag new tails.</p>
                 </div>
                 <div>
@@ -567,6 +611,39 @@
     <script>
         // Current year
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ── CHECKOUT ── worker is the price authority; we only send { source, items:[{sku,qty}] }
+        var WORKER = "https://nyctb-checkout.markususeche.workers.dev/create-checkout-session";
+        var SKUS = { paperback: "book-jiggs-glo-1", digital: "book-jiggs-glo-1-digital" };
+        function buyBook(format, qty, btn) {
+            var sku = SKUS[format]; if (!sku) return;
+            qty = Math.max(1, Math.min(20, parseInt(qty, 10) || 1));
+            var orig = btn.textContent; btn.disabled = true; btn.textContent = "Redirecting to secure checkout...";
+            fetch(WORKER, { method: "POST", headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ source: "book", items: [{ sku: sku, qty: qty }] }) })
+                .then(function (r) { return r.json(); })
+                .then(function (d) { if (d.url) { window.location.href = d.url; } else { throw new Error(d.error || "Checkout error"); } })
+                .catch(function (e) { btn.disabled = false; btn.textContent = orig; alert(e.message + "\n\nYou can also email info@nyctailblazers.com to order."); });
+        }
+
+        // ── NOTIFY FORM ── async submit to Formspree, no page reload
+        (function () {
+            var form = document.getElementById('notify-form');
+            if (!form) return;
+            var msg = document.getElementById('notify-msg');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var btn = form.querySelector('button[type=submit]');
+                var orig = btn.textContent; btn.disabled = true; btn.textContent = "Sending...";
+                fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+                    .then(function (r) {
+                        if (r.ok) { form.reset(); msg.textContent = "You're on the list. We'll be in touch when Book Two lands."; }
+                        else { throw new Error(); }
+                    })
+                    .catch(function () { msg.textContent = "Something went wrong. Email info@nyctailblazers.com and we'll add you."; })
+                    .then(function () { btn.disabled = false; btn.textContent = orig; });
+            });
+        })();
 
         // Scroll reveal
         (function () {
