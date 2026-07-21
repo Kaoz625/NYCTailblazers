@@ -39,6 +39,21 @@ const CATALOG = {
   "pet-id-tag":            { name: "Silent 3D Pet ID Tag",              cents: 1000, min: 1  },
   "pet-memorial":          { name: "Pet Memorial Keychain / Tag",       cents: 1200, min: 1  },
   "breed-keychain":        { name: "Breed Keychain",                    cents: 900,  min: 1  },
+  // Books — Jiggs & Glo (physical ships; digital emailed). standalone: exempt from the $12 3D minimum.
+  "book-jiggs-glo-1":         { name: "Jiggs & Glo, Book One — Signed Paperback",       cents: 1500, min: 1, physical: true, standalone: true },
+  "book-jiggs-glo-1-digital": { name: "Jiggs & Glo, Book One — Digital PDF (emailed)",  cents: 800,  min: 1, digital: true,  standalone: true },
+};
+
+// success/cancel destinations by storefront source (validated; defaults to 3d for back-compat).
+const RETURN = {
+  "3d": {
+    success: "https://www.nyctailblazers.com/3d/success.html?session_id={CHECKOUT_SESSION_ID}",
+    cancel:  "https://www.nyctailblazers.com/3d-printing.html#shop",
+  },
+  "book": {
+    success: "https://www.nyctailblazers.com/success.html?session_id={CHECKOUT_SESSION_ID}",
+    cancel:  "https://www.nyctailblazers.com/jiggs-and-glo.html#get-the-book",
+  },
 };
 
 const ALLOWED_ORIGINS = [
@@ -82,16 +97,16 @@ export default {
     try { body = await request.json(); } catch { return json({ error: "bad json" }, 400, cors); }
     const items = Array.isArray(body.items) ? body.items : [];
 
+    const src = (body && RETURN[body.source]) ? body.source : "3d";
+
     const params = new URLSearchParams();
     params.set("mode", "payment");
-    params.set("success_url", "https://www.nyctailblazers.com/3d/success.html?session_id={CHECKOUT_SESSION_ID}");
-    params.set("cancel_url", "https://www.nyctailblazers.com/3d-printing.html#shop");
+    params.set("success_url", RETURN[src].success);
+    params.set("cancel_url", RETURN[src].cancel);
     params.set("billing_address_collection", "auto");
     params.set("phone_number_collection[enabled]", "true");
-    params.set("shipping_address_collection[allowed_countries][0]", "US");
-    params.set("shipping_address_collection[allowed_countries][1]", "CA");
 
-    let i = 0, subtotal = 0;
+    let i = 0, subtotal = 0, needsShipping = false, allStandalone = true;
     for (const it of items) {
       const sku = CATALOG[it && it.sku];
       if (!sku) continue;
@@ -99,6 +114,8 @@ export default {
       if (!Number.isFinite(qty)) qty = sku.min;
       qty = Math.max(sku.min, Math.min(999, qty));
       subtotal += sku.cents * qty;
+      if (!sku.digital) needsShipping = true;   // 3D items + physical books ship; digital does not
+      if (!sku.standalone) allStandalone = false;
       params.set(`line_items[${i}][quantity]`, String(qty));
       params.set(`line_items[${i}][price_data][currency]`, "usd");
       params.set(`line_items[${i}][price_data][unit_amount]`, String(sku.cents));
@@ -108,12 +125,20 @@ export default {
       i++;
     }
     if (i === 0) return json({ error: "Your cart is empty or contains no valid items." }, 400, cors);
-    if (subtotal < 1200) return json({ error: "Order minimum is $12. Please add a little more to your cart." }, 400, cors);
+    // $12 minimum applies to made-to-order 3D goods; standalone items (books) are exempt.
+    if (!allStandalone && subtotal < 1200) return json({ error: "Order minimum is $12. Please add a little more to your cart." }, 400, cors);
 
-    // ask for personalization details at checkout too (name/photo instructions)
+    // only ask for a shipping address when something actually ships.
+    if (needsShipping) {
+      params.set("shipping_address_collection[allowed_countries][0]", "US");
+      params.set("shipping_address_collection[allowed_countries][1]", "CA");
+    }
+
+    // optional personalization note (3D piece instructions, or a book dedication).
+    const cfLabel = src === "book" ? "Sign the book to… (name, optional)" : "Names / text / photo notes (optional)";
     params.set("custom_fields[0][key]", "personalization");
     params.set("custom_fields[0][label][type]", "custom");
-    params.set("custom_fields[0][label][custom]", "Names / text / photo notes (optional)");
+    params.set("custom_fields[0][label][custom]", cfLabel);
     params.set("custom_fields[0][type]", "text");
     params.set("custom_fields[0][optional]", "true");
     params.set("custom_fields[0][text][maximum_length]", "255");

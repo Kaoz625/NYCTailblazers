@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order received | NYC Tailblazers</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --paper:#fbf5e9; --ink:#453a32; --ink-soft:#7a6c5c; --peach:#db7f52; --leaf:#6f9c3c; --butter:#f6c95a; --line:#e6d4ac; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Nunito',system-ui,sans-serif; background:
+            radial-gradient(70% 60% at 12% 8%, rgba(246,201,90,.28), transparent 60%),
+            radial-gradient(60% 55% at 92% 92%, rgba(151,192,90,.24), transparent 62%), var(--paper);
+            color:var(--ink); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px 20px; }
+        .card { max-width:600px; text-align:center; background:#fff; border:3px solid var(--ink); border-radius:28px; padding:clamp(32px,5vw,52px); box-shadow:0 24px 54px -24px rgba(90,66,40,.45); }
+        .badge { width:78px; height:78px; border-radius:50%; background:var(--leaf); color:#fff; display:flex; align-items:center; justify-content:center; margin:0 auto 22px; }
+        .badge svg { width:40px; height:40px; }
+        .k { display:inline-block; font-weight:800; font-size:.72rem; letter-spacing:2px; text-transform:uppercase; color:var(--peach); background:rgba(219,127,82,.12); border:2px dashed rgba(219,127,82,.45); padding:5px 14px; border-radius:100px; margin-bottom:16px; }
+        h1 { font-family:'DM Serif Display',Georgia,serif; font-size:clamp(2rem,5vw,2.9rem); line-height:1.04; margin-bottom:14px; }
+        p { color:var(--ink-soft); font-size:1.06rem; font-weight:600; margin-bottom:12px; }
+        .note { background:rgba(140,196,222,.16); border:2px dashed rgba(77,157,194,.4); border-radius:16px; padding:16px 18px; font-size:.96rem; color:#3d5a68; margin:20px 0 6px; }
+        .btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:26px; }
+        .btn { display:inline-flex; align-items:center; gap:8px; padding:14px 26px; border-radius:100px; font-weight:800; text-decoration:none; border:2.5px solid var(--ink); transition:transform .2s; }
+        .btn:hover { transform:translateY(-2px); }
+        .btn-peach { background:var(--peach); color:#fff; }
+        .btn-ghost { background:var(--paper); color:var(--ink); }
+        .ref { font-family:ui-monospace,Menlo,monospace; font-size:.72rem; color:#a99; margin-top:20px; word-break:break-all; }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <span class="k">Order received</span>
+        <h1>Thank you — your order is in.</h1>
+        <p>We got it, and we&rsquo;re grateful. A confirmation is on its way to your email.</p>
+        <div class="note">
+            <strong>Paperbacks</strong> ship to the address you provided — signed, if you left a name at checkout.<br>
+            <strong>Digital copies</strong> are emailed to you within 24 hours.
+        </div>
+        <p style="margin-top:14px;">Every book helps youth raise service dogs for veterans. That&rsquo;s on you now, too.</p>
+        <div class="btns">
+            <a href="jiggs-and-glo.html" class="btn btn-peach">Back to the books</a>
+            <a href="mailto:info@nyctailblazers.com?subject=My%20Jiggs%20%26%20Glo%20order" class="btn btn-ghost">Email us about my order</a>
+        </div>
+        <div class="ref" id="ref"></div>
+    </main>
+    <script>
+        try { localStorage.removeItem("tb_book_cart_v1"); } catch (e) {}
+        var s = new URLSearchParams(location.search).get("session_id");
+        if (s) document.getElementById("ref").textContent = "Reference: " + s;
+    </script>
+</body>
+</html>
