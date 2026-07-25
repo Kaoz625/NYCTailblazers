@@ -422,10 +422,28 @@ function parseAddress(raw) {
 // DKIM-authenticated there (brevo1/brevo2 CNAMEs), so it can reach real buyers. Resend
 // remains the fallback, but its free plan's single domain slot is held by another brand, so
 // it can only reach Markus himself.
+// Tries providers in order and only throws if ALL of them fail. The failover is not
+// decoration: the "manual send needed" alert is itself sent through here, so a single-
+// provider version would mean a broken primary loses the buyer email AND the alert about
+// it — a silent lost order. With failover, a dead primary still degrades to "Markus gets
+// an alert he can forward", which is the whole safety net.
 async function sendEmail(env, msg) {
-  if (env.BREVO_API_KEY) return sendBrevo(env, msg);
-  if (env.RESEND_API_KEY) return sendResend(env, msg);
-  throw new Error("no email provider configured");
+  const providers = [];
+  if (env.BREVO_API_KEY) providers.push(["brevo", sendBrevo]);
+  if (env.RESEND_API_KEY) providers.push(["resend", sendResend]);
+  if (!providers.length) throw new Error("no email provider configured");
+
+  const failures = [];
+  for (const [name, send] of providers) {
+    try {
+      return await send(env, msg);
+    } catch (e) {
+      failures.push(`${name}: ${e.message}`);
+    }
+  }
+  const err = new Error(failures.join(" | "));
+  err.allProvidersFailed = true;
+  throw err;
 }
 
 async function sendBrevo(env, { to, subject, text: body, html, replyTo }) {
