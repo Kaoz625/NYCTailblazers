@@ -1,0 +1,10 @@
+# NYC Tailblazers — https://www.nyctailblazers.com/
+# Every public page is open to crawlers. Pages that should stay out of the
+# index (order confirmations, redirect stubs) carry <meta name="robots"
+# content="noindex"> instead of a Disallow, so crawlers must be able to fetch
+# them to read that tag.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.nyctailblazers.com/sitemap.xml
