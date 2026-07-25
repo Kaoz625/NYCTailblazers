@@ -25,8 +25,12 @@ Set with `wrangler secret put <NAME>` from inside this directory.
 |---|---|
 | `STRIPE_SECRET_KEY` | live `sk_live_…`, creates Checkout Sessions and reads line items |
 | `STRIPE_WEBHOOK_SECRET` | `whsec_…` from the Stripe webhook endpoint, verifies every webhook |
-| `RESEND_API_KEY` | sends the delivery email |
+| `BREVO_API_KEY` | `xkeysib-…`, **preferred** sender — see "Email delivery" below |
+| `RESEND_API_KEY` | fallback sender, used only when `BREVO_API_KEY` is absent |
 | `DOWNLOAD_SIGNING_KEY` | HMAC key for `/download` links |
+
+The provider is chosen at runtime by which key is present — setting `BREVO_API_KEY`
+switches delivery over with no code change and no redeploy of logic.
 
 Source values live in `~/.credentials/api-keys.env` (`STRIPE_SECRET_KEY_NYCTB_LIVE`,
 `RESEND_API_KEY`). `DOWNLOAD_SIGNING_KEY` is a random 32-byte hex string with no
@@ -37,7 +41,8 @@ emailed**, which is the intended way to revoke a leaked link.
 
 | Name | Current value | Notes |
 |---|---|---|
-| `MAIL_FROM` | `NYC Tailblazers <onboarding@resend.dev>` | must be on a Resend-verified domain — see below |
+| `MAIL_FROM_BREVO` | `NYC Tailblazers <info@nyctailblazers.com>` | used when sending via Brevo, where the domain IS authenticated |
+| `MAIL_FROM` | `NYC Tailblazers <onboarding@resend.dev>` | Resend fallback only; must stay on `resend.dev` — see below |
 | `MAIL_REPLY_TO` | `info@nyctailblazers.com` | where buyer replies go |
 | `OWNER_EMAIL` | `nyctailblazers@nyctailblazers.com` | gets the "manual send needed" alert |
 | `PUBLIC_BASE_URL` | the workers.dev URL | used to build download links |
@@ -128,39 +133,46 @@ If the signing secret is ever rolled in the Stripe dashboard, push the new value
 printf '%s' 'whsec_…' | wrangler secret put STRIPE_WEBHOOK_SECRET
 ```
 
-## Email sending — current limitation
+## Email delivery — Brevo primary, Resend fallback
 
-`nyctailblazers.com` is **not verified in Resend**. The Resend account is on the
-free plan, which allows exactly one domain, and that slot is taken by the client
-domain `nzurient.com`. So `MAIL_FROM` is currently Resend's onboarding sender,
-and Resend will only let that sender deliver to `nyctailblazers@nyctailblazers.com`.
+`sendEmail()` picks the provider by which key is set: **Brevo** when `BREVO_API_KEY`
+exists, otherwise Resend. Nothing else changes between them, so setting the key is
+the whole migration.
 
-What that means in practice: a real buyer's email is rejected, the worker catches
-it, and immediately sends Markus a "Manual send needed" alert containing the same
-download link, ready to forward. Nothing is ever lost — but delivery is one
-forward away from automatic until a domain is verified.
+**Why Brevo is the right one here.** `nyctailblazers.com` is already authenticated
+for Brevo in DNS and has been for a while:
 
-To finish it, free a domain slot (move `nzurient.com` to its own Resend account,
-or upgrade the plan), then add `nyctailblazers.com` at resend.com/domains. Resend
-generates records for a sending subdomain; the root SPF, root MX (Cloudflare Email
-Routing) and the existing Brevo DKIM are untouched:
+| Type | Name | Value | Status |
+|---|---|---|---|
+| CNAME | `brevo1._domainkey.nyctailblazers.com` | `b1.nyctailblazers-com.dkim.brevo.com` | live |
+| CNAME | `brevo2._domainkey.nyctailblazers.com` | `b2.nyctailblazers-com.dkim.brevo.com` | live |
+| TXT | `nyctailblazers.com` | `brevo-code:738d363a…` | live |
+| TXT | `_dmarc.nyctailblazers.com` | `v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com` | live |
+| TXT | `nyctailblazers.com` | `v=spf1 include:_spf.mx.cloudflare.net include:spf.brevo.com ~all` | added 2026-07-25 |
 
-| Type | Name | Value |
-|---|---|---|
-| MX | `send.nyctailblazers.com` | `feedback-smtp.us-east-1.amazonses.com` (priority 10) |
-| TXT | `send.nyctailblazers.com` | `v=spf1 include:amazonses.com ~all` |
-| TXT | `resend._domainkey.nyctailblazers.com` | the DKIM `p=…` value Resend shows you |
+DKIM gives DMARC alignment on its own; the `spf.brevo.com` include was added for
+belt-and-braces deliverability. Root MX still points at Cloudflare Email Routing,
+so **inbound mail is unaffected** — SPF governs outbound only.
 
-Add them in Cloudflare DNS with proxy **off**, hit Verify, then flip the sender
-and redeploy — that is the only change needed:
+**Resend cannot be the primary.** Its free plan allows one domain and that slot is
+held by the client domain `nzurient.com`, so a `nyctailblazers.com` sender is
+rejected and its onboarding sender can only deliver to
+`nyctailblazers@nyctailblazers.com`. That is exactly why `MAIL_FROM` must stay on
+`resend.dev` while `MAIL_FROM_BREVO` uses the real domain — do not merge them.
+
+To switch on (or rotate) Brevo:
 
 ```
-MAIL_FROM = "NYC Tailblazers <books@nyctailblazers.com>"
+printf '%s' 'xkeysib-…' | wrangler secret put BREVO_API_KEY
+wrangler deploy
 ```
 
-`nyctailblazers.com` already has Brevo DKIM and a Brevo verification code in DNS,
-so sending through Brevo instead of Resend may be viable without freeing the
-Resend slot. That would mean swapping the `sendResend` call in `src/index.js`.
+Get the key at **Brevo → SMTP & API → API Keys**. Confirm the domain reads
+*Authenticated* under **Senders, Domains & Dedicated IPs → Domains** first.
+
+Whichever provider is active, if a send fails the worker catches it, alerts
+`OWNER_EMAIL` with the same working download link ready to forward, and records
+`needs_manual_send`. No order is ever lost silently.
 
 ## Keeping prices in sync
 
