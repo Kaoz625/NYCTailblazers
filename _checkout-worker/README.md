@@ -160,19 +160,40 @@ rejected and its onboarding sender can only deliver to
 `nyctailblazers@nyctailblazers.com`. That is exactly why `MAIL_FROM` must stay on
 `resend.dev` while `MAIL_FROM_BREVO` uses the real domain — do not merge them.
 
-To switch on (or rotate) Brevo:
+**Status: Brevo is live** as of 2026-07-25 and verified end to end — a signed
+synthetic `checkout.session.completed` produced a real Brevo message id
+(`…@smtp-relay.mailin.fr`).
+
+To rotate the key:
 
 ```
 printf '%s' 'xkeysib-…' | wrangler secret put BREVO_API_KEY
 wrangler deploy
 ```
 
-Get the key at **Brevo → SMTP & API → API Keys**. Confirm the domain reads
-*Authenticated* under **Senders, Domains & Dedicated IPs → Domains** first.
+Get one at **Brevo → SMTP & API → API Keys**. Recovery copies live in
+`~/.credentials/api-keys.env` as `BREVO_API_KEY` / `BREVO_API_KEY_ALT`.
 
-Whichever provider is active, if a send fails the worker catches it, alerts
-`OWNER_EMAIL` with the same working download link ready to forward, and records
-`needs_manual_send`. No order is ever lost silently.
+### Gotcha: Brevo's "Authorised IPs" blocks local testing, not the Worker
+
+Calling the Brevo API from a laptop returns
+`unauthorized … unrecognised IP address <your ip>`, pointing at
+<https://app.brevo.com/security/authorised_ips>. The **Worker is unaffected** —
+Cloudflare's egress reaches Brevo fine. So do not conclude the key is dead just
+because curl from your machine fails; test through the deployed worker instead.
+Testing locally would mean allowlisting a home IP, which is not worth it.
+
+The brevo-code TXT was also **stale** until 2026-07-25 — DNS held
+`738d363a…` while Brevo expected `e8ef7afa…`, which is why the domain never
+authenticated. If verification ever fails again, re-compare that value first.
+
+### Failure behaviour
+
+`sendEmail()` tries every configured provider in order and only throws if they
+all fail. This matters because the "manual send needed" alert goes through the
+same function: with a single provider, a dead primary would lose the buyer email
+*and* the alert about it. If everything fails, the worker still records
+`needs_manual_send` against the order, so nothing is lost silently.
 
 ## Keeping prices in sync
 
