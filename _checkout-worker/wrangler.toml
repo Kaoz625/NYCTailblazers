@@ -6,11 +6,20 @@ workers_dev = true
 # Secrets (never in this file or in git) — set with `wrangler secret put <NAME>`:
 #   STRIPE_SECRET_KEY      live Stripe key, creates Checkout Sessions
 #   STRIPE_WEBHOOK_SECRET  whsec_… from the Stripe webhook endpoint, verifies POST /stripe-webhook
-#   RESEND_API_KEY         sends the digital-delivery email
+#   BREVO_API_KEY          xkeysib-… preferred sender; nyctailblazers.com is DKIM-verified there
+#   RESEND_API_KEY         fallback sender, used only when BREVO_API_KEY is absent
 #   DOWNLOAD_SIGNING_KEY   HMAC key for /download links (rotating it kills every issued link)
 
 [vars]
-# From address must be on a domain verified in Resend. See README before changing.
+# Sender is chosen by which key is set: Brevo when BREVO_API_KEY exists, else Resend.
+#
+# MAIL_FROM_BREVO can use the real domain — brevo1/brevo2 DKIM CNAMEs are live on
+# nyctailblazers.com, so Brevo can send as it and reach real buyers.
+#
+# MAIL_FROM is the Resend fallback and must stay on resend.dev: that free plan's single
+# domain slot holds nzurient.com, so a nyctailblazers.com sender would be rejected and even
+# the "manual send needed" alert would fail. Do not "tidy" these two into one value.
+MAIL_FROM_BREVO = "NYC Tailblazers <info@nyctailblazers.com>"
 MAIL_FROM = "NYC Tailblazers <onboarding@resend.dev>"
 MAIL_REPLY_TO = "info@nyctailblazers.com"
 # Where the "manual send needed" alert goes when a buyer email cannot be delivered.

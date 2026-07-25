@@ -8,7 +8,8 @@
  *   GET  /download?token=…        HMAC-signed, time-limited stream of a paid PDF out of R2
  *
  * Secrets (wrangler secret put …): STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET,
- * RESEND_API_KEY, DOWNLOAD_SIGNING_KEY.  Bindings: ASSETS (R2 bucket nyctb-assets).
+ * DOWNLOAD_SIGNING_KEY, and one email provider — BREVO_API_KEY (preferred) or
+ * RESEND_API_KEY (fallback).  Bindings: ASSETS (R2 bucket nyctb-assets).
  * Nothing sensitive lives in this file or in wrangler.toml.
  */
 
@@ -409,6 +410,52 @@ function buyerEmail(env, name, links, expiresAt) {
   };
 }
 
+// "NYC Tailblazers <info@example.com>" -> { name, email }; a bare address also works.
+function parseAddress(raw) {
+  const m = /^\s*(.*?)\s*<([^>]+)>\s*$/.exec(raw || "");
+  if (m) return m[1] ? { name: m[1], email: m[2] } : { email: m[2] };
+  return { email: (raw || "").trim() };
+}
+
+// Picks the provider by which key is present, so the key alone flips it — no redeploy of
+// logic, no window where neither works. Brevo wins when configured: nyctailblazers.com is
+// DKIM-authenticated there (brevo1/brevo2 CNAMEs), so it can reach real buyers. Resend
+// remains the fallback, but its free plan's single domain slot is held by another brand, so
+// it can only reach Markus himself.
+async function sendEmail(env, msg) {
+  if (env.BREVO_API_KEY) return sendBrevo(env, msg);
+  if (env.RESEND_API_KEY) return sendResend(env, msg);
+  throw new Error("no email provider configured");
+}
+
+async function sendBrevo(env, { to, subject, text: body, html, replyTo }) {
+  const payload = {
+    sender: parseAddress(env.MAIL_FROM_BREVO || env.MAIL_FROM),
+    to: (Array.isArray(to) ? to : [to]).map((email) => ({ email })),
+    subject,
+    textContent: body,
+  };
+  if (html) payload.htmlContent = html;
+  if (replyTo) payload.replyTo = { email: replyTo };
+
+  const resp = await fetch("https://api.brevo.com/v3/smtp/email", {
+    method: "POST",
+    headers: {
+      "api-key": env.BREVO_API_KEY,
+      "content-type": "application/json",
+      "accept": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+  const data = await resp.json().catch(() => ({}));
+  if (!resp.ok) {
+    const err = new Error(data.message || `Brevo error ${resp.status}`);
+    err.status = resp.status;
+    throw err;
+  }
+  return data.messageId || null;
+}
+
 async function sendResend(env, { to, subject, text: body, html, replyTo }) {
   const payload = {
     from: env.MAIL_FROM,
@@ -488,7 +535,7 @@ async function handleStripeWebhook(request, env) {
   let emailId = null;
   try {
     if (!to) throw new Error("no customer email on session");
-    emailId = await sendResend(env, {
+    emailId = await sendEmail(env, {
       to, subject: msg.subject, text: msg.text, html: msg.html, replyTo: env.MAIL_REPLY_TO,
     });
     await markSession(env, session.id, {
@@ -510,7 +557,7 @@ async function handleStripeWebhook(request, env) {
       ...links.map((l) => `${l.title}\n${l.url}`),
     ].join("\n");
     try {
-      const alertId = await sendResend(env, {
+      const alertId = await sendEmail(env, {
         to: env.OWNER_EMAIL,
         subject: `Manual send needed — digital order ${session.id}`,
         text: alert,
