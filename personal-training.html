@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Training | NYC Tailblazers</title>
-    <meta name="description" content="Marine-forged hybrid training in NYC, led by a U.S. Marine Corps veteran. Strength and conditioning on a foundation of discipline and standards. Founding-member waitlist now open.">
+    <meta name="description" content="Marine-forged hybrid training in NYC, led by a U.S. Marine Corps veteran. Strength and conditioning on a foundation of discipline and standards. Book a single session at founding-member rates, from $80.">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="canonical" href="https://nyctailblazers.com/personal-training.html">
+    <link rel="canonical" href="https://www.nyctailblazers.com/personal-training.html">
     <meta property="og:title" content="Personal Training | NYC Tailblazers" />
-    <meta property="og:description" content="Marine-forged hybrid training in NYC — strength, conditioning, and standards. Join the founding-member waitlist." />
-    <meta property="og:image" content="https://nyctailblazers.com/images/training/blues-flag.jpg" />
+    <meta property="og:description" content="Marine-forged hybrid training in NYC — strength, conditioning, and standards. Book a session at founding-member rates, from $80." />
+    <meta property="og:image" content="https://www.nyctailblazers.com/images/training/blues-flag.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:alt" content="Markus in dress blues beside an American flag" />
-    <meta property="og:url" content="https://nyctailblazers.com/personal-training.html" />
+    <meta property="og:url" content="https://www.nyctailblazers.com/personal-training.html" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://nyctailblazers.com/images/training/blues-flag.jpg" />
+    <meta name="twitter:image" content="https://www.nyctailblazers.com/images/training/blues-flag.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +72,7 @@
         .links .cta:hover{transform:translateY(-2px)}
         .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:10px}
         .burger span{width:24px;height:2px;background:var(--ink)}
-        @media(max-width:940px){.burger{display:flex}.links{position:absolute;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px 20px;transform:translateY(-10px);opacity:0;visibility:hidden;pointer-events:none;transition:.25s}.links.open{transform:none;opacity:1;visibility:visible;pointer-events:auto}.links a{padding:13px 2px;border-bottom:1px solid var(--line2)}.links .cta{text-align:center;margin-top:10px}}
+        @media(max-width:1040px){.burger{display:flex}.links{position:absolute;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px 20px;transform:translateY(-10px);opacity:0;visibility:hidden;pointer-events:none;transition:.25s}.links.open{transform:none;opacity:1;visibility:visible;pointer-events:auto}.links a{padding:13px 2px;border-bottom:1px solid var(--line2)}.links .cta{text-align:center;margin-top:10px}}
 
         /* hero */
         .hero{position:relative;overflow:hidden;padding:clamp(52px,8vw,104px) 0 clamp(48px,7vw,88px)}
@@ -197,18 +197,36 @@
 
         /* pricing */
         .price-band{background:var(--bg2);border-block:1px solid var(--line)}
-        .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+        .prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
         .price{background:var(--bg3);border:1px solid var(--line);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column}
         .price.feat{border-color:var(--volt);box-shadow:0 20px 50px -26px rgba(204,255,0,.4)}
         .price .k{font-family:var(--cond);font-weight:700;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--volt)}
         .price h3{font-size:1.6rem;color:var(--ink);margin:8px 0 14px}
         .price .amt{font-family:var(--display);font-size:clamp(2.2rem,5vw,3rem);color:var(--ink);line-height:.9}
         .price .amt small{font-family:var(--cond);font-weight:600;font-size:.8rem;letter-spacing:.04em;color:var(--mut);display:block;text-transform:none;margin-top:8px}
-        .price ul{list-style:none;margin:20px 0 24px;display:grid;gap:10px}
+        .price ul{list-style:none;margin:20px 0 6px;display:grid;gap:10px}
         .price li{display:grid;grid-template-columns:auto 1fr;gap:10px;color:var(--mut);font-size:.94rem}
         .price li svg{width:16px;height:16px;color:var(--volt);margin-top:4px}
-        .price .btn{margin-top:auto;justify-content:center}
+        .price .found{margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}
+        .price .found .lab{font-family:var(--cond);font-weight:700;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--volt)}
+        .price .found .now{font-family:var(--display);font-size:2rem;color:var(--ink);line-height:.95;margin-top:8px}
+        .price .found .now span{display:block;margin-top:8px;font-family:var(--cond);font-weight:600;font-size:.8rem;letter-spacing:.02em;text-transform:none;color:var(--mut)}
+        .price .btn{width:100%;margin-top:16px;justify-content:center;white-space:normal;text-align:center;padding-inline:18px}
+        .price .alt{display:block;margin-top:12px;text-align:center;font-family:var(--cond);font-weight:600;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut2)}
+        .price .alt:hover{color:var(--volt)}
         .price-foot{text-align:center;color:var(--mut2);font-size:.86rem;margin-top:24px}
+        .secure{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:26px;font-family:var(--cond);font-weight:600;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut2)}
+        .secure svg{width:15px;height:15px;color:var(--volt)}
+        .howbook{max-width:760px;margin:26px auto 0;background:var(--bg3);border:1px solid var(--line);border-left:3px solid var(--volt);border-radius:12px;padding:22px 24px}
+        .howbook h3{font-size:1.15rem;color:var(--ink);margin-bottom:10px}
+        .howbook p{color:var(--mut);font-size:.94rem}.howbook p+p{margin-top:10px}
+        .howbook a{color:var(--volt);border-bottom:1px solid rgba(204,255,0,.4)}
+        .booked{max-width:760px;margin:0 auto 40px;background:rgba(204,255,0,.07);border:1px solid rgba(204,255,0,.36);border-radius:14px;padding:26px 28px}
+        .booked[hidden]{display:none}
+        .booked h3{font-size:1.4rem;color:var(--ink);margin-bottom:10px}
+        .booked p{color:var(--mut);font-size:.98rem}.booked p+p{margin-top:10px}
+        .booked a{color:var(--volt)}
+        .booked .ref{font-family:ui-monospace,Menlo,monospace;font-size:.72rem;color:var(--mut2);word-break:break-all;margin-top:14px}
         @media(max-width:900px){.prices{grid-template-columns:1fr}}
 
         /* faq */
@@ -263,7 +281,7 @@
     <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
     <a href="#main" class="skip">Skip to content</a>
 
-    <div class="announce">Founding-member waitlist is open. <a href="#waitlist">Claim your spot</a></div>
+    <div class="announce">Founding-member rates are live. <a href="#pricing">Book a session</a> or <a href="#waitlist">join the waitlist</a></div>
 
     <header>
         <div class="wrap">
@@ -275,8 +293,9 @@
                     <a href="#programs">Programs</a>
                     <a href="#standards">Standards</a>
                     <a href="#pricing">Pricing</a>
+                    <a href="#waitlist">Waitlist</a>
                     <a href="index.html">Main Site</a>
-                    <a href="#waitlist" class="cta">Join Waitlist</a>
+                    <a href="#pricing" class="cta">Book a Session</a>
                 </div>
             </nav>
         </div>
@@ -291,11 +310,11 @@
                     <span class="soon reveal"><span class="dot" aria-hidden="true"></span> Now enrolling founding members</span>
                     <h1 class="reveal d1">Marine-forged <span class="hl">hybrid</span> training.</h1>
                     <p class="sub reveal d1">Strength and engine, built on standards.</p>
-                    <p class="lede reveal d2">Coaching from a U.S. Marine Corps veteran who trains strength and conditioning together, not one at the cost of the other. <b>You show up, you follow the plan, you hit the numbers.</b> Programs launch soon, and founding members get in first at launch pricing.</p>
+                    <p class="lede reveal d2">Coaching from a U.S. Marine Corps veteran who trains strength and conditioning together, not one at the cost of the other. <b>You show up, you follow the plan, you hit the numbers.</b> Founding-member rates are open now &mdash; book a single session below, or join the waitlist for ongoing coaching.</p>
                     <div class="hero-btns reveal d3">
-                        <a href="#waitlist" class="btn btn-volt">Join the founding-member waitlist
+                        <a href="#pricing" class="btn btn-volt">Book a session &mdash; from $80
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                        <a href="#programs" class="btn btn-ghost">See the programs</a>
+                        <a href="#waitlist" class="btn btn-ghost">Join the founding-member waitlist</a>
                     </div>
                     <div class="stats reveal d3">
                         <div class="stat"><div class="n">Hybrid</div><div class="k">Strength + engine</div></div>
@@ -502,6 +521,15 @@
                 <h2>Founding-member <span class="hl">rates</span>.</h2>
                 <p>Indicative launch pricing while we build the roster. Founding members lock these rates going in. NYC-market ranges, positioned for a veteran coach without overshooting.</p>
             </div>
+
+            <div class="booked" id="booked" hidden>
+                <h3>Payment received &mdash; now pick your time.</h3>
+                <p>Choose a slot on the training calendar and it&rsquo;s locked in. Nothing is on the schedule until you do, so grab one now while it&rsquo;s in front of you.</p>
+                <p><a href="https://cal.com/nyctailblazers/training-session" target="_blank" rel="noopener" class="btn btn-volt">Pick your session time</a></p>
+                <p>If none of the open slots work, text <a href="sms:+13472608305">(347) 260-8305</a> or email <a href="mailto:info@nyctailblazers.com">info@nyctailblazers.com</a> and Markus will find one that does.</p>
+                <p class="ref" id="booked-ref"></p>
+            </div>
+
             <div class="prices">
                 <div class="price reveal">
                     <span class="k">Small-Group</span>
@@ -512,7 +540,13 @@
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Shared programming, individual loading</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Roughly half the 1:1 rate per person</li>
                     </ul>
-                    <a href="#waitlist" class="btn btn-ghost">Join waitlist</a>
+                    <div class="found">
+                        <span class="lab">Founding rate</span>
+                        <div class="now">$80<span>One session, one person. Pay once, then we schedule.</span></div>
+                        <button type="button" class="btn btn-ghost" onclick="bookSession('semi', this)">Book one session &mdash; $80
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                        <a href="#waitlist" class="alt">Or join the waitlist</a>
+                    </div>
                 </div>
                 <div class="price feat reveal d1">
                     <span class="k">Most hands-on</span>
@@ -523,7 +557,13 @@
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Built on your own baseline numbers</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>In-session technique correction</li>
                     </ul>
-                    <a href="#waitlist" class="btn btn-volt">Join waitlist</a>
+                    <div class="found">
+                        <span class="lab">Founding rate</span>
+                        <div class="now">$150<span>One 60-minute session. Pay once, then we schedule.</span></div>
+                        <button type="button" class="btn btn-volt" onclick="bookSession('private', this)">Book one session &mdash; $150
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                        <a href="#waitlist" class="alt">Or join the waitlist</a>
+                    </div>
                 </div>
                 <div class="price reveal d2">
                     <span class="k">Anywhere</span>
@@ -534,9 +574,28 @@
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Video-checked lifts</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Weekly or biweekly check-ins</li>
                     </ul>
-                    <a href="#waitlist" class="btn btn-ghost">Join waitlist</a>
+                    <div class="found">
+                        <span class="lab">Founding rate</span>
+                        <div class="now">$150<span>One month, billed once. Nothing renews on its own.</span></div>
+                        <button type="button" class="btn btn-ghost" onclick="bookSession('online', this)">Start one month &mdash; $150
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                        <a href="#waitlist" class="alt">Or join the waitlist</a>
+                    </div>
                 </div>
             </div>
+
+            <span class="secure">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                Secure checkout by Stripe.
+            </span>
+
+            <div class="howbook">
+                <h3>How booking works</h3>
+                <p>Each button above buys <b>one session at the founding rate</b> &mdash; a single session, not a package and not a subscription. The online option buys one month of programming, billed once.</p>
+                <p><b>You pick your time after you pay.</b> Checkout hands you straight to the <a href="https://cal.com/nyctailblazers/training-session" target="_blank" rel="noopener">training calendar</a>, where you choose a slot that works and it&rsquo;s locked in. Nothing is on the schedule until you pick one. If none of the open times fit, text or email and Markus will sort it out with you directly.</p>
+                <p>Checkout asks for your goal and training experience so he knows what he is walking into. Want to talk before you pay? Text <a href="sms:+13472608305">(347) 260-8305</a> or email <a href="mailto:info@nyctailblazers.com">info@nyctailblazers.com</a>.</p>
+            </div>
+
             <p class="price-foot">Monthly session packages will be available at launch. Founding-member pricing is limited and set at enrollment.</p>
         </div>
     </section>
@@ -549,8 +608,12 @@
             </div>
             <div class="faq reveal">
                 <details>
-                    <summary>Are the programs running yet?</summary>
-                    <div class="ans">Not quite. We&rsquo;re building the roster now and taking founding members first. Join the waitlist and you get in ahead of the general launch, at launch pricing.</div>
+                    <summary>Can I book a session right now?</summary>
+                    <div class="ans">Yes. Single sessions are open at founding-member rates &mdash; semi-private, 1:1, or one month of online programming. <a href="#pricing">Book one from the pricing section</a>. The longer multi-week tracks are still filling their roster, so if you want ongoing coaching, <a href="#waitlist">join the waitlist</a> instead and you get in ahead of the general launch.</div>
+                </details>
+                <details>
+                    <summary>What happens after I pay for a session?</summary>
+                    <div class="ans">You land on the <a href="https://cal.com/nyctailblazers/training-session" target="_blank" rel="noopener">training calendar</a> and pick a slot that works for you &mdash; that locks it in. Nothing is scheduled until you choose a time, so do it while you are there. If none of the open slots fit, text (347) 260-8305 and Markus will find one that does. Checkout also asks for your goal and training experience so he can plan the session before you show up.</div>
                 </details>
                 <details>
                     <summary>Do I have to be a Marine or ex-military?</summary>
@@ -570,7 +633,7 @@
                 </details>
                 <details>
                     <summary>How do I hold my spot?</summary>
-                    <div class="ans">Fill out the <a href="#waitlist">waitlist form</a> below, or text (347) 260-8305. We&rsquo;ll reach out with next steps and lock your founding-member rate.</div>
+                    <div class="ans">Two ways. <a href="#pricing">Book a single session</a> and your founding-member rate is locked the moment you pay. Or fill out the <a href="#waitlist">waitlist form</a> below for ongoing coaching, or text (347) 260-8305. We&rsquo;ll reach out with next steps and lock your founding-member rate.</div>
                 </details>
             </div>
         </div>
@@ -582,7 +645,8 @@
                 <div class="wl-copy reveal">
                     <span class="eyebrow">Founding-member waitlist</span>
                     <h2>Claim your <span class="hl">spot</span>.</h2>
-                    <p>Tell us where you are and what you&rsquo;re after. We&rsquo;ll follow up as programs open, and founding members go to the front of the line at launch pricing.</p>
+                    <p>This form is for ongoing and custom coaching &mdash; the multi-week tracks, small-group slots you want held, and anything that needs a conversation first. Tell us where you are and what you&rsquo;re after, and founding members go to the front of the line at launch pricing.</p>
+                    <p>Just want one session? You can <a href="#pricing" style="color:var(--volt)">book and pay for it now</a> instead of waiting.</p>
                     <p>Prefer to talk? Text or call, or send an email &mdash; whatever&rsquo;s easiest.</p>
                     <div class="wl-direct">
                         <a href="sms:+13472608305" class="big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Text (347) 260-8305</a>
@@ -666,6 +730,25 @@
 
     <script>
         document.getElementById('year').textContent=new Date().getFullYear();
+
+        // ── CHECKOUT ── worker is the price authority; we only send { source, items:[{sku,qty}] }
+        var WORKER = "https://nyctb-checkout.markususeche.workers.dev/create-checkout-session";
+        var SKUS = { semi: "training-semi-private", private: "training-1on1", online: "training-online" };
+        function bookSession(key, btn) {
+            var sku = SKUS[key]; if (!sku) return;
+            var orig = btn.innerHTML; btn.disabled = true; btn.textContent = "Redirecting to secure checkout...";
+            fetch(WORKER, { method: "POST", headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ source: "training", items: [{ sku: sku, qty: 1 }] }) })
+                .then(function (r) { return r.json(); })
+                .then(function (d) { if (d.url) { window.location.href = d.url; } else { throw new Error(d.error || "Checkout error"); } })
+                .catch(function (e) { btn.disabled = false; btn.innerHTML = orig; alert(e.message + "\n\nYou can also text (347) 260-8305 or email info@nyctailblazers.com to book."); });
+        }
+
+        // Returning from a paid Checkout Session — confirm it and say what happens next.
+        (function(){var s=new URLSearchParams(location.search).get('session_id');
+        if(!s)return; var box=document.getElementById('booked'); if(!box)return;
+        box.hidden=false; document.getElementById('booked-ref').textContent='Reference: '+s;})();
+
         (function(){var els=document.querySelectorAll('.reveal');
         if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
         var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});

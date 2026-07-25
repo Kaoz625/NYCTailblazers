@@ -3,5 +3,23 @@ main = "src/index.js"
 compatibility_date = "2026-07-01"
 workers_dev = true
 
-# STRIPE_SECRET_KEY is set as a secret via: wrangler secret put STRIPE_SECRET_KEY
-# (never stored in this file or in git)
+# Secrets (never in this file or in git) — set with `wrangler secret put <NAME>`:
+#   STRIPE_SECRET_KEY      live Stripe key, creates Checkout Sessions
+#   STRIPE_WEBHOOK_SECRET  whsec_… from the Stripe webhook endpoint, verifies POST /stripe-webhook
+#   RESEND_API_KEY         sends the digital-delivery email
+#   DOWNLOAD_SIGNING_KEY   HMAC key for /download links (rotating it kills every issued link)
+
+[vars]
+# From address must be on a domain verified in Resend. See README before changing.
+MAIL_FROM = "NYC Tailblazers <onboarding@resend.dev>"
+MAIL_REPLY_TO = "info@nyctailblazers.com"
+# Where the "manual send needed" alert goes when a buyer email cannot be delivered.
+OWNER_EMAIL = "nyctailblazers@nyctailblazers.com"
+PUBLIC_BASE_URL = "https://nyctb-checkout.markususeche.workers.dev"
+DOWNLOAD_TTL_DAYS = "30"
+
+# Private bucket. Holds the paid PDFs plus fulfilled/<session_id>.json idempotency
+# markers. Public access and custom domains are intentionally off.
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "nyctb-assets"
