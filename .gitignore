@@ -14,3 +14,7 @@ dist/
 # NOT git (the manual PDFs exceed GitHub's 100MB limit and aren't website content).
 PBB Training/
 Curriculum/
+
+# Wrangler local state (Cloudflare Worker dev cache) — never track
+.wrangler/
+**/.wrangler/
