@@ -1,3 +1,6 @@
 .wrangler/
 node_modules/
 .dev.vars
+
+# Local stubs left behind by "wrangler r2 object get" when it fails — never real data
+fulfilled/
