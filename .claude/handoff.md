@@ -1,6 +1,32 @@
 Working on: Closing out the open punch list on nyctailblazers.com (analytics, SEO, social cards, scheduling, automatic PDF fulfillment, training payments) + repo safety.
-Last action: Everything shipped. main = da6be9e, Pages built green, all verified live over HTTPS.
-Next step: Nothing blocking. Highest-value next task is freeing a Resend domain slot so digital-PDF buyers get their email automatically instead of Markus forwarding one alert. See "NEEDS MARKUS" below.
+Last action: Everything shipped INCLUDING Brevo email. main = 923598d. Digital-PDF delivery is now fully automatic — verified with a signed synthetic event that produced a real Brevo message id.
+Next step: Nothing blocking. The one thing worth watching is the FIRST REAL digital-PDF purchase — Brevo accepted our test, but inbox placement can only be confirmed by a real order landing in a buyer's inbox.
+
+=== BREVO IS LIVE (2026-07-25) — supersedes the Resend limitation noted below ===
+The Resend blocker is GONE; email now goes out through Brevo as info@nyctailblazers.com.
+TWO things were broken beyond the missing key, and the key alone would NOT have fixed it:
+  1. The brevo-code TXT was STALE — DNS held 738d363a… while Brevo expected e8ef7afa….
+     That mismatch is why the domain never authenticated despite correct DKIM. Updated.
+  2. Three CNAMEs were missing entirely: mail, img.mail, r.mail (branded + tracking).
+     Added, all GREY-CLOUDED — proxying them breaks Brevo the same way it broke Pages.
+Also added include:spf.brevo.com to the root SPF. Inbound mail untouched (root MX is still
+Cloudflare Email Routing; SPF is outbound only).
+⚠️ BREVO "AUTHORISED IPs" GOTCHA: calling the Brevo API from a laptop returns
+   "unauthorized … unrecognised IP address". The WORKER is unaffected — Cloudflare's egress
+   reaches Brevo fine. A failing local curl does NOT mean the key is bad. Test through the
+   deployed worker, not from your machine.
+sendEmail() now FAILS OVER across providers. This was required before setting the key: the
+"manual send needed" alert goes through the same function, so a broken primary would have
+lost the buyer email AND the alert about it — a silent lost order.
+Keys saved as BREVO_API_KEY / BREVO_API_KEY_ALT in ~/.credentials/api-keys.env.
+VERIFIED against production: real Brevo id (…@smtp-relay.mailin.fr) · replay → "already
+fulfilled", no second send · paperback-only → "no digital items" · unpaid → ignored ·
+unsigned webhook 400 · forged download token 403 · all SKUs still mint cs_live_.
+🧹 ONE KNOWN BIT OF LITTER: the test left fulfilled/cs_live_BREVOTEST20260725.json in the R2
+bucket and I could NOT delete it — no available Cloudflare credential has R2 object
+permissions (both the API token and OAuth return 403). Harmless: that session id is synthetic
+and Stripe will never mint it, so it cannot block a real order. Delete it from the Cloudflare
+dashboard if you want the bucket tidy.
 Key files: _checkout-worker/src/index.js, personal-training.html, dog-walking.html, sitemap.xml, robots.txt, _headers
 Blockers: none in code. Two things need Markus's own accounts (Resend domain, credential rotation).
 
