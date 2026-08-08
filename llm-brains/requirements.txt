@@ -1,0 +1,62 @@
+# LLM-Brains — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# ── Core ──────────────────────────────────────────────────────────────────
+anthropic>=0.40.0          # Claude API — compiler, vision, dream cycle
+python-frontmatter>=1.1.0  # Markdown YAML frontmatter parsing
+python-dotenv>=1.0.0       # .env loading
+click>=8.1.7               # CLI framework
+tqdm>=4.66.4               # Progress bars
+requests>=2.31.0           # HTTP client
+pydantic>=2.5.0            # Data validation
+numpy>=1.26.0              # Vector math
+pyyaml>=6.0                # YAML parsing
+
+# ── Search & Embeddings ───────────────────────────────────────────────────
+sqlite-vec>=0.1.6          # Vector search extension for SQLite (local)
+openai>=1.30.0             # OpenAI embeddings (alternative to Ollama)
+tiktoken>=0.7.0            # Token counting
+scipy>=1.11.0              # Cosine similarity utilities
+
+# ── Media Processing ──────────────────────────────────────────────────────
+faster-whisper>=1.0.0      # Audio/video transcription (local, fast)
+pymupdf>=1.24.0            # PDF text extraction (fitz)
+youtube-transcript-api>=0.6.0  # YouTube caption extraction
+yt-dlp>=2024.10.0          # YouTube audio download (whisper fallback)
+Pillow>=10.0.0             # Image processing
+
+# ── Document Parsing ──────────────────────────────────────────────────────
+python-docx>=1.1.0         # .docx Word documents
+openpyxl>=3.1.0            # .xlsx Excel spreadsheets
+python-pptx>=0.6.23        # .pptx PowerPoint files
+ebooklib>=0.18             # .epub ebooks
+mistune>=3.0.2             # Markdown parsing
+feedparser>=6.0.11         # RSS/Atom feed parsing
+
+# ── File Watching ─────────────────────────────────────────────────────────
+watchdog>=4.0.0            # File system change detection
+
+# ── Supabase (self-hosted sync) ───────────────────────────────────────────
+psycopg2-binary>=2.9.9     # Postgres driver for self-hosted Supabase
+# supabase>=2.0.0          # Optional: Supabase Python client for REST API
+
+# ── MCP Server ────────────────────────────────────────────────────────────
+# mcp>=1.0.0               # Anthropic MCP SDK (optional, uses built-in stdio JSON-RPC)
+# The mcp_server.py uses a lightweight built-in JSON-RPC implementation
+# that has zero extra dependencies. Install the SDK only if you want
+# the higher-level abstractions:
+#   pip install mcp
+
+# ── Notes ─────────────────────────────────────────────────────────────────
+# ffmpeg must be installed separately (for Whisper audio processing):
+#   macOS:  brew install ffmpeg
+#   Linux:  apt install ffmpeg
+#
+# For local (free, private) embeddings instead of OpenAI:
+#   1. Install Ollama: https://ollama.ai
+#   2. Run: ollama pull nomic-embed-text
+#   No API key needed — runs entirely on your machine.
+#
+# For self-hosted Supabase:
+#   cd docker/ && docker compose up -d
+#   python -m src.supabase_sync --migrate
